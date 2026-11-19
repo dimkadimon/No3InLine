@@ -5,9 +5,8 @@ authors:
   - family-names: Kamenetsky
     given-names: Dmitry
 type: dataset
-version: "r3"
+version: "r3-editorial-draft"
 repository-code: "https://github.com/dimkadimon/No3InLine"
-date-released: 2026-11-19
 license: MIT
 preferred-citation:
   type: unpublished
@@ -16,4 +15,4 @@ preferred-citation:
     - family-names: Kamenetsky
       given-names: Dmitry
   year: 2026
-  notes: "Illustrated working manuscript, revision R3. Author review is ongoing. No arXiv identifier assigned."
+  notes: "Editorial working draft based on the public R3 prerelease. Author review is ongoing. No arXiv identifier assigned."

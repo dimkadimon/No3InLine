@@ -1,0 +1,24 @@
+Editorial follow-up to the published review-r3 tag; local build checks.
+Output written on main.pdf (19 pages, 600204 bytes).
+PASS reader: references and 16 citation destinations before Appendix A; both negative rows and their positive excesses.
+PASS reader: four figures, four F-dagger source cells, clean formula extraction, requested removals and pinned kit link.
+PASS fresh source-archive build: 13 members, one LaTeX root, clean three-pass pdfLaTeX build.
+PASS reader PDF attachment round trip, SHA256 238f38e60234b982cd0ba13045bfad4809fb00e764d0eb1278bfeb7378d6d9ca
+arxiv-source.tar.gz SHA256 b630af4d547de0a31ca6efa3ab21604f3ca5834ffcc8085b541e2b16e7a8394b
+main.pdf SHA256 db6db6deab682584ad1d155e3ba70fd297f7c1c781ebd53c9afb2acae8638b63
+PASS repeat clean build: cmp of PDF, source archive and build output.
+Title:           A super-polylogarithmic excess in the no-three-in-line problem
+Pages:           19
+File size:       1907220 bytes
+Rendered headings:
+  page 15: Authorship and use of generative AI
+  page 16: References
+  page 16: Construction and data sources
+  page 17: A Finite witnesses and comparisons
+  page 18: Table 1: Finite evidence.
+  page 18: Why two differences are negative.
+PASS all ten rStation manuscript/forum URLs in the register occur in PDF annotations.
+PASS counts and benchmark provenance for all 15 sides.
+  n=293: W=508, B=512, difference=-4, excess=+68.5; without reports B=504 (K), difference=+4.
+  n=773: W=1188, B=1244, difference=-56, excess=+28.5; without reports B=1152 (R), difference=+36.
+PASS generated rows, results, figures, and ancillary kit unchanged from review-r3. Project geometry was not re-searched for this editorial change.

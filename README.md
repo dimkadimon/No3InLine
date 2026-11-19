@@ -1,7 +1,7 @@
 # No3InLine
 
 **A super-polylogarithmic excess in the no-three-in-line problem**  
-Dmitry Kamenetsky · R3 illustrated working manuscript · author and independent review pending
+Dmitry Kamenetsky · Illustrated working manuscript · editorial follow-up to R3 · author and independent review pending
 
 **[Read the paper (PDF)](paper/main.pdf)** · [TeX and ancillary source](paper/arxiv-source.tar.gz) · [Standalone finite replay (ZIP)](paper/anc/no3-replay-r2.zip) · [Response to review](REVISION.md) · [Finite comparison table (CSV)](results/lower-bounds.csv) · [Verification transcripts](verification/) · [Source credits](THIRD_PARTY.md)
 
@@ -19,7 +19,9 @@ Keep six sites on each of `p−1` hyperbola fibres and add eight boundary sites.
 
 **Read the diagram:** keeping component 46,139 leaves one endpoint of the transposed secant absent; flipping 5,045 removes one endpoint of the original secant. Each fibre still contributes six sites. [See all three diagrams with explanations](paper/FIGURES.md).
 
-**R3.** Lemma 3.1 displays the normalized character expansion and the correction at its shift roots. Sections 5–7 make the counting multiplicities, edge cases and powers of `L_p` explicit. Appendix A contains the finite examples; the four F† comparisons are reported-only. The project data did not change: the [commit-pinned finite kit](https://raw.githubusercontent.com/dimkadimon/No3InLine/e19b8a1b689eba392c7d26ec3733e88db566dc0e/paper/anc/no3-replay-r2.zip) has SHA-256 `238f38e60234b982cd0ba13045bfad4809fb00e764d0eb1278bfeb7378d6d9ca`. It is available separately, in the source tarball's `anc/` directory and in the reader PDF. This GitHub release is a working manuscript, not a journal publication or arXiv submission.
+**Editorial follow-up.** The [published R3 prerelease](https://github.com/dimkadimon/No3InLine/releases/tag/review-r3) is unchanged. This draft places Appendix A after the references, separates published mathematics from construction and data credits, and works the two negative comparisons directly below Table 1. The theorem, witnesses and benchmarks are unchanged.
+
+**R3 baseline.** Lemma 3.1 displays the normalized character expansion and the correction at its shift roots. Sections 5–7 make the counting multiplicities, edge cases and powers of `L_p` explicit. Appendix A contains the finite examples; the four F† comparisons are reported-only. The project data did not change: the [commit-pinned finite kit](https://raw.githubusercontent.com/dimkadimon/No3InLine/e19b8a1b689eba392c7d26ec3733e88db566dc0e/paper/anc/no3-replay-r2.zip) has SHA-256 `238f38e60234b982cd0ba13045bfad4809fb00e764d0eb1278bfeb7378d6d9ca`. It is available separately, in the source tarball's `anc/` directory and in the reader PDF. The tagged R3 release is a working manuscript, not a journal publication or arXiv submission.
 
 ## Selected finite bounds
 

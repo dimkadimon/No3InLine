@@ -40,6 +40,18 @@ def build():
         marked=[c[0].replace(' ','') for c in cells if len(c)>2 and c[2]=='F†']
         assert marked==['293','389','773','4037'],marked
         assert '† Reported only.' in text and all(f'Figure {j}:' in text for j in range(1,5))
+        headings=[' '.join(l.split()) for l in text.splitlines()]
+        order=[headings.index(h) for h in ('Authorship and use of generative AI','References',
+                                            'Construction and data sources','A Finite witnesses and comparisons')]
+        assert order==sorted(order),order
+        rows=[[v.replace(' ','') for v in c] for c in cells if len(c)==7 and re.fullmatch(r'[0-9][0-9 ]*',c[0])]
+        assert len(rows)==15,len(rows)
+        assert [r for r in rows if r[-2].startswith('−')]==[
+            ['293','512','F†','508','Q','−4','+68.5'],['773','1244','F†','1188','H','−56','+28.5']]
+        keys=re.findall(r'\\bibitem(?:\[[^]]+\])?\{([^}]+)\}',(d/'references.tex').read_text())
+        dests={name:int(pg) for pg,name in re.findall(r'(?m)^ *(\d+) +\[.*?\] +"([^"]+)"',run('pdfinfo','-dests','reader.pdf').decode())}
+        assert keys and all(dests[f'cite.{key}']<dests['appendix.A'] for key in keys)
+        print(f'PASS reader: references and {len(keys)} citation destinations before Appendix A; both negative rows and their positive excesses.')
         assert b'https://raw.githubusercontent.com/dimkadimon/No3InLine/e19b8a1b689eba392c7d26ec3733e88db566dc0e/paper/anc/no3-replay-r2.zip' in run('pdfinfo','-url','reader.pdf')
         print('PASS reader: four figures, four F-dagger source cells, clean formula extraction, requested removals and pinned kit link.')
         shutil.copyfile(d/'reader.pdf',P/'main.pdf');shutil.copyfile(a,T)
