@@ -1,0 +1,5 @@
+PIN 22.zip 704cba3c87fc5882aa323c51ead7bb6ce9157a92932814b5b9dcf19ff88e1f68
+PIN 47.zip cb218228a2e7a1e5d801cbf85bb360ee7007ad7f5352d8ecf9e95e6fc1b214cd
+PIN all.dat 2aa1d0565e6792177c4dbb7a145257739d2008f7b9c126be7ea6be076f16eed5
+PIN defect.txt 057a2ae75457e01fcb8464bbc0d3f317078742463baaf88191edb70b7719b55c
+PASS restored or checked 159 source files against historical output digests.

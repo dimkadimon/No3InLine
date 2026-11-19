@@ -1,0 +1,1 @@
+VERIFIED n=1000018 p=500009 retained=1500024 removed=0 additions=6 total=1500030 exact_anchor_directions=9000174

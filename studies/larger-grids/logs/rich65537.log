@@ -1,0 +1,3 @@
+p=65537 initial=196608 pool=572 (including mixed-pair filters)
+run=0 total=196649 added=41 removed=0 seed_deletions=0
+run=1 total=196650 added=42 removed=0 seed_deletions=0

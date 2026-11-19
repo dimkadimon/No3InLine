@@ -1,0 +1,88 @@
+n=3 skipped=0 size=4 count=2 nodes=3
+witness 0,2
+n=5 skipped=0 size=8 count=2 nodes=5
+witness 0,2 4,4
+n=7 skipped=0 size=12 count=2 nodes=8
+witness 2,2 4,6
+n=9 skipped=0 size=16 count=3 nodes=13
+witness 2,2 4,6 0,8
+n=11 skipped=0 size=20 count=3 nodes=19
+witness 2,4 6,10 0,8
+n=13 skipped=0 size=24 count=4 nodes=36
+witness 0,2 6,6 8,12 4,10
+n=15 skipped=0 size=28 count=2 nodes=54
+witness 2,6 4,14 8,8 10,12
+n=17 skipped=0 size=32 count=3 nodes=87
+witness 2,12 4,16 0,6 8,10 14,14
+n=19 skipped=0 size=36 count=0 nodes=134
+n=19 skipped=1 size=32 count=50 nodes=619
+witness 0,2 6,10 8,16 4,14 18,18
+n=21 skipped=0 size=40 count=0 nodes=211
+n=21 skipped=1 size=36 count=31 nodes=989
+witness 0,2 6,20 10,14 12,18 4,16
+n=23 skipped=0 size=44 count=0 nodes=315
+n=23 skipped=1 size=40 count=33 nodes=1668
+witness 0,2 6,10 12,12 4,14 8,20 16,22
+n=25 skipped=0 size=48 count=1 nodes=528
+witness 2,24 4,16 8,8 0,6 12,22 10,14 18,20
+n=27 skipped=0 size=52 count=0 nodes=802
+n=27 skipped=1 size=48 count=29 nodes=4742
+witness 2,2 4,26 10,18 8,24 16,22 6,20 0,12
+n=29 skipped=0 size=56 count=0 nodes=1309
+n=29 skipped=1 size=52 count=10 nodes=8201
+witness 2,10 0,4 14,20 6,26 12,28 8,18 22,24
+n=31 skipped=0 size=60 count=0 nodes=2152
+n=31 skipped=1 size=56 count=25 nodes=14062
+witness 0,2 6,18 10,26 14,24 4,30 12,16 20,20 22,28
+n=33 skipped=0 size=64 count=1 nodes=3694
+witness 2,12 4,30 6,26 18,24 14,22 0,16 8,10 20,20 28,32
+n=35 skipped=0 size=68 count=0 nodes=5986
+n=35 skipped=1 size=64 count=17 nodes=42505
+witness 0,2 6,16 12,24 18,22 14,30 4,28 10,10 20,34 26,32
+n=37 skipped=0 size=72 count=0 nodes=10382
+n=37 skipped=1 size=68 count=5 nodes=75308
+witness 2,2 4,26 6,30 14,20 8,10 18,34 22,36 16,28 24,32
+n=39 skipped=0 size=76 count=0 nodes=17535
+n=39 skipped=1 size=72 count=17 nodes=132865
+witness 0,2 6,20 10,34 14,32 30,30 12,18 16,38 22,26 4,24 28,36
+n=41 skipped=0 size=80 count=0 nodes=30004
+n=41 skipped=1 size=76 count=3 nodes=238976
+witness 2,22 8,30 14,26 16,18 0,10 4,32 6,36 20,38 24,40 28,34
+n=43 skipped=0 size=84 count=0 nodes=51517
+n=43 skipped=1 size=80 count=12 nodes=427391
+witness 0,2 6,24 36,40 8,16 26,32 4,38 20,42 10,30 14,14 18,28 22,34
+n=45 skipped=0 size=88 count=0 nodes=91573
+n=45 skipped=1 size=84 count=3 nodes=786985
+witness 2,22 4,36 8,38 16,28 24,40 6,42 0,14 10,18 20,30 26,44 32,34
+n=47 skipped=0 size=92 count=1 nodes=158884
+witness 2,22 4,36 8,38 12,46 10,18 16,28 0,14 6,42 20,30 24,40 26,44 32,34
+n=49 skipped=0 size=96 count=0 nodes=280501
+n=49 skipped=1 size=92 count=4 nodes=2585752
+witness 2,18 4,32 8,30 12,20 16,40 10,44 14,26 22,28 24,42 34,38 36,46 0,48
+n=51 skipped=0 size=100 count=0 nodes=509958
+n=51 skipped=1 size=96 count=6 nodes=4814674
+witness 2,20 4,34 6,6 10,18 14,48 22,46 8,44 12,38 16,26 28,32 30,50 36,42 0,40
+n=53 skipped=0 size=104 count=0 nodes=880052
+n=53 skipped=1 size=100 count=1 nodes=8718035
+witness 2,20 4,52 8,28 10,34 6,48 18,44 16,50 14,24 22,36 26,26 30,46 32,40 38,42
+n=55 skipped=0 size=108 count=0 nodes=1576425
+n=55 skipped=1 size=104 count=2 nodes=16161104
+witness 2,38 4,52 8,14 6,48 20,46 18,42 24,26 22,54 0,16 28,40 12,32 30,34 36,50 44,44
+n=57 skipped=0 size=112 count=0 nodes=2898743
+n=57 skipped=1 size=108 count=1 nodes=30432373
+witness 4,40 6,56 8,48 18,24 12,42 20,52 16,54 28,50 32,34 22,30 26,38 10,14 36,46 44,44
+n=59 skipped=0 size=116 count=0 nodes=5223783
+n=59 skipped=1 size=112 count=5 nodes=56408789
+witness 2,16 4,58 26,34 10,10 18,48 6,52 30,42 8,44 12,38 14,24 20,36 22,54 0,28 32,56 46,50
+n=61 skipped=0 size=120 count=0 nodes=9517093
+n=61 skipped=1 size=116 count=0 nodes=106374993
+n=61 skipped=2 size=112 count=295 nodes=675652910
+witness 0,2 6,18 12,40 8,28 22,36 42,48 38,56 24,32 30,52 26,58 4,50 16,60 20,54 34,44 46,46
+n=63 skipped=0 size=124 count=0 nodes=17183444
+n=63 skipped=1 size=120 count=0 nodes=198565516
+n=63 skipped=2 size=116 count=60 nodes=1298665493
+witness 2,2 4,62 10,18 12,28 32,54 16,36 24,38 6,50 40,52 26,44 8,56 14,46 20,58 34,60 42,48
+n=65 skipped=0 size=128 count=0 nodes=31562843
+n=65 skipped=1 size=124 count=0 nodes=375094205
+n=65 skipped=2 size=120 count=177 nodes=2510723234
+witness 0,2 6,30 12,40 10,64 8,42 20,60 16,22 26,38 50,54 34,48 18,44 28,28 14,62 32,52 36,58 46,56

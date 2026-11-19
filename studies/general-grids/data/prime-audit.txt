@@ -1,0 +1,1 @@
+PASS: exceptional branch has 194 primes; small-root witnesses=191; direct ray certificates=3; largest prime tested in branch=50497

@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Please cite the preprint and, when using the finite certificates, identify the Git revision and the upstream sources in THIRD_PARTY.md."
+title: "A super-polylogarithmic excess in the no-three-in-line problem"
+authors:
+  - family-names: Kamenetsky
+    given-names: Dmitry
+type: dataset
+version: "2026-11-19"
+date-released: 2026-11-19
+license: MIT
+keywords:
+  - no-three-in-line
+  - modular hyperbola
+  - extremal combinatorics
+  - computational certificates
+preferred-citation:
+  type: unpublished
+  title: "A super-polylogarithmic excess in the no-three-in-line problem"
+  authors:
+    - family-names: Kamenetsky
+      given-names: Dmitry
+  year: 2026
+  notes: "Preprint, 19 November 2026. Author review in progress. No arXiv identifier assigned."

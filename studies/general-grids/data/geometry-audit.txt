@@ -1,0 +1,4 @@
+PASS n=293 points=440 half_turn=yes full_integer_directions=193160
+PASS n=389 points=584 half_turn=yes full_integer_directions=340472
+PASS n=4037 points=6056 half_turn=yes full_integer_directions=36669080
+PASS n=10085 points=15128 half_turn=yes full_integer_directions=228841256

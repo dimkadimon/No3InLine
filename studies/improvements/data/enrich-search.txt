@@ -1,0 +1,25 @@
+p=8009 targeted candidates=3019
+n=16018 old=24024 candidates=8227 constraints=126322 incidences=387398
+n=16018 vars=32251 lines=126322 initial=24524
+step=169 points=24530
+step=10557 points=24540
+step=11753 points=24550
+step=22575 points=24560
+step=37859 points=24570
+step=145680 points=24580
+final best n=16018 points=24588
+n 16018 points 24588 data/final-8009.txt
+p=16001 targeted candidates=3987
+n=32002 old=48000 candidates=12218 constraints=175582 incidences=536874
+n=32002 vars=60218 lines=175582 initial=48748
+step=2 points=48750
+step=6714 points=48760
+step=12442 points=48770
+step=24253 points=48780
+step=27830 points=48790
+step=63975 points=48800
+step=125729 points=48810
+step=265297 points=48820
+step=886990 points=48830
+final best n=32002 points=48838
+n 32002 points 48838 data/final-16001.txt

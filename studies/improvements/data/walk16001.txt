@@ -1,0 +1,10 @@
+n=32002 vars=56240 lines=78749 initial=48661
+step=15341 points=48670
+step=22407 points=48680
+step=27956 points=48690
+step=49979 points=48700
+step=58487 points=48710
+step=74303 points=48720
+step=164083 points=48730
+step=536531 points=48740
+final best n=32002 points=48748

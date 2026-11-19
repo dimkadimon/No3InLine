@@ -1,0 +1,1 @@
+whole board side=16018 admissible columns=8010 rows=8010 frame=24024 free=388

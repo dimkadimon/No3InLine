@@ -1,0 +1,3 @@
+n=389 g=4 step=232604 best=664
+n=389 g=4 step=232675 best=668
+final n=389 order=4 points=668 resets=12

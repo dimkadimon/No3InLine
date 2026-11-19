@@ -1,0 +1,1 @@
+final n=300 order=2 points=528 resets=6

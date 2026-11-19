@@ -1,0 +1,1 @@
+PASS: independently enumerated 194 moduli requiring finite witnesses; 191 certified by least roots, 3 by complete old-point scans over all 12 open-side anchors.

@@ -1,0 +1,4 @@
+VERIFIED n=201 points=362 exact_determinants=7840920
+VERIFIED n=202 points=364 exact_determinants=7971964
+VERIFIED n=67 points=128 exact_determinants=341376
+VERIFIED n=69 points=128 exact_determinants=341376

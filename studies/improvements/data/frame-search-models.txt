@@ -1,0 +1,3 @@
+n=16018 old=24024 candidates=5232 constraints=51181 incidences=155980
+n=32002 old=48000 candidates=8240 constraints=78749 incidences=239512
+n=64006 old=96006 candidates=10363 constraints=85306 incidences=258743

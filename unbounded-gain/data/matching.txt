@@ -1,0 +1,6 @@
+representative 1591070,845785: potential secants=72, initially blocking=21
+representative 845785,1591070: potential secants=72, initially blocking=17
+p=797161 level=11 subgroup order=26 index=30660
+nonaxial physical clauses=144 coset occurrences=288 distinct cosets=288 initial blocking secants=38
+matched=144
+flipped components=38

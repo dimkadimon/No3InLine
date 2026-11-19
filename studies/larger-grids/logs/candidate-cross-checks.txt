@@ -1,0 +1,3 @@
+p=8009 independent rectangle 4004:12013,4004:12013, matches whole-board enumeration at every cell; surviving sites=382.
+p=8009 independent extra column x=0 has 6 sites; rectangle plus column equals whole-board list of 388, coordinate for coordinate.
+p=16001 independent rectangle 10100:21600,10100:21600, matches whole-board enumeration at every cell; surviving sites=531.

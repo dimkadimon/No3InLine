@@ -1,0 +1,8 @@
+n=16018 vars=29256 lines=51181 initial=24469
+step=12113 points=24470
+step=17659 points=24480
+step=23910 points=24490
+step=53234 points=24500
+step=66726 points=24510
+step=484228 points=24520
+final best n=16018 points=24524

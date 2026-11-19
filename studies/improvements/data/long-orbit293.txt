@@ -1,0 +1,2 @@
+n=293 g=4 step=53415 best=508
+final n=293 order=4 points=508 resets=12

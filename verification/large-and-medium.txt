@@ -1,0 +1,22 @@
+File checksums match.
+VERIFIED n=201 points=362 exact_determinants=7840920
+VERIFIED n=202 points=364 exact_determinants=7971964
+VERIFIED n=67 points=128 exact_determinants=341376
+VERIFIED n=69 points=128 exact_determinants=341376
+n=201 entire_204_window_free=4 max_added=2 distinct_optimal_extension_lists_without_translation=4 total=362
+example ((-1, 145), (54, -1))
+n=202 entire_204_window_free=4 max_added=4 distinct_optimal_extension_lists_without_translation=1 total=364
+example ((-1, 145), (54, -1), (145, 200), (200, 54))
+VERIFIED one-for-two example, 24306 -> 24307
+VERIFIED n=16018 p=8009 retained=23866 removed=158 additions=603 total=24469 exact_anchor_directions=14754204
+VERIFIED n=32002 p=16001 retained=47771 removed=229 additions=890 total=48661 exact_anchor_directions=43307400
+VERIFIED n=64006 p=32003 retained=95820 removed=186 additions=1188 total=97008 exact_anchor_directions=115244316
+VERIFIED n=131074 p=65537 retained=196608 removed=0 additions=42 total=196650 exact_anchor_directions=8259258
+VERIFIED n=1000018 p=500009 retained=1500024 removed=0 additions=6 total=1500030 exact_anchor_directions=9000174
+VERIFIED n=32002 p=16001 retained=48000 removed=0 additions=424 total=48424 exact_anchor_directions=20531352
+p=16001 sites=614 disjoint_groups={(2, 1): 166, (3, 1): 4, (10, 2): 2} forced_omissions=190 upper=424
+VERIFIED n=16018 p=8009 retained=24024 removed=0 additions=284 total=24308 exact_anchor_directions=6903188
+p=8009 sites=388 disjoint_groups={(2, 1): 95, (3, 2): 5, (6, 2): 1} forced_omissions=104 upper=284
+VERIFIED n=202 p=101 retained=300 removed=0 additions=0 total=300 exact_anchor_directions=0
+Frontier gap cases independently agree.
+PASS

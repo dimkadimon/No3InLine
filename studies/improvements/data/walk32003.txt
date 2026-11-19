@@ -1,0 +1,8 @@
+n=64006 vars=106369 lines=85306 initial=97008
+step=17393 points=97010
+step=49000 points=97020
+step=72976 points=97030
+step=136903 points=97040
+step=410305 points=97050
+step=2456307 points=97060
+final best n=64006 points=97062

@@ -1,0 +1,2 @@
+PASS 75 public 2n-point catalogue controls, with actual centre symmetries.
+PASS arbitrary-side generator recovers the catalogue upper bound on all 75 represented ordinary sides; all 74 labelled half-turn sides also recover it centred.

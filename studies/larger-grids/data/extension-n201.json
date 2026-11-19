@@ -1,0 +1,18 @@
+{
+  "n": 201,
+  "m": 200,
+  "source": "sets_n200_c",
+  "dx": 1,
+  "dy": 0,
+  "added_in_source_frame": [
+    [
+      -1,
+      145
+    ],
+    [
+      145,
+      200
+    ]
+  ],
+  "halo_exact_for_seed": true
+}

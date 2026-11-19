@@ -1,0 +1,1 @@
+final n=200 order=2 points=360 resets=6

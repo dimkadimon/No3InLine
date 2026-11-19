@@ -1,0 +1,4 @@
+n=293 base=440 free=8 added=6 total=446 upper_on_additions=6 solver=OPTIMAL
+n=389 base=584 free=12 added=10 total=594 upper_on_additions=10 solver=OPTIMAL
+n=4037 base=6056 free=184 added=120 total=6176 upper_on_additions=120 solver=OPTIMAL
+n=10085 base=15128 free=344 added=236 total=15364 upper_on_additions=236 solver=OPTIMAL

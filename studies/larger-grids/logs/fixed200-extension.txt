@@ -1,0 +1,4 @@
+n=201 entire_204_window_free=4 max_added=2 distinct_optimal_extension_lists_without_translation=4 total=362
+example ((-1, 145), (54, -1))
+n=202 entire_204_window_free=4 max_added=4 distinct_optimal_extension_lists_without_translation=1 total=364
+example ((-1, 145), (54, -1), (145, 200), (200, 54))

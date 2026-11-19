@@ -1,0 +1,26 @@
+# Build/cache output. Historical run logs in studies/ are intentional, tracked data.
+.cache/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+/paper/*.aux
+/paper/*.log
+/paper/*.out
+/paper/*.fls
+/paper/*.fdb_latexmk
+# Third-party data, installed on demand by scripts/restore_inputs.py and never relicensed.
+/studies/improvements/sources/insertions_*.txt
+/studies/improvements/sources/public300-crop-seed.txt
+/studies/improvements/sources/catalogue-examples.csv
+/studies/larger-grids/experiments/seeds/
+/studies/larger-grids/experiments/high.dat
+/studies/larger-grids/inputs/insertions_*.txt
+/studies/larger-grids/inputs/frontier-seeds.txt
+/studies/larger-grids/inputs/n200_c_zero_based.txt
+/studies/no3research/comparison/flammenkamp-2026-05-03.txt
+/studies/no3research/extras/frontier-seeds.txt
+# Expanded legacy lists: compact edit certificates + hashes are tracked.
+/studies/larger-grids/coordinates/n131074.csv
+/studies/larger-grids/coordinates/n1000018.csv

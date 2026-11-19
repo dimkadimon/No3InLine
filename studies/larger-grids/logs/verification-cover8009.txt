@@ -1,0 +1,1 @@
+p=8009 sites=388 disjoint_groups={(2, 1): 95, (3, 2): 5, (6, 2): 1} forced_omissions=104 upper=284

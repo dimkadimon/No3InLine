@@ -1,0 +1,1 @@
+final n=100 order=2 points=184 resets=5

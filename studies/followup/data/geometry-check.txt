@@ -1,0 +1,1 @@
+PASS 712 whole-board tests; 146705252 ordered exact integer directions, plus half-turn, uniqueness and coordinate bounds.

@@ -1,0 +1,2 @@
+n=47 core_size=76 surviving_cores=2 completions=0 row_search_nodes=18
+n=47 core_size=72 surviving_cores=22 completions=0 row_search_nodes=92

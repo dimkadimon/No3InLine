@@ -1,0 +1,1 @@
+n=10085 frozen=15128 individually_legal=344

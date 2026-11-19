@@ -1,0 +1,8 @@
+{'p': 5003, 'n': 17712, 'c': 4033, 't': 2137, 'short_patch': True, 'ideal': 25412, 'loss': 0, 'points': 25412, 'bad_signed': 4} d>=32sqrt(p) True PASS
+{'p': 5003, 'n': 17711, 'c': 576, 't': 24, 'short_patch': True, 'ideal': 25412, 'loss': 0, 'points': 25412, 'bad_signed': 4} d>=32sqrt(p) True PASS
+{'p': 5009, 'n': 17728, 'c': 2096, 't': 1360, 'short_patch': True, 'ideal': 25432, 'loss': 0, 'points': 25432, 'bad_signed': 4} d>=32sqrt(p) True PASS
+{'p': 5009, 'n': 17727, 'c': 243, 't': 27, 'short_patch': True, 'ideal': 25432, 'loss': 0, 'points': 25432, 'bad_signed': 4} d>=32sqrt(p) True PASS
+{'p': 2003, 'n': 8012, 'c': 1, 't': 1, 'short_patch': False, 'ideal': 12012, 'loss': 10, 'points': 12002, 'bad_signed': 4} d>=32sqrt(p) False PASS
+{'p': 2003, 'n': 8011, 'c': 1, 't': 1, 'short_patch': False, 'ideal': 12012, 'loss': 10, 'points': 12002, 'bad_signed': 4} d>=32sqrt(p) False PASS
+{'p': 2017, 'n': 8068, 'c': 5, 't': 1, 'short_patch': False, 'ideal': 12096, 'loss': 0, 'points': 12096, 'bad_signed': 0} d>=32sqrt(p) False PASS
+{'p': 241, 'n': 964, 'c': 7, 't': 1, 'short_patch': False, 'ideal': 1440, 'loss': 0, 'points': 1440, 'bad_signed': 0} d>=32sqrt(p) False PASS

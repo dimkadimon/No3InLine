@@ -1,0 +1,4 @@
+n=293 orbits=4 edges=2 irreducible_triples=0 graph_bound=3 hypergraph_optimum=3 upper=6 achieved=6 graph_states=5 hypergraph_states=1
+n=389 orbits=6 edges=1 irreducible_triples=0 graph_bound=5 hypergraph_optimum=5 upper=10 achieved=10 graph_states=10 hypergraph_states=1
+n=4037 orbits=92 edges=82 irreducible_triples=4 graph_bound=60 hypergraph_optimum=60 upper=120 achieved=120 graph_states=1567 hypergraph_states=121
+n=10085 orbits=172 edges=114 irreducible_triples=7 graph_bound=120 hypergraph_optimum=118 upper=236 achieved=236 graph_states=14502 hypergraph_states=1381

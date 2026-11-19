@@ -1,0 +1,6 @@
+m=4 w=3 h=3 cap_masks=230 disjoint_support_pairs=43046721 translation_color_orbits=1346501 best_mean=128/32 state=11024160
+m=4 w=3 h=4 cap_masks=885 disjoint_support_pairs=43046721 translation_color_orbits=1346501 best_mean=160/32 state=11024160
+m=4 w=4 h=4 cap_masks=4812 disjoint_support_pairs=43046721 translation_color_orbits=1346501 best_mean=192/32 state=11024160
+m=4 w=4 h=5 cap_masks=20149 disjoint_support_pairs=43046721 translation_color_orbits=1346501 best_mean=192/32 state=11024160
+m=4 w=5 h=5 cap_masks=109536 disjoint_support_pairs=43046721 translation_color_orbits=1346501 best_mean=192/32 state=6241191
+m=4 w=5 h=6 cap_masks=552015 disjoint_support_pairs=43046721 translation_color_orbits=1346501 best_mean=200/32 state=6299520

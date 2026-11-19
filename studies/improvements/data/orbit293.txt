@@ -1,0 +1,7 @@
+n=293 g=4 step=507 best=484
+n=293 g=4 step=1392 best=488
+n=293 g=4 step=3501 best=492
+n=293 g=4 step=3789 best=496
+n=293 g=4 step=7611 best=500
+n=293 g=4 step=13378 best=504
+final n=293 order=4 points=504 resets=0

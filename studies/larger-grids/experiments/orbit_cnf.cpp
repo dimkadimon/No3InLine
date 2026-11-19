@@ -1,0 +1,11 @@
+// Build an exact rct4 SAT instance on a supplied unordered set of positive magnitude pairs.
+// Board n=2m+1. input n, then a b (0<a<b<=m); including all axes and one special diagonal pair.
+#include <bits/stdc++.h>
+using namespace std; struct V{int a,b;bool diag;};int main(int argc,char**argv){int n;cin>>n;int m=n/2;if(!(n&1)||n>101)return 2;set<pair<int,int>>edges;int a,b;while(cin>>a>>b)edges.emplace(a,b);vector<V>v(1);vector<vector<int>>pts(1);vector<int>id(n*n);auto add=[&](int a,int b,bool diag){int k=v.size();v.push_back({a,b,diag});set<int>s;int x=a,y=b;for(int j=0;j<(diag?2:4);j++){s.insert((m+y)*n+m+x);if(diag){x=-x;y=-y;}else{int t=x;x=-y;y=t;}}pts.emplace_back(s.begin(),s.end());for(int z:s){if(id[z])abort();id[z]=k;}};
+ for(auto[a,b]:edges)if(0<a&&a<b&&b<=m){add(a,b,false);add(b,a,false);}for(int r=1;r<=m;r++)add(0,r,false);for(int r=1;r<=m;r++)add(r,r,true);
+ int nv=v.size()-1;vector<vector<int>>c;vector<int>special;for(int i=1;i<=nv;i++)if(v[i].diag)special.push_back(i);c.push_back(special);for(int i:special)for(int j:special)if(i<j)c.push_back({-i,-j});
+ // At least two actual points in every row. Generated triples supply the converse bound.
+ for(int y=m;y<n;y++){vector<int>row;for(int x=0;x<n;x++)if(id[y*n+x])row.push_back(id[y*n+x]);for(int i=0;i<(int)row.size();i++){vector<int>cc;for(int j=0;j<(int)row.size();j++)if(j!=i)cc.push_back(row[j]);c.push_back(cc);}}
+ unordered_set<uint64_t>T;int base=nv+1;vector<int>L;for(int i=1;i<=nv;i++){// all points, can fix by half-turn to one from each opposite pair, but keep all here
+ for(int z:pts[i]){int x=z%n,y=z/n;for(int u=z+1;u<n*n;u++)if(id[u]){int X=u%n,Y=u/n,dx=X-x,dy=Y-y,g=gcd(abs(dx),abs(dy));dx/=g;dy/=g;int xx=X+dx,yy=Y+dy;for(;xx>=0&&yy>=0&&xx<n&&yy<n;xx+=dx,yy+=dy){int j=id[u],k=id[yy*n+xx];if(!k)continue;array<int,3>t{i,j,k};sort(t.begin(),t.end());uint64_t code=(uint64_t(t[0])*base+t[1])*base+t[2];if(T.insert(code).second){vector<int>cc{-t[0]};if(t[1]!=t[0])cc.push_back(-t[1]);if(t[2]!=t[1])cc.push_back(-t[2]);c.push_back(cc);}}}}}
+ cout<<"p cnf "<<nv<<" "<<c.size()<<"\n";for(auto&cc:c){for(int a:cc)cout<<a<<" ";cout<<"0\n";}ofstream F(argv[1]);for(int i=1;i<=nv;i++){F<<i;for(int z:pts[i])F<<" "<<z;F<<"\n";}}

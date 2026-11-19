@@ -1,0 +1,8 @@
+n,public_reference,public_points,previous_points,new_points,net_over_public,net_over_previous,removed_from_public,inserted_vs_public,literal_public_append,append_status
+16018,rStation paper 47 v1 section 8,24306,24469,24588,282,119,660,942,2,exact for published seed
+32002,rStation paper 47 v1 section 8,48421,48661,48838,417,177,1092,1509,3,exact for published seed
+64006,rStation paper 47 v1 section 8,96816,97008,97062,246,54,1157,1403,4,at least; whole-board upper unknown
+293,,,446,508,,62,,,,
+389,,,594,668,,74,,,,
+4037,,,6176,6296,,120,,,,
+10085,,,15364,15520,,156,,,,

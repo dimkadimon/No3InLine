@@ -1,0 +1,8 @@
+n=202 p=61 k=2 points=276 twice_surplus_over_1.5n=-54 construction=rectangular sheet masks
+PASS n=202 points=276 half_turn=yes full_integer_directions=75900
+n=401 p=97 k=17 points=584 twice_surplus_over_1.5n=-35 construction=odd anchored ring
+PASS n=401 points=584 half_turn=yes full_integer_directions=340472
+n=1000 p=251 k=1 points=1456 twice_surplus_over_1.5n=-88 construction=rectangular sheet masks
+PASS n=1000 points=1456 half_turn=yes full_integer_directions=2118480
+n=10000 p=2503 k=1 points=14952 twice_surplus_over_1.5n=-96 construction=rectangular sheet masks
+PASS n=10000 points=14952 half_turn=yes full_integer_directions=223547352

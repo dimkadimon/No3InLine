@@ -1,0 +1,6 @@
+32 census witnesses verified; 2,491,600 exact triple determinants.
+24 ceiling configurations checked; just the order-3 axial cross admits an added point.
+13 mutually inequivalent ordinary 2n-point configurations verified.
+5 credited frontier seeds verified geometrically.
+Catalogue SHA-256: 2aa1d0565e6792177c4dbb7a145257739d2008f7b9c126be7ea6be076f16eed5
+0 source words absent; 0 matching oriented result words in supplied catalogue.

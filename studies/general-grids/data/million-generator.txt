@@ -1,0 +1,1 @@
+n=1000229 p=250057 k=5445 points=1500344 twice_surplus_over_1.5n=1 half_turn=True construction=odd anchored ring

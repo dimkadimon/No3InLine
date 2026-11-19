@@ -1,0 +1,6 @@
+VERIFIED n=16018 p=8009 retained=24024 removed=0 additions=284 total=24308 exact_anchor_directions=6903188
+VERIFIED n=16018 p=8009 retained=23444 removed=580 additions=1144 total=24588 exact_anchor_directions=28127528
+VERIFIED n=32002 p=16001 retained=48000 removed=0 additions=424 total=48424 exact_anchor_directions=20531352
+VERIFIED n=32002 p=16001 retained=47034 removed=966 additions=1804 total=48838 exact_anchor_directions=88101948
+VERIFIED n=64006 p=32003 retained=96006 removed=0 additions=814 total=96820 exact_anchor_directions=78810666
+VERIFIED n=64006 p=32003 retained=94991 removed=1015 additions=2071 total=97062 exact_anchor_directions=201013331

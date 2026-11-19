@@ -1,0 +1,20 @@
+PASS: independently enumerated 194 moduli requiring finite witnesses; 191 certified by least roots, 3 by complete old-point scans over all 12 open-side anchors.
+PASS 4 whole-board tests; 274724644 ordered exact integer directions, plus half-turn, uniqueness and coordinate bounds.
+n=293 frozen=440 individually_legal=8
+n=389 frozen=584 individually_legal=12
+n=4037 frozen=6056 individually_legal=184
+n=10085 frozen=15128 individually_legal=344
+n=293 orbits=4 edges=2 irreducible_triples=0 graph_bound=3 hypergraph_optimum=3 upper=6 achieved=6 graph_states=5 hypergraph_states=1
+n=389 orbits=6 edges=1 irreducible_triples=0 graph_bound=5 hypergraph_optimum=5 upper=10 achieved=10 graph_states=10 hypergraph_states=1
+n=4037 orbits=92 edges=82 irreducible_triples=4 graph_bound=60 hypergraph_optimum=60 upper=120 achieved=120 graph_states=1567 hypergraph_states=121
+n=10085 orbits=172 edges=114 irreducible_triples=7 graph_bound=120 hypergraph_optimum=118 upper=236 achieved=236 graph_states=14502 hypergraph_states=1381
+PASS 712 whole-board tests; 146705252 ordered exact integer directions, plus half-turn, uniqueness and coordinate bounds.
+{'p': 5003, 'n': 17712, 'c': 4033, 't': 2137, 'short_patch': True, 'ideal': 25412, 'loss': 0, 'points': 25412, 'bad_signed': 4} d>=32sqrt(p) True PASS
+{'p': 5003, 'n': 17711, 'c': 576, 't': 24, 'short_patch': True, 'ideal': 25412, 'loss': 0, 'points': 25412, 'bad_signed': 4} d>=32sqrt(p) True PASS
+{'p': 5009, 'n': 17728, 'c': 2096, 't': 1360, 'short_patch': True, 'ideal': 25432, 'loss': 0, 'points': 25432, 'bad_signed': 4} d>=32sqrt(p) True PASS
+{'p': 5009, 'n': 17727, 'c': 243, 't': 27, 'short_patch': True, 'ideal': 25432, 'loss': 0, 'points': 25432, 'bad_signed': 4} d>=32sqrt(p) True PASS
+{'p': 2003, 'n': 8012, 'c': 1, 't': 1, 'short_patch': False, 'ideal': 12012, 'loss': 10, 'points': 12002, 'bad_signed': 4} d>=32sqrt(p) False PASS
+{'p': 2003, 'n': 8011, 'c': 1, 't': 1, 'short_patch': False, 'ideal': 12012, 'loss': 10, 'points': 12002, 'bad_signed': 4} d>=32sqrt(p) False PASS
+{'p': 2017, 'n': 8068, 'c': 5, 't': 1, 'short_patch': False, 'ideal': 12096, 'loss': 0, 'points': 12096, 'bad_signed': 0} d>=32sqrt(p) False PASS
+{'p': 241, 'n': 964, 'c': 7, 't': 1, 'short_patch': False, 'ideal': 1440, 'loss': 0, 'points': 1440, 'bad_signed': 0} d>=32sqrt(p) False PASS
+PASS. Free-site lists regenerated.

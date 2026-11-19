@@ -1,0 +1,6 @@
+seed_index,new_board,cases,minimum_triples,cases_at_minimum,zero_triple_cases
+1,75,5625,6,4,0
+2,75,5625,6,4,0
+3,77,5929,7,4,0
+4,77,5929,7,4,0
+5,79,6241,6,4,0

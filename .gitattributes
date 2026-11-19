@@ -1,0 +1,6 @@
+# Historical checksums are byte-for-byte: never transcode original LF/CRLF inputs in a checkout.
+* -text
+*.pdf binary
+*.png binary
+*.zip binary
+*.gz binary

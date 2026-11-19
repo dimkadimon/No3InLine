@@ -1,0 +1,48 @@
+VERIFIED n=16018 p=8009 retained=24024 removed=0 additions=284 total=24308 exact_anchor_directions=6903188
+VERIFIED n=16018 p=8009 retained=23444 removed=580 additions=1144 total=24588 exact_anchor_directions=28127528
+whole board side=16018 admissible columns=8010 rows=8010 frame=24024 free=388
+PASS literal n=16018: 6 individually free in complete board; 2 feasible simultaneously.
+PASS n=16018: vs public -660 +942; vs previous -742 +861.
+VERIFIED n=32002 p=16001 retained=48000 removed=0 additions=424 total=48424 exact_anchor_directions=20531352
+VERIFIED n=32002 p=16001 retained=47034 removed=966 additions=1804 total=48838 exact_anchor_directions=88101948
+whole board side=32002 admissible columns=16002 rows=16002 frame=48000 free=614
+PASS literal n=32002: 9 individually free in complete board; 3 feasible simultaneously.
+PASS n=32002: vs public -1092 +1509; vs previous -1160 +1337.
+VERIFIED n=64006 p=32003 retained=96006 removed=0 additions=814 total=96820 exact_anchor_directions=78810666
+VERIFIED n=64006 p=32003 retained=94991 removed=1015 additions=2071 total=97062 exact_anchor_directions=201013331
+PASS literal n=64006: 17 individually free in tested pool only; 4 feasible simultaneously.
+PASS n=64006: vs public -1157 +1403; vs previous -1143 +1197.
+PASS n=293: vs previous -442 +504.
+PASS n=389: vs previous -592 +666.
+PASS n=4037: vs previous -296 +416.
+PASS n=10085: vs previous -388 +544.
+PASS 4 whole-board tests; 281191312 ordered exact integer directions, plus half-turn, uniqueness and coordinate bounds.
+Finite branch: 4395 prime/side pairs; 102 exceptions on 93 distinct boards, all meeting their maximum required count.
+PASS 93 whole-board tests; 2517076 ordered exact integer directions, plus half-turn, uniqueness and coordinate bounds.
+PASS 11 parameter cases at p=73, including short, long and near-full windows.
+PASS 11 parameter cases at p=97, including short, long and near-full windows.
+PASS 11 parameter cases at p=101, including short, long and near-full windows.
+PASS 11 parameter cases at p=107, including short, long and near-full windows.
+PASS 11 parameter cases at p=127, including short, long and near-full windows.
+PASS 11 parameter cases at p=163, including short, long and near-full windows.
+PASS 11 parameter cases at p=193, including short, long and near-full windows.
+PASS 11 parameter cases at p=251, including short, long and near-full windows.
+PASS 11 parameter cases at p=1009, including short, long and near-full windows.
+PASS 11 parameter cases at p=1601, including short, long and near-full windows.
+PASS 11 parameter cases at p=2003, including short, long and near-full windows.
+PASS 11 parameter cases at p=2027, including short, long and near-full windows.
+PASS 11 parameter cases at p=2053, including short, long and near-full windows.
+PASS 11 parameter cases at p=2521, including short, long and near-full windows.
+PASS 11 parameter cases at p=3001, including short, long and near-full windows.
+PASS 11 parameter cases at p=5003, including short, long and near-full windows.
+PASS 11 parameter cases at p=5009, including short, long and near-full windows.
+PASS 652 whole-board tests; 40545666 ordered exact integer directions, plus half-turn, uniqueness and coordinate bounds.
+Construction smoke n=202: half-turn 364, ordinary 364.
+Construction smoke n=293: half-turn 508, ordinary 508.
+Construction smoke n=389: half-turn 668, ordinary 668.
+Construction smoke n=4037: half-turn 6296, ordinary 6296.
+Construction smoke n=10085: half-turn 15520, ordinary 15520.
+Construction smoke n=16018: half-turn 24010, ordinary 24588.
+Construction smoke n=32002: half-turn 47976, ordinary 48838.
+Construction smoke n=64006: half-turn 95996, ordinary 97062.
+PASS finite witnesses, comparisons, theorem finite branch, construction checks and transfer interval.

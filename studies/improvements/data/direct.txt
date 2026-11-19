@@ -1,0 +1,6 @@
+p 8009 checked 106 free against PUBLIC witness 6 first 12 [(0, 4140), (0, 4259), (0, 4430), (0, 8914), (0, 9761), (0, 11687)]
+mutually compatible [(0, 4140), (0, 4259)]
+p 16001 checked 193 free against PUBLIC witness 9 first 12 [(0, 8619), (0, 9094), (0, 9110), (0, 9528), (0, 11383), (0, 15962), (0, 23248), (0, 23908), (13484, 8000)]
+mutually compatible [(0, 8619), (0, 9094), (13484, 8000)]
+p 32003 checked 1003 free against PUBLIC witness 2 first 12 [(35817, 16001), (36424, 16001)]
+mutually compatible [(35817, 16001), (36424, 16001)]

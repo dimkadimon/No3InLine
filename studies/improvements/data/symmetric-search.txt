@@ -1,0 +1,14 @@
+n 10085 orbits 9615 line models {2: 22476, 1: 6}
+step=62789 points=7756
+step=62799 points=7757
+step=233541 points=7758
+step=360858 points=7759
+step=386761 points=7760
+final best n=10085 points=7760
+n 4037 orbits 9008 line models {2: 531378, 1: 87}
+step=141168 points=3144
+step=206702 points=3145
+step=223470 points=3146
+step=299840 points=3147
+step=478326 points=3148
+final best n=4037 points=3148

@@ -1,0 +1,20 @@
+Finite branch: 4395 prime/side pairs; 102 exceptions on 93 distinct boards, all meeting their maximum required count.
+PASS 93 whole-board tests; 2517076 ordered exact integer directions, plus half-turn, uniqueness and coordinate bounds.
+PASS 11 parameter cases at p=73, including short, long and near-full windows.
+PASS 11 parameter cases at p=97, including short, long and near-full windows.
+PASS 11 parameter cases at p=101, including short, long and near-full windows.
+PASS 11 parameter cases at p=107, including short, long and near-full windows.
+PASS 11 parameter cases at p=127, including short, long and near-full windows.
+PASS 11 parameter cases at p=163, including short, long and near-full windows.
+PASS 11 parameter cases at p=193, including short, long and near-full windows.
+PASS 11 parameter cases at p=251, including short, long and near-full windows.
+PASS 11 parameter cases at p=1009, including short, long and near-full windows.
+PASS 11 parameter cases at p=1601, including short, long and near-full windows.
+PASS 11 parameter cases at p=2003, including short, long and near-full windows.
+PASS 11 parameter cases at p=2027, including short, long and near-full windows.
+PASS 11 parameter cases at p=2053, including short, long and near-full windows.
+PASS 11 parameter cases at p=2521, including short, long and near-full windows.
+PASS 11 parameter cases at p=3001, including short, long and near-full windows.
+PASS 11 parameter cases at p=5003, including short, long and near-full windows.
+PASS 11 parameter cases at p=5009, including short, long and near-full windows.
+PASS 652 whole-board tests; 40545666 ordered exact integer directions, plus half-turn, uniqueness and coordinate bounds.

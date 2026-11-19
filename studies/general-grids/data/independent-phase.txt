@@ -1,0 +1,3 @@
+m=2 masks=109536 supports=81 translation-and-colour orbits=17 maximal_mean=48/8
+m=3 masks=109536 supports=19683 translation-and-colour orbits=1106 maximal_mean=90/18
+m=4 masks=109536 supports=43046721 translation-and-colour orbits=1346501 maximal_mean=192/32

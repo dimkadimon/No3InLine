@@ -1,0 +1,27 @@
+{'side': 90, 'points': 118, 'guarantee': 118, 'construction': 'rectangular repair', 'prime': 23, 'half_turn': True}
+{'side': 90, 'points': 126, 'guarantee': 126, 'construction': 'ordinary frame', 'prime': 43, 'half_turn': False}
+{'side': 97, 'points': 132, 'guarantee': 124, 'construction': 'rectangular repair', 'prime': 29, 'half_turn': True}
+{'side': 97, 'points': 138, 'guarantee': 138, 'construction': 'ordinary frame', 'prime': 47, 'half_turn': False}
+{'side': 127, 'points': 176, 'guarantee': 176, 'construction': 'rectangular sheet masks', 'prime': 37, 'half_turn': True}
+{'side': 127, 'points': 180, 'guarantee': 180, 'construction': 'ordinary frame', 'prime': 61, 'half_turn': False}
+{'side': 128, 'points': 176, 'guarantee': 176, 'construction': 'rectangular sheet masks', 'prime': 37, 'half_turn': True}
+{'side': 128, 'points': 180, 'guarantee': 180, 'construction': 'ordinary frame', 'prime': 61, 'half_turn': False}
+{'side': 131, 'points': 184, 'guarantee': 184, 'construction': 'rectangular sheet masks', 'prime': 37, 'half_turn': True}
+{'side': 131, 'points': 189, 'guarantee': 186, 'construction': 'ordinary crop', 'prime': 67, 'half_turn': False}
+{'side': 202, 'points': 288, 'guarantee': 284, 'construction': 'rectangular repair', 'prime': 53, 'half_turn': True}
+{'side': 202, 'points': 300, 'guarantee': 300, 'construction': 'ordinary frame', 'prime': 101, 'half_turn': False}
+{'side': 293, 'points': 446, 'guarantee': 446, 'construction': 'embedded verified example', 'prime': None, 'half_turn': True}
+{'side': 293, 'points': 446, 'guarantee': 446, 'construction': 'embedded verified example', 'prime': None, 'half_turn': True}
+{'side': 294, 'points': 432, 'guarantee': 432, 'construction': 'rectangular sheet masks', 'prime': 73, 'half_turn': True}
+{'side': 294, 'points': 446, 'guarantee': 446, 'construction': 'embedded verified example', 'prime': None, 'half_turn': False}
+{'side': 389, 'points': 594, 'guarantee': 594, 'construction': 'embedded verified example', 'prime': None, 'half_turn': True}
+{'side': 389, 'points': 594, 'guarantee': 594, 'construction': 'embedded verified example', 'prime': None, 'half_turn': True}
+{'side': 514, 'points': 750, 'guarantee': 750, 'construction': 'rectangular repair', 'prime': 131, 'half_turn': True}
+{'side': 514, 'points': 768, 'guarantee': 768, 'construction': 'ordinary frame', 'prime': 257, 'half_turn': False}
+{'side': 999, 'points': 1484, 'guarantee': 1482, 'construction': 'rectangular repair', 'prime': 251, 'half_turn': True}
+{'side': 999, 'points': 1494, 'guarantee': 1494, 'construction': 'ordinary frame', 'prime': 499, 'half_turn': False}
+{'side': 1009, 'points': 1496, 'guarantee': 1492, 'construction': 'rectangular repair', 'prime': 257, 'half_turn': True}
+{'side': 1009, 'points': 1506, 'guarantee': 1506, 'construction': 'ordinary frame', 'prime': 503, 'half_turn': False}
+{'side': 2003, 'points': 2990, 'guarantee': 2986, 'construction': 'rectangular repair', 'prime': 503, 'half_turn': True}
+{'side': 2003, 'points': 2990, 'guarantee': 2986, 'construction': 'rectangular repair', 'prime': 503, 'half_turn': True}
+PASS: 1..90 and 13 listed larger sides, both modes; exact geometry through side 514; ordinary result was never smaller.

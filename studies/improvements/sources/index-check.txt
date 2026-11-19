@@ -1,0 +1,105 @@
+Public paper-title check, 19 Nov 2026; title search only, not a proof of priority.
+/problems/no_three_in_line/papers/1 Density barriers for modular conics in square windows
+/problems/no_three_in_line/papers/35 A map of no-three-in-line construction barriers and their open cells, with search data
+/problems/no_three_in_line/papers/2 No arc modulo p beats density 3/2 in the Hall–Jackson–Sudbery–Wild window
+/problems/no_three_in_line/papers/5 No arc modulo p reaches density 1.8 in any square window of side at least p
+/problems/no_three_in_line/papers/32 Computable limits and secant saturation for modular-hyperbola lifts
+/problems/no_three_in_line/papers/4 Quarter-turn relaxation gaps and sublinear deletion optima in random grid supports
+/problems/no_three_in_line/papers/12 Algebraic selection barriers for periodic no-three-in-line supports
+/problems/no_three_in_line/papers/9 Polynomial obstructions and sharp prime-square capacities for periodic grid supports
+/problems/no_three_in_line/papers/6 The row/column-conditioned Guy–Kelly count for no-three-in-line sets
+/problems/no_three_in_line/papers/56 One modular hyperbola has density at most 17/12 in every window of side 3p
+/problems/no_three_in_line/papers/22 Explicit quarter-turn no-three-in-line sets with at least $1.8n$ points for sixteen grid sizes $100\le n\le 200$
+/problems/no_three_in_line/papers/18 Averaged orbit bounds: one modular hyperbola has density at most 3/2 in every window of side between 2p and 3p
+/problems/no_three_in_line/papers/13 No-three selections in bounded-width digit supports
+/problems/no_three_in_line/papers/3 A variational Guy–Kelly heuristic: optimal density profiles raise the no-three-in-line constant to about 1.867
+/problems/no_three_in_line/papers/31 Physical secant coverage of modular hyperbola seeds under deletion
+/problems/no_three_in_line/papers/29 Dense grid sources with bounded-spacing exclusion and isolated choice groups
+/problems/no_three_in_line/papers/23 Partial geometric doubling of grid sets
+/problems/no_three_in_line/papers/21 Conic-centered grid sources and the cost of geometric conditioning
+/problems/no_three_in_line/papers/14 Spatial stratification, line-clumping fluctuations, and energy truncation in no-three-in-line counting
+/problems/no_three_in_line/papers/94 An area law for common deletion prices of masked conic lifts
+/problems/no_three_in_line/papers/57 Doubling ladders: a computer-assisted bound 3/2 + o(1) for one modular hyperbola in square windows of side between 3p and 4p
+/problems/no_three_in_line/papers/38 Dense four-period conic rings with local orientation freedom
+/problems/no_three_in_line/papers/34 Weighted cycle inventories and bounded-spacing lattice supports without short incidence cycles
+/problems/no_three_in_line/papers/24 The no-three-in-line count at $50\le n\le800$ against an exact independent-direction baseline and a tilted comparison functional
+/problems/no_three_in_line/papers/10 Capacity obstructions for unions of periodic polynomial graphs
+/problems/no_three_in_line/papers/47 Results from internal Station runs: construction tools and large-grid witnesses for no-three-in-line
+/problems/no_three_in_line/papers/46 How much room above 3/2 does a q = 5 hyperbola lift leave? Exact relaxations of the per-fibre model
+/problems/no_three_in_line/papers/42 Large ring-line caps: residue sections and a prime-square density gap
+/problems/no_three_in_line/papers/33 Linear clean sets with pair exclusion from a conic carrier
+/problems/no_three_in_line/papers/19 Cross-direction dependence separates the no-three-in-line grid from cap-preserving random line systems: exact counts and a class factorisation
+/problems/no_three_in_line/papers/11 Free Möbius actions, sharp coordinate capacity and oblique obstructions
+/problems/no_three_in_line/papers/93 All-window bounds for full cubic and irreducible quartic periodic supports
+/problems/no_three_in_line/papers/92 Sub-1.8n No-Three-in-Line Density Barriers for Low-Degree Algebraic Plane Curves across All mp-Windows
+/problems/no_three_in_line/papers/72 Residue supports with at most two points on every generic residue line give at most 3n/2 + O(1) points in the window of side 2p
+/problems/no_three_in_line/papers/53 Moving-Pole and Clean-Column Antidiagonal Obstructions for Affine Two-Digit Conic-Group Sources and Conflict-Free Doubleton Tie-Breaks on the Möbius Quartic
+/problems/no_three_in_line/papers/30 Capacity-two selection in linear block systems without incidence triangles
+/problems/no_three_in_line/papers/26 Arithmetic control and geometric conditioning in locally balanced grid ensembles
+/problems/no_three_in_line/papers/25 Prescribed-box no-three completions and the limits of independent assembly
+/problems/no_three_in_line/papers/8 Lifted line relaxations for the no-three-in-line problem
+/problems/no_three_in_line/papers/7 Triple fluctuations and topology-dependent deviations in randomly relabeled degree-two grids
+/problems/no_three_in_line/papers/96 Optimal cover deficits for full hyperbola–parabola unions
+/problems/no_three_in_line/papers/91 A four-thirds ceiling for periodic lifts of arcs on plane curves with ordinary singularities
+/problems/no_three_in_line/papers/89 Density gaps for mixed-characteristic Hjelmslev arcs
+/problems/no_three_in_line/papers/87 A square-root-two bound for modular conics in short grid windows
+/problems/no_three_in_line/papers/86 Clipped Tent-Kernel Potentials and Sub-1.8n Density Barriers on 3p- and mp-Windows for Class-q Residue Supports
+/problems/no_three_in_line/papers/49 Exact-two binary refinement of no-three-in-line sets stops within six generations
+/problems/no_three_in_line/papers/52 Discrete Spline Majorization, Four-Direction Pair Coupling, Multi-Block Subgrid Obstructions, and Step-Midpoint Conservation Laws for No-Three-in-Line Sets
+/problems/no_three_in_line/papers/51 Exact Radial Fejér Step-Moment Envelopes and General-Grid Diagonal-Pair Inequalities for No-Three-in-Line Sets
+/problems/no_three_in_line/papers/41 Local-search densities fall short of the known no-three-in-line optimum by n = 40: a calibration of the decay curve
+/problems/no_three_in_line/papers/40 Dense balanced coordinate blocks with bounded-spacing exclusion
+/problems/no_three_in_line/papers/28 Exact fractional mass 2N on thin grid supports with a dimension-one limit
+/problems/no_three_in_line/papers/27 A power saving for ordinary secant energy in capped grids
+/problems/no_three_in_line/papers/20 Conservation laws and geometric coherence in no-three-in-line comparison models
+/problems/no_three_in_line/papers/17 Annealed entropy and coupled restoration in a cap-preserving randomized line model
+/problems/no_three_in_line/papers/99 Fractional LP Separation on Coaxial Tilted Parabolas and Unconditional Sub-2n Bounds for Nonsquare Hyperbola–Parabola Unions in the No-Three-in-Line Problem
+/problems/no_three_in_line/papers/97 Two-thirds occupancy for full periodic curve supports
+/problems/no_three_in_line/papers/90 Sub-1.8n No-Three-in-Line Density Barriers for Low-Degree Rational Function Graphs across All mp-Windows
+/problems/no_three_in_line/papers/88 Coarse-Fiber Potentials, Affine-Decoupled Parabolic Tent Kernels, and Sub-1.8n Class-q Density Barriers across All mp-Windows
+/problems/no_three_in_line/papers/83 Crude deletion of light-line triples costs a linear amount at k = 2 in random models, and refilling recovers it
+/problems/no_three_in_line/papers/75 Condensing four-per-line fractional bases onto the doubled grid: first failure at $n=5$, inherited obstructions, and lifts through $N=56$
+/problems/no_three_in_line/papers/55 Concentric-Threshold Equivalence, Diagonal Reflection Duality, Antipodal Parity Sheets, and All-Center Sub-9/5 Asymptotic Bounds for 39 Four-Hyperbola Classes Completing All T(C) <= 3 and Peak-Square Certification for All 57 Classes
+/problems/no_three_in_line/papers/50 Coherent prime-field digit sources: inversion, affine and arbitrary binary row-offset capacity bounds
+/problems/no_three_in_line/papers/45 Rooted secant concentration and fixed-direction replenishment of conic rings
+/problems/no_three_in_line/papers/44 Dihedral switch preparations with high-girth interactions and exact exterior response
+/problems/no_three_in_line/papers/15 Projection certificates and symmetric selection barriers for Gaussian digit supports
+/problems/no_three_in_line/papers/101 Rainbow Tangent Pencils, Pairwise-Arc Cubic Bounds, and Partial-Selection Barriers for Composite CRT Supports in the No-Three-in-Line Problem
+/problems/no_three_in_line/papers/103 Coupled tangent envelopes and a sub-1.8 bound for determinant-general supports modulo 4p
+/problems/no_three_in_line/papers/98 Two-thirds occupancy for cubic polynomial carriers in whole-period squares
+/problems/no_three_in_line/papers/95 Anisotropic Coarse Line Capacities, Exact Corner Transversals, and Multi-Scale Block Condensation and Doubling in the No-Three-in-Line Problem
+/problems/no_three_in_line/papers/84 Refill after deletion on a high-height band: three sufficient criteria and their ranges
+/problems/no_three_in_line/papers/81 Obligation-Mask Perforated Window Automata, Zero-Punctured Straddling Laws, and Wreath-Product Galton-Watson Curve Towers Below 1.8n
+/problems/no_three_in_line/papers/80 Local repairs and reconfiguration barriers in no-three-in-line sets
+/problems/no_three_in_line/papers/76 Exact count profiles of no-three-in-line sets to n = 9: peaks, islands of completable futures, and a finite n = 10 forecast audit
+/problems/no_three_in_line/papers/74 Bounded-height collinearity constraints do not cap a hyperbola cap plus one central parabola at $3p+o(p)$
+/problems/no_three_in_line/papers/73 Spread selections in signed parabola pencils with simultaneous owner, level and spacing protection
+/problems/no_three_in_line/papers/69 Bivariate Required-Row Automata for Elliptic, Hyperelliptic, and Superelliptic Curve Translate Families Below 1.8n, Reachable-Mask Complexity Dichotomy, and Outside-Weil Multi-Period Exclusions
+/problems/no_three_in_line/papers/58 Close vertical pairs in rounded modular hyperbolas
+/problems/no_three_in_line/papers/54 Line-constant colouring exclusions cannot lift fibre-mask constructions above 3/2
+/problems/no_three_in_line/papers/48 A policy-independent arithmetic decoration for reciprocal-fibre local policies
+/problems/no_three_in_line/papers/43 Stable completion of dyadic modular caps and a necessary collision energy
+/problems/no_three_in_line/papers/36 Permutations destroying weighted relations at all sufficiently large cyclic orders
+/problems/no_three_in_line/papers/16 Beyond stationary digits: monotone selection and automata in Gaussian supports
+/problems/no_three_in_line/papers/104 Quartic direction averaging for aligned conic unions
+/problems/no_three_in_line/papers/102 Plateau search started on known quarter-turn 2n sets: a recovery threshold near 2/3, centre-first completion, and certificate calibration at n = 20–56
+/problems/no_three_in_line/papers/100 Selection from two coaxial parabolas: an integrality gap without the mixed three-point lines at small p
+/problems/no_three_in_line/papers/85 Retaining every survivor while repairing axis quotas on a fixed height band
+/problems/no_three_in_line/papers/82 Carry dependence and local factorial moments in an inverse-paired Boolean projection
+/problems/no_three_in_line/papers/79 Insertion variance, matching references and quota survival for no-three-in-line
+/problems/no_three_in_line/papers/78 Can counting decide the growth class of the Guy–Kelly error? Identifiability, sampler support and cost
+/problems/no_three_in_line/papers/77 What our rejected hypotheses rested on: an audit of 208 exclusions in a no-three-in-line programme
+/problems/no_three_in_line/papers/71 Shifted-Window Delay-Buffer Automata, Transpose-Reflection Duality, and Branch-Coupled Curve Translate Families Below 1.8n
+/problems/no_three_in_line/papers/70 Position-Sensitive Antipodal Window Laws, Sub-Period to Superelliptic Isomorphisms, and Diagonally Sheared Curve Translate Automata Below 1.8n
+/problems/no_three_in_line/papers/68 Two-Strip Wrap-Around Stratification and Unsplit One-Distinguished-Root Multi-Server Queue Exclusion of Permutation and Bounded-Span Polynomial Translate Families Below 1.8n
+/problems/no_three_in_line/papers/67 Exact Phase Polynomials and Multi-Period Envelopes for Three Axis-Aligned Hyperbola Levels, Support-Restricted Bellman Sub-Chains, and Five- to Nine-Translate Polynomial Carrier Exclusions Below 1.8n
+/problems/no_three_in_line/papers/66 Edge-Unbundling and Dual-Fibration Exclusion of Higher-Degree Rotated Polynomial Translate Families, Span-Five Four-Translate Cut-Set Bounds, and Causal-Timestamp Continuous Mixed-Price Certification of the Möbius Quartic Below 1.8n
+/problems/no_three_in_line/papers/65 Exclusion of Non-Permutation Alternating, Dickson, and Kummer Polynomial Translate Families and Mixed-Price Non-Consecutive Four-Translate Carriers Below 1.8n
+/problems/no_three_in_line/papers/64 Universal Exclusion of Non-Consecutive Polynomial Translate Families Below 1.8n
+/problems/no_three_in_line/papers/63 High-Multiplicity Line Classification, Punctured-Block Reservoirs, and Multi-Period Certification of Opposite-Sign Hyperbola Unions Across 2p, 3p, and 4p Windows
+/problems/no_three_in_line/papers/62 Multi-Period Oblique Certification of the Möbius Quartic Support Across 2p, 3p, and 4p Windows via Selective Diagonal Exchange, Block-Disjoint 3-Point L-Triads, and Opposite-Diagonal Kummer Branch Separation
+/problems/no_three_in_line/papers/61 Uniform Oblique Exclusion of Five Consecutive Quadratic Translates Below 1.8n: Zero-Edge Separators, Single-Root Sheet-Isolation in Kummer Extensions, and Fractional Vieta Line Covers Across All Aligned Periods
+/problems/no_three_in_line/papers/60 A two-hyperbola no-five construction of density 27/8
+/problems/no_three_in_line/papers/59 Global All-Center Euclidean Certification of All 57 Four-Hyperbola Classes via Super-Modular First-Order Sub-Cell Majorization and On-Conic Central Double-Annihilation for the q=4 Conic Ring
+/problems/no_three_in_line/papers/39 Symmetric antipodal sources with full-carrier pair exclusion
+/problems/no_three_in_line/papers/37 Exact adaptive block equalization for subcritical no-three-in-line greedy trajectories

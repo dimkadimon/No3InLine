@@ -1,0 +1,2 @@
+PASS: all rectangular masks; 288 full rectangular constructions at primes 5..43; 121 consecutive inputs of the all-n generator.
+PASS: 5 complete midpoint-count tables; 81 labelled maximal boundary lists, 9 invariant under the half-turn.

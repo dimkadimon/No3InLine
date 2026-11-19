@@ -1,0 +1,4 @@
+prime=797161 side=3188645 old=4782960 anchors=8 central=4 total=4782972
+complete same-fibre direction set=8; integer line intercepts checked against every old point: PASS
+12 full ordinary direction screens; directions checked=57395652: PASS
+half-turn, cardinality, old/old/old and all triples involving additions: PASS

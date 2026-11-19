@@ -1,0 +1,17 @@
+p=5 side=21 points=42 all-direction check from every point: PASS
+p=73 side=293 points=450 all-direction check from every point: PASS
+p=97 side=389 points=594 all-direction check from every point: PASS
+p=193 side=773 points=1188 all-direction check from every point: PASS
+prime=2521 side=10085 old=15120 anchors=8 central=236 total=15364
+complete same-fibre direction set=8; integer line intercepts checked against every old point: PASS
+244 full ordinary direction screens; directions checked=3748572: PASS
+half-turn, cardinality, old/old/old and all triples involving additions: PASS
+prime=3361 side=13445 old=20160 anchors=8 central=292 total=20460
+complete same-fibre direction set=8; integer line intercepts checked against every old point: PASS
+300 full ordinary direction screens; directions checked=6137700: PASS
+half-turn, cardinality, old/old/old and all triples involving additions: PASS
+prime=4201 side=16805 old=25200 anchors=8 central=300 total=25508
+complete same-fibre direction set=8; integer line intercepts checked against every old point: PASS
+308 full ordinary direction screens; directions checked=7856156: PASS
+half-turn, cardinality, old/old/old and all triples involving additions: PASS
+Seven CSV coordinate lists, certificates, rotation closure and exact geometry: PASS

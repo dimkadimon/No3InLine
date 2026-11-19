@@ -1,0 +1,2 @@
+PASS p=250057 k=5445: all least-root inequalities and boundary-ray certificate; n=1000229, points=1500344.
+PASS p=660241: every one of 101 consecutive sides gains 140 relative to the largest-prime HJSW embedding; not 140 over 3n/2.

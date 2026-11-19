@@ -1,0 +1,8 @@
+n=202 p=101 k=1 points=300 twice_surplus_over_1.5n=-6 half_turn=False construction=classical embedded frame
+PASS n=202 points=300 half_turn=no full_integer_directions=89700
+n=293 p=73 k=28 points=440 twice_surplus_over_1.5n=1 half_turn=True construction=odd anchored ring
+PASS n=293 points=440 half_turn=yes full_integer_directions=193160
+n=294 p=73 k=28 points=440 twice_surplus_over_1.5n=-2 half_turn=False construction=odd anchored ring
+PASS n=294 points=440 half_turn=no full_integer_directions=193160
+n=514 p=257 k=1 points=768 twice_surplus_over_1.5n=-6 half_turn=False construction=classical embedded frame
+PASS n=514 points=768 half_turn=no full_integer_directions=589056

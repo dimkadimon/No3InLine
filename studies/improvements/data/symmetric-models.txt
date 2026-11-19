@@ -1,0 +1,4 @@
+n=4037 depth counts 184 1638 10138
+n=4037 old=6056 candidates=11960 constraints=1062843 incidences=3339532
+n=10085 depth counts 344 3758 25940
+n=10085 old=15128 candidates=4102 constraints=44958 incidences=137590

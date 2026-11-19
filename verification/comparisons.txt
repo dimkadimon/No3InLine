@@ -1,0 +1,2 @@
+PASS all 146 P22 seed geometries and all window maxima; P47 versioned header counts.
+PASS counts and benchmark provenance for all 15 sides.

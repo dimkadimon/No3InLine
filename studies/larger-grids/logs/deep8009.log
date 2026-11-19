@@ -1,0 +1,5 @@
+p=8009 initial=24306 pool=20536 (including mixed-pair filters)
+run=0 total=24460 added=302 removed=148 seed_deletions=146
+run=1 total=24467 added=314 removed=153 seed_deletions=152
+run=2 total=24468 added=317 removed=155 seed_deletions=153
+run=6 total=24469 added=322 removed=159 seed_deletions=158

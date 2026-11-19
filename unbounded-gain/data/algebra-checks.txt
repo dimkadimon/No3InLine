@@ -1,0 +1,5 @@
+One-root level sieve: 86 primitive slopes, 42 reduced ratio shifts, plus 0 and xy = 130 distinct formal shifts: PASS
+p=11: hits=4050, same-root ordered endpoint comparisons=22000, two-root samples=35000, exceptional=3962: PASS
+p=13: hits=8712, same-root ordered endpoint comparisons=64080, two-root samples=42000, exceptional=3857: PASS
+p=17: hits=28800, same-root ordered endpoint comparisons=324352, two-root samples=56000, exceptional=3743: PASS
+Rank-two lift difference: M=(10,9)^T(-11,1), M'=(1,11)^T(-9,10); M'-M=101 Id: PASS
