@@ -1,0 +1,5 @@
+PASS: 21 proper reduced fractions, 86 signed slopes, 42 ratio shifts; 130 distinct rational coefficient triples (88 negative, 42 positive signs of the level).
+PASS: signed product-cancellation incidences for the four gcd rows: 8464 8464 19872 19872
+PASS: 21384 rectangle/ratio/gcd cases. At p=7, S=2, T=3 the different directions (1,3),(2,-1) share one residue slope although ST<p.
+PASS: p=5, 96 marked templates, 27648 nonsingular, 6912 inconsistent and 2304 exceptional pair/ratio systems; direct root enumeration agrees.
+PASS: p=7, 360 marked templates, 648000 nonsingular, 108000 inconsistent and 21600 exceptional pair/ratio systems; direct root enumeration agrees.

@@ -34,7 +34,7 @@ def medium(n,k):
     print('PASS unrestricted integer directions for medium witness',n,k,flush=True)
 def build(src,dest):run(shlex.split(os.environ.get('CXX','c++'))+['-std=c++17','-O3',src,'-o',dest]);return dest
 def check_all(expand):
-    run([P,R/'scripts/comparison.py']); counts={int(z['n']):int(z['certified_count']) for z in csv.DictReader((R/'results/lower-bounds.csv').open())}
+    run([P,R/'scripts/comparison.py']);run([P,R/'scripts/audit_counting.py']); counts={int(z['n']):int(z['certified_count']) for z in csv.DictReader((R/'results/lower-bounds.csv').open())}
     for n in (201,202):medium(n,counts[n])
     run([P,S/'verify.py']);run([P,U/'code/sample_root.py']);run([P,U/'code/check_identities.py'])
     with TemporaryDirectory() as td:

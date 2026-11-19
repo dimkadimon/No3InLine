@@ -1,0 +1,4 @@
+VERIFIED n=16018 p=8009 retained=24024 removed=0 additions=282 total=24306 exact_anchor_directions=6854010
+VERIFIED n=32002 p=16001 retained=48000 removed=0 additions=421 total=48421 exact_anchor_directions=20384820
+VERIFIED n=64006 p=32003 retained=96006 removed=0 additions=810 total=96816 exact_anchor_directions=78420150
+PASS: all three public P47 v1 point sets reconstructed from the source additions and checked as ordinary caps.
