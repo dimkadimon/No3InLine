@@ -1,0 +1,25 @@
+Output written on main.pdf (18 pages, 452781 bytes).
+PASS fresh source-archive build: 10 members, one LaTeX root, clean three-pass pdfLaTeX build.
+PASS reader PDF attachment round trip, SHA256 238f38e60234b982cd0ba13045bfad4809fb00e764d0eb1278bfeb7378d6d9ca
+arxiv-source.tar.gz SHA256 638d580a4b996987c43dd0e627b2c649d191add9ee765ffd717e73c5ee90c6a6
+main.pdf SHA256 5398612046f5a00bbe01069908753bf5c7ec1af1692fbbb077e0bcad18fcad7b
+PASS second build byte-identical (reader PDF and complete archive).
+Title:           A super-polylogarithmic excess in the no-three-in-line problem
+Author:          Dmitry Kamenetsky
+JavaScript:      no
+Pages:           18
+Page size:       595.276 x 841.89 pts (A4)
+File size:       1759846 bytes
+1 embedded files
+1: no3-replay-r2.zip
+checking paper/main.pdf
+PDF Version: 1.7
+File is not encrypted
+File is not linearized
+No syntax or stream encoding errors found; the file may still contain
+errors that qpdf cannot detect
+pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)
+qpdf version 12.2.0
+pdfdetach version 25.03.0
+PASS TeX-only build with the ancillary directory omitted has identical extracted page text.
+PASS all revised lemma/proposition locators, all ten source-register URL annotations, exact finite-data commit and archive digest in reader PDF.

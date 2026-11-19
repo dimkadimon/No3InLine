@@ -15,6 +15,12 @@ The other three lists follow by the half-turn, and $(i,j)\mapsto(3-i,j)$ exchang
 \[B=p\{(0,1),(0,3),(1,0),(3,0),(4,1),(4,3),(1,4),(3,4)\}.\]
  These points are the eight extreme vertices of a convex octagon, so no three are collinear. From an anchor, a nonaxial primitive direction $(a,b)$ meets the carrier only at parameters satisfying $ab t^2=k\pmod p$. At height $\max(|a|,|b|)\le7$ every signed factor is a square modulo $p$ (use $p\equiv1\pmod{8}$ and quadratic reciprocity for $3,5,7$), so there are no such points. At height $D\ge8$ only the inward ray occurs, with $1\le t\le4p/D\le p/2$; it contains at most one of the two opposite roots modulo $p$ (and none if $p\mid ab$). A coarse axis misses the carrier. Lines between anchors have primitive height at most four. Thus $O\cup B$ is a cap for \emph{every} choice of the orientation bits.
 
+Figure~\ref{fig:masks} shows what a change of colour means on an actual board: a bit exchanges the two masks in every fibre it controls. It neither moves the anchors nor changes the number of ring sites.
+\begin{figure}[htbp]\centering
+\includegraphics[width=.97\linewidth]{figures/ring-and-masks.pdf}
+\caption{The mask switch at $p=73$, $k=28$. Left: only the twelve outer lifts of $(47,27)$ are drawn; the other fibres are omitted. The two diamonds are a proposed opposite pair, not ring sites. Right: the same fibre before and after the component flip. Cell $(2,3)$ contains $(193,246)$, an endpoint of the blocking secant through $q=(131,122)$ in Appendix~\ref{sec:finite}. Its removal costs no ring points in total. This finite illustration does not use the asymptotic sign test.}\label{fig:masks}
+\end{figure}
+
 \paragraph{Which pairs give clauses?} Fix the level $k$, but not the bits. Write $P_k$ for the union of the twelve outer-sheet sites over each $(u,k/u)$ (both masks together). Given one representative $q_i$ of each proposed opposite pair, form the list
 \[
  \mathcal L_i=\big\{\{P,P'\}\subset P_k:\ P\ne P',\ q_i,P,P'\text{ collinear on a nonaxial integer line}\big\}.
@@ -33,6 +39,12 @@ Build the bipartite incidence graph from clauses to orientation bits. A bit has 
 
 Let $R(P)=2C-P$. Reflection bijects $P_k$ with itself, preserves physical parity and sends the abscissa residue $u$ to $-u$, in the very same coset since $-1\in H$. Thus a reflected clause has the same two membership requirements, not two additional occurrences for the degree count. At a central noncoarse physical row or column the one-site observation above handles an axis directly. The two partner cosets of a single bit may both occur.
 \end{proof}
+
+Figure~\ref{fig:match} illustrates why the distinction between a coset and a bit matters. The two clauses have four distinct endpoint cosets, but just two orientation bits between them. Each clause is assigned a different one.
+\begin{figure}[htbp]\centering
+\includegraphics[width=.97\linewidth]{figures/matched-secants.pdf}
+\caption{Part of the certified $p=797\,161$ matching. The two representatives are $q$ and its \emph{transpose} $q^T$, not half-turn mates. The secant at $q$ has endpoints $P=q+155653(3,11)$ and $S=q-14051(3,11)$; transposing the coordinates gives the other secant. A solid edge assigns its clause a bit, labelled by its least component residue. Flipping bit $5045$ disables $S$; retaining bit $46139$ leaves $P^T$ absent. The left panel shows these final choices. Reflection then protects the two mates as well.}\label{fig:match}
+\end{figure}
 
 \section{Sampling opposite pairs at one level}\label{sec:sampling}
 Choose one level $k\in\F$ uniformly. Independently of it, sample $N$ independent uniform residues $z_i=(X_i,Y_i)\in\F^2$. Index $i$ proposes the two actual sites $q_i=(p+[X_i]_p,p+[Y_i]_p)$ and $2C-q_i$, where $[\ ]_p\in[0,p-1]$. We call $q_i$ the representative and $z_i$ its root modulo $p$. Write $d_i=X_iY_i$ and let $\ch$ be the quadratic character, zero at zero. We now define a test $E_i$ for \emph{one} index and show $\Prob(E_i)\ge\gamma>0$ for all sufficiently large $p$, with absolute $\gamma$. We will use linearity of expectation, not an assumption that these tests at the shared level are independent.
@@ -70,7 +82,31 @@ For an indeterminate root $(X,Y)$, the 130 shift polynomials are $0$, $XY$, the 
 \]
 The last group has nonzero $X^2$ coefficients distinguishing the signed slopes $b/a$; the first three groups have zero $X^2$ coefficient and distinct $XY$ coefficients. Distinctness over $\mathbb Q$ therefore follows before any root or level is chosen. Only finitely many primes divide a denominator or all nonzero numerators of a coefficient difference. Outside them the shift polynomials stay distinct in $\F[X,Y]$. Each difference has total degree at most two and vanishes on at most $2p$ pairs $(X,Y)$ (the elementary polynomial zero bound). The probability that any two \emph{values} coincide is at most $2\binom{130}{2}/p$. Also $\Prob(\ch(XY)=1)=(p-1)^2/(2p^2)$. Hence a positive fraction, tending to $1/2$, of roots pass the latter condition and have no coincident values.
 
-For any such root write its distinct shifts as $a_1,\dots,a_s$, $s=130$. Prescribe sign $-1$ at the shifts $0,XY$ and at all direction shifts, and $+1$ at the 42 ratio shifts. Off the $s$ roots the indicator of this prescription is $2^{-s}\prod_j(1+\epsilon_j\ch(k-a_j))$. Its complete sum over $k$ has constant term $p2^{-s}$. Each nonempty subset of shifts gives the quadratic character of a squarefree polynomial with distinct linear factors; the absolute value of its sum is at most $(s-1)\sqrt p$ by the Weil bound~\cite[Theorem 5.41]{weil}. The coefficients of the subset terms have total absolute value at most one. Removing the $s$ roots costs at most $s$. The count is consequently $p2^{-130}+O(130\sqrt p+130)$ for every such root. For example $\gamma=2^{-133}$ works eventually. This lower bound is marginal in $(z_i,k)$, not conditional on any tests at the other roots.
+Fix such a root and write $\mathcal A=\{a_1,\ldots,a_s\}$ for its distinct shifts, $s=130$. Put $\epsilon_j=-1$ for $0,XY$ and the 86 direction shifts, and $\epsilon_j=+1$ for the 42 ratio shifts. For every $k\in\F$ put
+\[
+  \mathcopy{P(k) = 2^(-s) product_{j=1}^s (1 + epsilon_j chi(k - a_j)).}{P(k)=\prod_{j=1}^{s}\frac{1+\epsilon_j\ch(k-a_j)}{2}.}
+\]
+For $k\notin\mathcal A$, this is the indicator that all signs agree. At a shift value the sign prescription fails, since $\ch(0)=0$. On $\mathcal A$ one factor of $P(k)$ is $1/2$ and every other factor is at most one. Thus
+\[
+  \mathcopy{R_A = sum_{k in A} P(k), with 0 <= R_A <= s/2.}{R_{\mathcal A}:=\sum_{k\in\mathcal A}P(k),\qquad 0\le R_{\mathcal A}\le s/2.}
+\]
+Writing $[s]=\{1,\ldots,s\}$, the number $N_z$ of admissible levels at this root is exactly
+\[
+\mathcopy{N_z = sum_{k in F_p} P(k) - R_A = p/2^s + 2^(-s) sum_{nonempty J in powerset([s])} (product_{j in J} epsilon_j) sum_{k in F_p} chi(product_{j in J} (k - a_j)) - R_A.}{\begin{aligned}
+  N_z&=\sum_{k\in\F} P(k)-R_{\mathcal A}\\
+     &=\frac{p}{2^s}
+       +\frac{1}{2^s}\sum_{\varnothing\ne J\subseteq[s]}
+         \left(\prod_{j\in J}\epsilon_j\right)
+         \sum_{k\in\F}\ch\!\left(\prod_{j\in J}(k-a_j)\right)
+       -R_{\mathcal A}.
+\end{aligned}}
+\]
+Each nonempty $J$ gives a product of distinct linear factors. The Weil bound~\cite[Theorem 5.41]{weil} bounds its character sum by $(|J|-1)\sqrt p$ in absolute value. Consequently
+\[
+  \mathcopy{|N_z - p/2^s| <= (1 - 2^(-s)) (s-1) sqrt(p) + s/2.}{\left|N_z-\frac{p}{2^s}\right|
+  \le (1-2^{-s})(s-1)\sqrt p+\frac{s}{2}.}
+\]
+For sufficiently large $p$, at least $1/4$ of the roots have the required $\ch(XY)$ and distinct shifts, and for each of them $N_z/p\ge 2^{-131}$. Multiplication gives $\Prob(E_i)\ge 2^{-133}$. This is a marginal bound for $(z_i,k)$, not a conditional bound given the tests at other roots.
 \end{proof}
 
 \paragraph{Other types of triples.} We record costs according to the number of distinct sampled indices involved.
@@ -124,26 +160,38 @@ These ten multisets exhaust the possibilities. In particular the test for three 
  \gg \frac{\min(I,\sqrt p)}{L_p^3}.
 \]
 \end{proposition}
-\begin{proof} Use $G=\max(1,\lfloor I^{1/4}\rfloor)$ in \eqref{eq:nonparallel}. Call an index \emph{eligible} if it passes $E_i$, has no one-index geometric exception and all endpoint occurrences of its nonaxial blocking secants through the representative use distinct $H$-cosets. On $E_i$ these are among our generic, long-direction, long-ratio templates. Removing impossible outer-sheet points from the template count can only help. Any two occurrences belong to the two slots of one chord, two different chords at one representative (equal or unequal modular slopes), or two different representatives. Reuse of a physical endpoint is included in this partition. The last case is a two-index event. For the within-root cases use Section~\ref{sec:encoding}, Lemma~\ref{lem:lifts} and Proposition~\ref{prop:nonparallel}, respectively. With $h/p\le I^{-1}$ and $G\asymp I^{1/4}$, the unconditional probability of a one-index failure \emph{on} $E_i$ is at most
+\begin{proof} Use $G=\max(1,\lfloor I^{1/4}\rfloor)$ in \eqref{eq:nonparallel}. Call an index \emph{eligible} if it passes $E_i$, has no one-index geometric exception and all endpoint occurrences of its nonaxial blocking secants through the representative use distinct $H$-cosets. On $E_i$ these are among our generic, long-direction, long-ratio templates. Removing impossible outer-sheet points from the template count can only help. Any two occurrences belong to the two slots of one chord, two different chords at one representative (equal or unequal modular slopes), or two different representatives. Reuse of a physical endpoint is included in this partition. The last case is a two-index event. For the within-root cases use Section~\ref{sec:encoding}, Lemma~\ref{lem:lifts} and Proposition~\ref{prop:nonparallel}, respectively. Let $B_i$ denote failure of any of the additional one-index checks. Since $h/p\le I^{-1}$ and $G\asymp I^{1/4}$, their unconditional costs give
 \begin{equation}\label{eq:one}
- O\!\left(\frac{1+L_p}{p}+\frac{L_p}{I}
- +\frac{L_p^5}{I^{1/4}}+\frac{L_p^2}{\sqrt I}\right)
- =O(L_p^5 I^{-1/4})=o(1).
+\mathcopy{Pr(E_i and B_i) << (1+L_p)/p + L_p/I + L_p^5/I^(1/4) + L_p^2/sqrt(I) << L_p^5/I^(1/4) <= 1/L_p for I >= L_p^24.}{\begin{aligned}
+ \Prob(E_i\cap B_i)
+ &\ll \frac{1+L_p}{p}+\frac{L_p}{I}
+       +\frac{L_p^5}{I^{1/4}}+\frac{L_p^2}{\sqrt I}\\[2pt]
+ &\ll \frac{L_p^5}{I^{1/4}}\le \frac{1}{L_p},
+ \qquad I\ge L_p^{24}.
+\end{aligned}}
 \end{equation}
 Hence the mean number of eligible indices among $N$ proposals is at least $\gamma N/2$. The shared level is not resampled.
 
-Mark an edge on two eligible indices for any two-index geometric exception, or if blocking endpoints at their representatives use a common $H$-coset. By Proposition~\ref{prop:cross} and the geometric estimates, the unconditional probability per index pair is
+Mark an edge on two eligible indices for any two-index geometric exception, or if blocking endpoints at their representatives use a common $H$-coset. By Proposition~\ref{prop:cross} and the geometric estimates, the cost for a specified pair of indices is
 \begin{equation}\label{eq:two}
- O\big(L_p^2 (I^{-1}+p^{-1/2})\big).
+  \Prob\big(\{i,j\}\text{ is marked}\big)
+    \ll L_p^2\!\left(\frac{1}{I}+\frac{1}{\sqrt p}\right).
 \end{equation}
-Also mark a three-index edge for a new collinearity among three eligible indices, at probability $O(1/p)$ each. Put $J=\min(I,\sqrt p)$ and $N=\lfloor J/L_p^3\rfloor$. Then $N\to\infty$ under the index hypothesis. The expected number of marked edges is
+Also mark a three-index edge for a collinearity among three eligible indices, at probability $O(1/p)$ for each triple. Put $J=\min\{I,\sqrt p\}$ and $N=\lfloor J/L_p^3\rfloor$. Then $N\to\infty$ under the index hypothesis. For the total number $Z$ of marked edges,
 \[
- O(N^2 L_p^2/J+N^3/p)=O(N/L_p+N/L_p^6)=o(N).
+  \mathcopy{E[Z] << N^2 L_p^2/J + N^3/p << N/L_p + N/L_p^6 = o(N).}{\mathbb E Z
+   \ll \frac{N^2 L_p^2}{J}+\frac{N^3}{p}
+   \ll \frac{N}{L_p}+\frac{N}{L_p^6}=o(N).}
 \]
-Subtracting, for some outcome the number of eligible indices minus the number of marked edges is at least $\gamma N/4$. Discard at most one candidate index per marked edge, for instance the union of one chosen index from each edge. This leaves at least $\gamma N/4$ indices with no marked edges. Their level is nonsquare because each passed $E_i$.
+Here $N/J\le L_p^{-3}$ and $N^2/p\le L_p^{-6}$. Subtracting, for some outcome the number of eligible indices minus the number of marked edges is at least $\gamma N/4$. Choose one index in each marked edge and discard the union of the chosen indices (Figure~\ref{fig:pruning}). The union has size at most $Z$. This leaves at least $\gamma N/4$ indices with no marked edges. Their level is nonsquare because each passed $E_i$.
 
 All blocking endpoint occurrences in the surviving representatives now have distinct $H$-cosets, both within and across indices. Lemma~\ref{lem:matching} chooses one orientation that disables every such secant, and by symmetry the same is true at all the mates. Lemma~\ref{lem:triples} now excludes every ordinary triple. Thus the $6(p-1)$ chosen old points, the eight anchors and all the retained opposite pairs form one half-turn cap, with no restriction on direction. Changing an orientation swaps six sites for six in each affected fibre. Thus each retained opposite pair accounts for two net additional points.
 \end{proof}
+
+\begin{figure}[htbp]\centering
+\includegraphics[width=.97\linewidth]{figures/shared-level-selection.pdf}
+\caption{How the deletion step in Proposition~\ref{prop:index} works, schematically. Each numbered vertex is one eligible index at the \emph{same} level $k$ and represents two opposite sites. Meeting the marked pair and the marked triple removes every indicated conflict. The matching is performed on the survivors. The diagram illustrates the deletion rule, not observed conflict frequencies.}\label{fig:pruning}
+\end{figure}
 
 \section{The cyclotomic choice of primes}\label{sec:primes}
 \begin{proof}[Proof of Theorem~\ref{thm:main}] Apply Stewart's theorem \cite[Theorem 1, (7)]{stewart} to $\Phi_j(3,1)$ for large multiples $j$ of 840. Here $(3+1)^2=16$ and $3\cdot1=3$ are coprime nonzero integers, and $3/1$ is not a root of unity. The largest prime divisor satisfies

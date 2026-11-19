@@ -5,14 +5,10 @@ authors:
   - family-names: Kamenetsky
     given-names: Dmitry
 type: dataset
-version: "2026-11-19-r2"
+version: "r3"
+repository-code: "https://github.com/dimkadimon/No3InLine"
 date-released: 2026-11-19
 license: MIT
-keywords:
-  - no-three-in-line
-  - modular hyperbola
-  - extremal combinatorics
-  - computational certificates
 preferred-citation:
   type: unpublished
   title: "A super-polylogarithmic excess in the no-three-in-line problem"
@@ -20,4 +16,4 @@ preferred-citation:
     - family-names: Kamenetsky
       given-names: Dmitry
   year: 2026
-  notes: "Revised working manuscript (R2), 19 November 2026. Local review tag review-r2-2026-11-19. Author review in progress. No arXiv identifier assigned."
+  notes: "Illustrated working manuscript, revision R3. Author review is ongoing. No arXiv identifier assigned."

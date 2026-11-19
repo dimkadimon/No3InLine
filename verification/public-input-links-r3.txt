@@ -1,0 +1,2 @@
+PASS anonymous HTTPS 200, SHA256 238f38e60234b982cd0ba13045bfad4809fb00e764d0eb1278bfeb7378d6d9ca https://raw.githubusercontent.com/dimkadimon/No3InLine/e19b8a1b689eba392c7d26ec3733e88db566dc0e/paper/anc/no3-replay-r2.zip
+PASS anonymous HTTPS 200, SHA256 069e2702df1008e1f6e3ce010ae05dc0e071b12a503e15d1934505bbfc3d6578 https://raw.githubusercontent.com/dimkadimon/No3InLine/27975940dc0d3201c3b2dda0a230c52740ec25f6/studies/general-grids/boundary-rings.tex

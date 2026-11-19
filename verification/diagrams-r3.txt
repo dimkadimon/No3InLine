@@ -1,0 +1,12 @@
+PASS exact mask flip, both physical secants and their coset/bit data; three vector diagrams written.
+PASS full matcher trace, clause 4 -> bit 5045, flip=1; coordinates and cosets agree with the plotted endpoints.
+PASS full matcher trace, clause 88 -> bit 46139, flip=0; coordinates and cosets agree with the plotted endpoints.
+point,qx,qy,x,y,coset_min,partner_min,bit_min,before_selected,after_selected
+P,1591070,845785,2058029,2557968,46139,55495,46139,1,1
+S,1591070,845785,1548917,691224,5045,71735,5045,1,0
+P_transpose,845785,1591070,2557968,2058029,55495,46139,46139,0,0
+S_transpose,845785,1591070,691224,1548917,71735,5045,5045,0,1
+PASS exact mask flip, both physical secants and their coset/bit data; three vector diagrams written.
+paper/figures/ring-and-masks.pdf: OK
+paper/figures/matched-secants.pdf: OK
+paper/figures/shared-level-selection.pdf: OK

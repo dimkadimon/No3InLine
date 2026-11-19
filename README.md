@@ -1,7 +1,7 @@
 # No3InLine
 
 **A super-polylogarithmic excess in the no-three-in-line problem**  
-Dmitry Kamenetsky · R2 working manuscript for author and independent review · 19 November 2026
+Dmitry Kamenetsky · R3 illustrated working manuscript · author and independent review pending
 
 **[Read the paper (PDF)](paper/main.pdf)** · [TeX and ancillary source](paper/arxiv-source.tar.gz) · [Standalone finite replay (ZIP)](paper/anc/no3-replay-r2.zip) · [Response to review](REVISION.md) · [Finite comparison table (CSV)](results/lower-bounds.csv) · [Verification transcripts](verification/) · [Source credits](THIRD_PARTY.md)
 
@@ -15,7 +15,11 @@ The guaranteed surplus dominates every fixed power of `log n`, but is smaller th
 
 Keep six sites on each of `p−1` hyperbola fibres and add eight boundary sites. Interior opposite pairs are proposed at a **single common level**. Separate the multiplicative cosets of the obstructing secant endpoints, discard conflicting proposals, and use one matching to orient the ring. Only the proposals are thinned: flipping an orientation never lowers the number of ring sites. The index of `⟨−1,3⟩` measures the room for this construction, and Stewart's cyclotomic prime-factor theorem supplies a sequence with large index. The finite certificates are illustrations and independent lower bounds, not assumptions in the proof.
 
-**Review revision.** Sections 5–6 now derive the same-root lift and divisor counts and the exceptional shared-level probability in full. Lemmas 2.1, 3.1 and 7.1 account for endpoint occurrences, 130 sign shifts and all ten ordinary triple types. Appendix A is supplementary finite evidence; Appendix B identifies the local finite-data commit and explains how to use the replay ZIP embedded in the PDF. The full local bundle labels this draft `review-r2-2026-11-19`. No public DOI or public distribution URL has been confirmed.
+![Two physical secants and the two distinct bits assigned to clear them](paper/figures/previews/matched-secants.png)
+
+**Read the diagram:** keeping component 46,139 leaves one endpoint of the transposed secant absent; flipping 5,045 removes one endpoint of the original secant. Each fibre still contributes six sites. [See all three diagrams with explanations](paper/FIGURES.md).
+
+**R3.** Lemma 3.1 displays the normalized character expansion and the correction at its shift roots. Sections 5–7 make the counting multiplicities, edge cases and powers of `L_p` explicit. Appendix A contains the finite examples; the four F† comparisons are reported-only. The project data did not change: the [commit-pinned finite kit](https://raw.githubusercontent.com/dimkadimon/No3InLine/e19b8a1b689eba392c7d26ec3733e88db566dc0e/paper/anc/no3-replay-r2.zip) has SHA-256 `238f38e60234b982cd0ba13045bfad4809fb00e764d0eb1278bfeb7378d6d9ca`. It is available separately, in the source tarball's `anc/` directory and in the reader PDF. This GitHub release is a working manuscript, not a journal publication or arXiv submission.
 
 ## Selected finite bounds
 
@@ -46,7 +50,7 @@ python3 scripts/audit_counting.py                # small exact diagnostics, not 
 python3 scripts/build_paper.py                   # needs TeX, qpdf, Poppler; full checkout, not the kit
 ```
 
-The witness verifier reconstructs sets independently of the heuristic that found them. It compares released CSVs with compact certificates or exact digests, checks the actual geometric constraints, and reproduces the matching certificate byte-for-byte. `verification/replay-r2.txt` records the R2 run from an isolated kit extraction. These checks do **not** verify the asymptotic estimates by computer.
+The witness verifier reconstructs sets independently of the heuristic that found them. It compares released CSVs with compact certificates or exact digests, checks the actual geometric constraints, and reproduces the matching certificate byte-for-byte. `verification/witnesses-r3.txt` records an R3 replay from a clean extraction of the identical kit. These checks do **not** verify the asymptotic estimates by computer.
 
 For the separately credited upstream comparisons and the older experimental packages:
 
@@ -65,7 +69,7 @@ python3 studies/larger-grids/verify.py           # earlier frame, deletion/cover
 
 | Path | Contents |
 |:---|:---|
-| `paper/` | Current named preprint, complete proof, figure, bibliography, reader PDF and TeX-source archive with ancillary kit. |
+| `paper/` | Current named preprint, complete proof, four vector illustrations, bibliography, reader PDF and TeX-source archive with ancillary kit. |
 | `results/` | Machine-readable comparison, exact crop results, source row indices, and reported benchmarks. |
 | `unbounded-gain/` | Original working proof and the C++ matching builder, separate verifier and compact certificate. |
 | `small-prime-examples/` | Six anchored rings and a credited catalogue control. Download/open `gallery.html` to inspect the actual points offline. |
@@ -76,6 +80,6 @@ python3 studies/larger-grids/verify.py           # earlier frame, deletion/cover
 
 ## Attribution and license
 
-Dmitry Kamenetsky proposed this research. Responsibility for the manuscript rests with the named author. Proof development, implementation, search and writing were substantially AI-assisted. **His review is ongoing**; independently implemented checks are not independent human refereeing. The project has no assigned arXiv identifier in this release. Please cite the dated manuscript and the revision used. The earlier working notes are retained to document provenance, not as separate claims of refereed publication.
+Dmitry Kamenetsky proposed this research. Responsibility for the manuscript rests with the named author. Proof development, implementation, search and writing were substantially AI-assisted. **His review is ongoing**; independently implemented checks are not independent human refereeing. The project has no assigned arXiv identifier in this release. Please cite the title and the Git revision or tagged version used. The earlier working notes are retained to document provenance, not as separate claims of refereed publication.
 
 The [MIT License](LICENSE) covers original project work. Upstream coordinate sources, inferred benchmarks, prior theorems, catalogue words/control sets, and font subsets are separately credited in [THIRD_PARTY.md](THIRD_PARTY.md); no third-party license is being overwritten. For the maintainer's safe GitHub publication workflow see [PUBLISH.md](PUBLISH.md).

@@ -1,6 +1,6 @@
 PYTHON ?= python3
 export PYTHONDONTWRITEBYTECODE := 1
-.PHONY: check hashes table paper inputs replay counting public-frames legacy
+.PHONY: check hashes table paper inputs replay counting public-frames diagrams legacy
 check:
 	$(PYTHON) scripts/verify_release.py
 hashes:
@@ -23,3 +23,6 @@ counting:
 	$(PYTHON) scripts/audit_counting.py
 public-frames:
 	$(PYTHON) scripts/check_public_frames.py
+
+diagrams:
+	$(PYTHON) scripts/construction_diagrams.py --previews paper/figures/previews

@@ -4,9 +4,9 @@ Requires pdfLaTeX (standard AMS, Latin Modern, microtype, booktabs, tabularx, ge
 TeX alone never reads the ancillary directory and does not need any tool or input from the finite replay.
 """
 from pathlib import Path
-import gzip, hashlib, io, os, shutil, subprocess, tarfile, tempfile
+import gzip, hashlib, io, os, re, shutil, subprocess, tarfile, tempfile
 R=Path(__file__).resolve().parents[1];P=R/'paper';STAMP=1795046400;KIT='anc/no3-replay-r2.zip'
-NAMES=('main.tex','proof.tex','collisions.tex','examples.tex','reproduction.tex','references.tex','table-ring.tex','table-other.tex','figures/one-flip.pdf',KIT);T=P/'arxiv-source.tar.gz'
+NAMES=('main.tex','proof.tex','collisions.tex','examples.tex','references.tex','table-ring.tex','table-other.tex','figures/one-flip.pdf','figures/ring-and-masks.pdf','figures/matched-secants.pdf','figures/shared-level-selection.pdf','anc/README.txt',KIT);T=P/'arxiv-source.tar.gz'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def build():
     with tempfile.TemporaryDirectory() as tmp:
@@ -18,7 +18,7 @@ def build():
             assert tuple(t.getnames())==NAMES
             for n in NAMES:
                 q=d/n;q.parent.mkdir(parents=True,exist_ok=True);q.write_bytes(t.extractfile(n).read());assert q.read_bytes()==(P/n).read_bytes()
-        assert sha(d/KIT) in (d/'reproduction.tex').read_text()
+        assert sha(d/KIT) in (d/'anc/README.txt').read_text()
         env={**os.environ,'SOURCE_DATE_EPOCH':str(STAMP),'FORCE_SOURCE_DATE':'1','TZ':'UTC'}
         for i in range(3):
             p=subprocess.run(['pdflatex','-no-shell-escape','-halt-on-error','-file-line-error','-interaction=nonstopmode','main.tex'],cwd=d,env=env,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True)
@@ -32,6 +32,16 @@ def build():
         run('qpdf','--check','reader.pdf');assert Path(KIT).name.encode() in run('pdfdetach','-list','reader.pdf')
         run('pdfdetach','-save','1','-o','roundtrip.zip','reader.pdf');assert (d/'roundtrip.zip').read_bytes()==(d/KIT).read_bytes()
         assert run('pdftotext','main.pdf','-')==run('pdftotext','reader.pdf','-')
+        text=run('pdftotext','-layout','reader.pdf','-').decode();front=text.split('\f')[0]
+        for gone in ('Mathematics Subject Classification','Keywords.','Appendix B','Data availability and replay','??'):assert gone not in text,gone
+        assert 'November' not in front and 'Dmitry Kamenetsky' in front
+        for fragment in ('2^(-s) product_', '0 <= R_A <= s/2', 'nonempty J in powerset', 'F_ht(n) - 3n/2', 'L_p^5/I^(1/4)', 'N/L_p^6'):assert fragment in text,fragment
+        cells=[re.split(r' {2,}',l.strip()) for l in text.splitlines()]
+        marked=[c[0].replace(' ','') for c in cells if len(c)>2 and c[2]=='F†']
+        assert marked==['293','389','773','4037'],marked
+        assert '† Reported only.' in text and all(f'Figure {j}:' in text for j in range(1,5))
+        assert b'https://raw.githubusercontent.com/dimkadimon/No3InLine/e19b8a1b689eba392c7d26ec3733e88db566dc0e/paper/anc/no3-replay-r2.zip' in run('pdfinfo','-url','reader.pdf')
+        print('PASS reader: four figures, four F-dagger source cells, clean formula extraction, requested removals and pinned kit link.')
         shutil.copyfile(d/'reader.pdf',P/'main.pdf');shutil.copyfile(a,T)
     print(f'PASS fresh source-archive build: {len(NAMES)} members, one LaTeX root, clean three-pass pdfLaTeX build.');print('PASS reader PDF attachment round trip, SHA256',sha(P/KIT));print('arxiv-source.tar.gz SHA256',sha(T));print('main.pdf SHA256',sha(P/'main.pdf'))
 if __name__=='__main__':build()

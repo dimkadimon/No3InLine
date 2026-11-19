@@ -5,28 +5,39 @@
 \usepackage{xcolor}
 \definecolor{link}{HTML}{06596A}
 \usepackage[colorlinks,linkcolor=link,citecolor=link,urlcolor=link]{hyperref}
-\hypersetup{pdftitle={A super-polylogarithmic excess in the no-three-in-line problem},pdfauthor={Dmitry Kamenetsky},pdfsubject={Extremal configurations on the square lattice},pdfkeywords={no-three-in-line, half-turn symmetry, modular hyperbola, primitive directions, probabilistic method}}
+\ifdefined\pdfinfoomitdate\pdfinfoomitdate=1\fi
+\hypersetup{pdftitle={A super-polylogarithmic excess in the no-three-in-line problem},pdfauthor={Dmitry Kamenetsky}}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{corollary}[theorem]{Corollary}
 \newcommand{\F}{\mathbb F_p}\newcommand{\R}{\mathcal R}\newcommand{\Z}{\mathbb Z}\newcommand{\htf}{F_{\mathrm{ht}}}\newcommand{\norm}[1]{\lVert#1\rVert_\infty}\newcommand{\Prob}{\mathbb P}\newcommand{\ch}{\chi}
+% Faithful ASCII replacements for the most layout-sensitive displays when
+% copying/searching the PDF. Printed math and the portable TeX remain primary.
+\newcommand{\mathcopy}[2]{\ifdefined\pdfliteral
+  \pdfliteral direct{/Span << /ActualText <\pdfescapehex{\detokenize{#1}}> >> BDC}#2\pdfliteral direct{EMC}%
+  \else#2\fi}
 \makeatletter\let\rowinput\@@input\makeatother
+% Mark the four F source cells only at typesetting time. The reviewed replay
+% kit's CSV, generated row text and hash are unchanged.
+\newcommand{\reportedsource}{\textbf{F}\textsuperscript{$\dagger$}}
+\ExplSyntaxOn
+\file_get:nnN {table-ring.tex} {} \l_tmpa_tl
+\tl_replace_all:Nnn \l_tmpa_tl { F } { \reportedsource }
+\cs_new:Npx \RingTableRows { \exp_not:V \l_tmpa_tl }
+\ExplSyntaxOff
 \setlength{\emergencystretch}{1.3em}
 \title{A super-polylogarithmic excess in the\texorpdfstring{\\}{ }no-three-in-line problem}
 \author{Dmitry Kamenetsky}
-\date{Revised working manuscript, 19 November 2026}
+\date{}
 \begin{document}
 \maketitle
 \begin{abstract}
 Let $F_{\mathrm{ht}}(n)$ be the largest size of a half-turn invariant subset of the $n\times n$ integer grid with no three points collinear. For infinitely many primes $p\equiv1\pmod{840}$ we prove that
 \[
- F_{\mathrm{ht}}(4p+1)\ \ge\ 6p+2+
- \exp\!\left(\frac{\log p}{300\log\log p}\right).
+ \mathcopy{F_ht(4p + 1) >= 6p + 2 + exp(log p / (300 log log p)).}{F_{\mathrm{ht}}(4p+1)\ \ge\ 6p+2+
+ \exp\!\left(\frac{\log p}{300\log\log p}\right).}
 \]
 Thus the guaranteed excess over $3n/2$ on these sides grows faster than every fixed power of $\log n$. We start with a four-period modular hyperbola ring and eight boundary points. A common conic level admits many pairs of opposite interior points whose obstructing secants use distinct multiplicative cosets. Hall's theorem then selects orientations of the ring that admit all these pairs without decreasing its size. Stewart's theorem on prime factors of cyclotomic values supplies the required subgroup indices. The result concerns a second-order term on a subsequence; it does not raise the leading coefficient $3/2$. We also give finite certificates and compare their sizes with explicit external constructions.
 \end{abstract}
-\smallskip\noindent\textbf{2020 Mathematics Subject Classification.} 52C10; 05D40, 11T24.\par
-\noindent\textbf{Keywords.} No-three-in-line problem, lattice points, modular hyperbola, collinear triples, probabilistic method.
-
 \section{The excess above the classical bound}\label{sec:intro}
 Write $[n]_0=\{0,\ldots,n-1\}$. A \emph{cap} is a set of lattice points in which no three distinct points are collinear on an ordinary Euclidean line. Let $F(n)$ be the largest size of a cap in $[n]_0^2$, and let $\htf(n)$ be the corresponding maximum under the additional requirement of invariance under $(x,y)\mapsto(n-1-x,n-1-y)$. In particular, $\htf(n)\le F(n)\le 2n$: each row holds at most two points. Modular lines enter the construction but do not replace ordinary lines in either definition.
 
@@ -41,13 +52,18 @@ For infinitely many primes $p\equiv1\pmod{840}$, with $n=4p+1$,
 The cap consists of six points per nonzero hyperbola fibre, eight fixed boundary points and additional interior points in opposite pairs.
 \end{theorem}
 \begin{corollary}\label{cor:superpoly}
-For every fixed $A>0$, along the same sequence,
+For every fixed $A>0$, the half-turn excess on the sides in Theorem~\ref{thm:main} satisfies
 \[
- \frac{F(n)-3n/2}{(\log n)^A}\ \ge\
- \frac{\htf(n)-3n/2}{(\log n)^A}\ \longrightarrow\ +\infty.
+  \mathcopy{lim (n -> infinity) (F_ht(n) - 3n/2) / (log n)^A = +infinity.}{\lim_{n\to\infty} \frac{\htf(n)-\tfrac32 n}{(\log n)^A}=+\infty.}
 \]
+The same limit holds for the unrestricted excess $F(n)-\tfrac32 n$, with the same normalization and along the same sequence.
 \end{corollary}
-\begin{proof} Since $n=4p+1$, $\log\log n=\log\log p+o(1)$ and $\log p/(300\log\log p)-A\log\log n\to\infty$. Apply~\eqref{eq:main}.
+\begin{proof} Since $n=4p+1$, $\log\log n=\log\log p+o(1)$, so
+\[
+  \log\!\left(\frac{g(p)}{(\log n)^A}\right)
+  =\frac{\log p}{300\log\log p}-A\log\log n\longrightarrow+\infty.
+\]
+Now apply~\eqref{eq:main} and $F(n)\ge\htf(n)$.
 \end{proof}
 The displayed \emph{guarantee} is also $o(n^\varepsilon)$ for every fixed $\varepsilon>0$. This is not an upper bound on the true excess. In particular the argument proves neither a fixed positive improvement of the coefficient $3/2$ nor any frequency estimate for the good sides.
 
@@ -62,7 +78,6 @@ Here we require a \emph{single} orientation of the full ring for a growing famil
 \input{proof}
 \appendix
 \input{examples}
-\input{reproduction}
 \section*{Authorship and use of generative AI}
 Dmitry Kamenetsky proposed this investigation. Generative AI was used substantially to develop the proof, draft and revise the manuscript, implement the searches, and write and run the verification programs. Responsibility for the mathematics, computations, references and attribution rests with the named author. His line-by-line review is ongoing. Separately implemented checks of finite configurations are not independent human peer review or formal verification of the theorem.
 \input{references}
