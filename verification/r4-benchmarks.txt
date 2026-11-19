@@ -1,0 +1,22 @@
+R4 — comparison checks from versioned coordinate supplements
+
+Fresh isolated replay: restore_inputs.py --group station --fetch; comparison.py --audit-sources; check_public_frames.py
+PIN 22.zip 704cba3c87fc5882aa323c51ead7bb6ce9157a92932814b5b9dcf19ff88e1f68
+PIN 47.zip cb218228a2e7a1e5d801cbf85bb360ee7007ad7f5352d8ecf9e95e6fc1b214cd
+PASS restored or checked 154 source files against historical output digests.
+PASS all 146 P22 seed geometries and all window maxima; P47 versioned header counts.
+PASS counts and benchmark provenance for all 15 sides.
+VERIFIED n=16018 p=8009 retained=24024 removed=0 additions=282 total=24306 exact_anchor_directions=6854010
+VERIFIED n=32002 p=16001 retained=48000 removed=0 additions=421 total=48421 exact_anchor_directions=20384820
+VERIFIED n=64006 p=32003 retained=96006 removed=0 additions=810 total=96816 exact_anchor_directions=78420150
+PASS: all three public P47 v1 point sets reconstructed from the source additions and checked as ordinary caps.
+
+Second implementation (reads only the two original pinned archives as geometry inputs):
+$ python3 scripts/recheck_benchmarks.py CACHE
+K: all 146 original coordinate sets pass; all 66 recorded crop count/corner pairs equal prefix-sum maxima.
+S: side 16018, 24024 frame + 282 additions = 24306; 6854010 exact directions through additions.
+S: side 32002, 48000 frame + 421 additions = 48421; 20384820 exact directions through additions.
+S: side 64006, 96006 frame + 810 additions = 96816; 78420150 exact directions through additions.
+PASS K/S contributions and ties for all 15 Table 1 sides. No reported-only counts used.
+
+This is a separately implemented project computation; not an external human attestation, an optimality proof or a check of the infinite-family theorem. The four F reports are not certified.

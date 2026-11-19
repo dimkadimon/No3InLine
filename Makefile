@@ -1,12 +1,15 @@
 PYTHON ?= python3
 export PYTHONDONTWRITEBYTECODE := 1
-.PHONY: check hashes table paper inputs replay counting public-frames diagrams legacy
+.PHONY: check hashes table paper inputs replay counting public-frames diagrams legacy scales
 check:
 	$(PYTHON) scripts/verify_release.py
 hashes:
 	$(PYTHON) scripts/verify_release.py --hashes-only
 table:
 	$(PYTHON) scripts/comparison.py
+	$(PYTHON) scripts/review_tables.py
+scales:
+	$(PYTHON) paper/anc/check-scales.py
 paper:
 	$(PYTHON) scripts/build_paper.py
 inputs:

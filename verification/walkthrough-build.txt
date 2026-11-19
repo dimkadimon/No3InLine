@@ -1,0 +1,49 @@
+19 November 2026 — Illustrated opening, local review draft
+
+Independent exact check of the opening example, rebuilt from small-prime-examples/certificates/p73.txt.
+p=73, side=293, k=28, 72 seeds, 12 perimeter copies per seed, 6 chosen per seed.
+All 8 settings of the three group switches give 432 ring sites plus 8 anchors, half-turn symmetric, with no collinear triple.
+Flip label 1 exchanges 144 ring sites for 144 alternatives; total stays 440.
+Before: the only pair collinear with q=(131,122) is {(96,52),(193,246)} on y=2x-140. The latter copy is (47,27)+73*(2,3).
+After: (96,52) stays, (193,246) leaves. Inserting q and its mate (161,170) gives 442 points.
+With all five pairs: 450 points, exactly the published p73.csv; full-board undirected primitive-direction and half-turn tests pass.
+
+$ python3 scripts/figure.py
+PASS side 293: 432 ring points and 8 anchors; flip exchanges 144 for 144. Exact geometry at 440, 442 and 450 points; final coordinates equal p73.csv.
+A second redraw gave byte-identical vector PDF and web PNG.
+
+$ python3 small-prime-examples/verify.py
+p=5 side=21 points=42 all-direction check from every point: PASS
+p=73 side=293 points=450 all-direction check from every point: PASS
+p=97 side=389 points=594 all-direction check from every point: PASS
+p=193 side=773 points=1188 all-direction check from every point: PASS
+prime=2521 side=10085 old=15120 anchors=8 central=236 total=15364
+complete same-fibre direction set=8; integer line intercepts checked against every old point: PASS
+244 full ordinary direction screens; directions checked=3748572: PASS
+half-turn, cardinality, old/old/old and all triples involving additions: PASS
+prime=3361 side=13445 old=20160 anchors=8 central=292 total=20460
+complete same-fibre direction set=8; integer line intercepts checked against every old point: PASS
+300 full ordinary direction screens; directions checked=6137700: PASS
+half-turn, cardinality, old/old/old and all triples involving additions: PASS
+prime=4201 side=16805 old=25200 anchors=8 central=300 total=25508
+complete same-fibre direction set=8; integer line intercepts checked against every old point: PASS
+308 full ordinary direction screens; directions checked=7856156: PASS
+half-turn, cardinality, old/old/old and all triples involving additions: PASS
+Seven CSV coordinate lists, certificates, rotation closure and exact geometry: PASS
+
+$ python3 scripts/build_paper.py
+PASS: 15 analytic/coordinate-backed comparisons; four stronger report-only transfers separately. All witnesses and both negative report differences retained.
+Output written on main.pdf (22 pages, 615395 bytes).
+PASS abstract ends with a clickable page-one repository URL; extracted limit and probability bound preserve the subsequence and exponents.
+PASS illustrated ring, flip and added-pair walkthrough before Theorem 1.1; denominator 300 unchanged.
+PASS reader: references and 16 citation destinations before Appendix A; both evidence tiers match the comparison CSV, including the two negative report differences.
+PASS reader: four figures, four marked report-only sources, clean formula extraction, requested removals and pinned kit link.
+PASS fresh source-archive build: 16 members, one LaTeX root, clean three-pass pdfLaTeX build.
+PASS reader PDF attachment round trip, SHA256 238f38e60234b982cd0ba13045bfad4809fb00e764d0eb1278bfeb7378d6d9ca
+arxiv-source.tar.gz SHA256 9dee75e0f266f36f09aa795fb51e5b6b77ec8aa6c717418e24deadc07c297dd2
+main.pdf SHA256 b75e57abff8c67b61fd5631aabab53a06d9e243c360b0b65514a82cbb8b056f0
+A second clean build reproduced both distribution files and the transcript byte-for-byte.
+Page 1: ring and group switches. Page 2: one pair, whole board / seed / line illustration, many pairs, annotated count. Page 3: Theorem 1.1; Section 2 starts on page 4.
+Source archive member-by-member comparison with the preceding review draft: identical 16 names; only main.tex, proof.tex, examples.tex and figures/one-flip.pdf have changed.
+Theorem inequality, corollary, qualified historical comparison and credits have been preserved.
+The reader attachment is byte-identical to the ancillary ZIP; all 74 internal manifest entries rechecked. These are geometry and packaging checks, not verification of the infinite-family theorem.

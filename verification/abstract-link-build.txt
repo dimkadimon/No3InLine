@@ -1,0 +1,22 @@
+Output written on main.pdf (19 pages, 603539 bytes).
+PASS abstract ends with a clickable page-one repository URL; extracted limit and probability bound preserve the subsequence and exponents.
+PASS reader: references and 16 citation destinations before Appendix A; both negative rows and their positive excesses.
+PASS reader: four figures, four F-dagger source cells, clean formula extraction, requested removals and pinned kit link.
+PASS fresh source-archive build: 13 members, one LaTeX root, clean three-pass pdfLaTeX build.
+PASS reader PDF attachment round trip, SHA256 238f38e60234b982cd0ba13045bfad4809fb00e764d0eb1278bfeb7378d6d9ca
+arxiv-source.tar.gz SHA256 6cce9c8f359553f1d0a52b70fc0e160097d6043c5da95ce74d6029621b8f00b2
+main.pdf SHA256 96832cde9bb7ee5ac6de1f534b83b2f8d0f41c703ebfc068c5f9c41d68ec74bf
+PASS second fresh build: reader PDF and source tarball byte-identical.
+Page  Type          URL
+   1  Annotation    https://github.com/dimkadimon/No3InLine
+Title:           A super-polylogarithmic excess in the no-three-in-line problem
+Pages:           19
+File size:       1910531 bytes
+PASS PDF attachment = source archive anc/no3-replay-r2.zip = unchanged kit; all 74 member digests.
+PASS counts and benchmark provenance for all 15 sides.
+PASS: 21 proper reduced fractions, 86 signed slopes, 42 ratio shifts; 130 distinct rational coefficient triples (88 negative, 42 positive signs of the level).
+PASS: signed product-cancellation incidences for the four gcd rows: 8464 8464 19872 19872
+PASS: 21384 rectangle/ratio/gcd cases. At p=7, S=2, T=3 the different directions (1,3),(2,-1) share one residue slope although ST<p.
+PASS: p=5, 96 marked templates, 27648 nonsingular, 6912 inconsistent and 2304 exceptional pair/ratio systems; direct root enumeration agrees.
+PASS: p=7, 360 marked templates, 648000 nonsingular, 108000 inconsistent and 21600 exceptional pair/ratio systems; direct root enumeration agrees.
+These are build and finite diagnostic checks. The specialist proof checks and author review remain open.

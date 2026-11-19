@@ -16,14 +16,8 @@
   \pdfliteral direct{/Span << /ActualText <\pdfescapehex{\detokenize{#1}}> >> BDC}#2\pdfliteral direct{EMC}%
   \else#2\fi}
 \makeatletter\let\rowinput\@@input\makeatother
-% Mark the four F source cells only at typesetting time. The reviewed replay
-% kit's CSV, generated row text and hash are unchanged.
-\newcommand{\reportedsource}{\textbf{F}\textsuperscript{$\dagger$}}
-\ExplSyntaxOn
-\file_get:nnN {table-ring.tex} {} \l_tmpa_tl
-\tl_replace_all:Nnn \l_tmpa_tl { F } { \reportedsource }
-\cs_new:Npx \RingTableRows { \exp_not:V \l_tmpa_tl }
-\ExplSyntaxOff
+% Only the separate report-only table uses this mark.
+\newcommand{\reportcite}[1]{\cite{#1}\kern.04em$\dagger$}
 \setlength{\emergencystretch}{1.3em}
 \title{A super-polylogarithmic excess in the\texorpdfstring{\\}{ }no-three-in-line problem}
 \author{Dmitry Kamenetsky}
@@ -31,55 +25,74 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-Let $F_{\mathrm{ht}}(n)$ be the largest size of a half-turn invariant subset of the $n\times n$ integer grid with no three points collinear. For infinitely many primes $p\equiv1\pmod{840}$ we prove that
+The no-three-in-line problem asks how many points of an $n\times n$ grid can be chosen so that no three lie on a straight line. The construction of Hall, Jackson, Sudbery and Wild gives $(3/2-o(1))n$ points for all sufficiently large $n$. To exceed $3n/2$, we build a square ring and flip groups of its points. The flips change which lines are blocked without shrinking the ring, so that many opposite pairs can be added in the empty middle. Write $F_{\mathrm{ht}}(n)$ for the maximum size when the chosen set must also be unchanged by a half-turn. For infinitely many primes $p\equiv1\pmod{840}$ we prove that
 \[
- \mathcopy{F_ht(4p + 1) >= 6p + 2 + exp(log p / (300 log log p)).}{F_{\mathrm{ht}}(4p+1)\ \ge\ 6p+2+
- \exp\!\left(\frac{\log p}{300\log\log p}\right).}
+ \mathcopy{F_ht(4p + 1) >= 6p + 2 + exp(log p / (114 log log p)).}{F_{\mathrm{ht}}(4p+1)\ \ge\ 6p+2+
+ \exp\!\left(\frac{\log p}{114\log\log p}\right).}
 \]
-Thus the guaranteed excess over $3n/2$ on these sides grows faster than every fixed power of $\log n$. We start with a four-period modular hyperbola ring and eight boundary points. A common conic level admits many pairs of opposite interior points whose obstructing secants use distinct multiplicative cosets. Hall's theorem then selects orientations of the ring that admit all these pairs without decreasing its size. Stewart's theorem on prime factors of cyclotomic values supplies the required subgroup indices. The result concerns a second-order term on a subsequence; it does not raise the leading coefficient $3/2$. We also give finite certificates and compare their sizes with explicit external constructions.
+At side $n=4p+1$ this gives a \emph{super-polylogarithmic excess} over $3n/2$: the guaranteed excess grows faster than every fixed power of $\log n$ along these sides. It does not raise the leading coefficient $3/2$. Code and certificates are available at \mbox{\url{https://github.com/dimkadimon/No3InLine}}.
 \end{abstract}
-\section{The excess above the classical bound}\label{sec:intro}
+\section{How the construction works}\label{sec:intro}
+Why not just put a point in the middle of an empty square? Lay a ruler through two points already on the board. Any other site on that line is blocked, even if it lies far from both points. Our starting set surrounds an empty square, but it has one useful freedom: we can change \emph{which} lines are blocked without changing \emph{how many} points we have.
+
+\paragraph{Build the ring.} Take the $293\times293$ board in Figure~\ref{fig:flip}. Its coordinates run from 0 to 292. Draw tile boundaries every 73 units in each direction, making four rows of four square tiles. In the lower-left tile mark 72 starting points, or \emph{seeds}, one in each interior column. For each column from 1 to 72, choose the row from 1 to 72 for which their product leaves remainder 28 on division by 73. Copy each seed into the same position in all sixteen tiles, then ignore the middle four tiles. The twelve remaining copies lie around a square rim. Colour the tiles like a chessboard: for each seed we keep either its six light-tile copies or its six dark-tile copies. These choices are linked, as described next. The resulting \emph{ring} has $72\cdot6=432$ points. Two fixed points on each side of the board, the eight \emph{anchors}, bring the total to 440.
+
+\paragraph{Flip a group.} A straight line through three of these candidate points must use at least two copies of the same seed. We link the choices of seeds whose copies could complete such a line. Think of one switch controlling a whole group: a \emph{flip} exchanges the chosen six copies of \emph{each} seed in that group for its other six. The anchors stay put. The groups are chosen so that the resulting set still has no three points on a line and still looks the same after a half-turn. A flip by itself adds no points.
+
+\paragraph{Add an opposite pair.} Try the site $q=(131,122)$. In the starting ring it lies on the straight line between $(96,52)$ and $(193,246)$, so adding it would make three. The second point is a copy of the seed $(47,27)$, two tiles across and three up. Flip that seed's group: $(193,246)$ is no longer one of its chosen six, while $(96,52)$ stays. We still have 440 points, but the line no longer blocks $q$. Turn the board halfway around: the same change clears the corresponding line through its partner $(161,170)$. Checking all the lines, including the one joining the partners, shows that we can insert both. That makes 442. In fact five opposite pairs fit \emph{together} with that same flip, bringing the count to $440+2\cdot5=450$. This is a checked example of the mechanism, not an instance of the large-prime estimate.
+
+\begin{figure}[!htb]\centering
+\includegraphics[width=.98\linewidth]{figures/one-flip.pdf}
+\caption{One flip on the $293\times293$ board. Left: all 450 points; the diamonds are the five new pairs. Middle: the same seed occupies six tiles before the flip (top) and six different tiles after it (bottom). The copy in the outlined tile is gone. Right: that copy was one of the two dots blocking the open diamond. Once it is gone the diamond can be filled.}\label{fig:flip}
+\end{figure}
+
+\paragraph{From one pair to many.} A flip that helps one pair can block another, and new points can line up with one another. We choose board sizes for which the ring has many independently switchable groups. For one seed pattern we propose many opposite pairs, then discard conflicting proposals, not ring points. The proof counts all the ways two ring sites could block a retained point, including obstructions that a flip might create. It shows that we can keep a growing family for which every such obstruction can be assigned its own switch. Set that switch to leave one of the two blocking sites empty. No switch receives contradictory instructions, so one arrangement admits all the retained pairs at once. On a board of side $4p+1$ the count is then
+\[
+ \mathcopy{6(p-1) ring points + 8 anchors + 2m points from m opposite pairs = 6p + 2 + 2m.}{\underbrace{6(p-1)}_{\text{ring}}+\underbrace{8}_{\text{anchors}}+\underbrace{2m}_{m\text{ opposite pairs}}=6p+2+2m.}
+\]
+For $n=4p+1$, the ring and anchors alone give $6p+2=3n/2+1/2$. Each added pair raises the excess by two. Theorem~\ref{thm:main} on page~\pageref{thm:main} gives the resulting bound on an infinite sequence of boards. Section~\ref{sec:ring} begins the proof with the precise seed and switch rules.
+
+\clearpage
+\subsection{The excess above the classical bound}\label{sec:main-result}
 Write $[n]_0=\{0,\ldots,n-1\}$. A \emph{cap} is a set of lattice points in which no three distinct points are collinear on an ordinary Euclidean line. Let $F(n)$ be the largest size of a cap in $[n]_0^2$, and let $\htf(n)$ be the corresponding maximum under the additional requirement of invariance under $(x,y)\mapsto(n-1-x,n-1-y)$. In particular, $\htf(n)\le F(n)\le 2n$: each row holds at most two points. Modular lines enter the construction but do not replace ordinary lines in either definition.
 
-Hall, Jackson, Sudbery and Wild~\cite[Theorem 2]{hjsw} constructed $3(q-1)$ points on side $2q$ for prime $q$, that is, $3n/2-3$ at their native side. Embedding at a nearby smaller prime gives $F(n)\ge (3/2-o(1))n$ for all sufficiently large $n$. The modern treatment of Kov\'acs, Nagy and Szab\'o~\cite[Theorem 1.2]{kns} retains this bound for the case in which at most two points may be collinear. A different question is whether the \emph{excess} $F(n)-3n/2$ can be guaranteed to grow along a sequence. This comparison is with $3n/2$ at the actual side $n$, not with the count after rounding down to a convenient prime.
+Hall, Jackson, Sudbery and Wild~\cite[Theorem 2]{hjsw} constructed $3(q-1)$ points on side $2q$ for prime $q$, that is, $3n/2-3$ at their native side. Embedding at a nearby smaller prime gives $F(n)\ge (3/2-o(1))n$ for all sufficiently large $n$. In 2026 Kov\'acs, Nagy and Szab\'o~\cite[Definition 1.1 and Theorem 1.2]{kns} still give $1.5n-o(n)\le f_2(n)\le 2n$ for the classical case $f_2=F$, crediting the 1975 construction. We ask a different question: can the additive excess $F(n)-3n/2$, measured at the actual side $n$, be guaranteed to grow along an infinite sequence?
 
 \begin{theorem}\label{thm:main}
 For infinitely many primes $p\equiv1\pmod{840}$, with $n=4p+1$,
 \begin{equation}\label{eq:main}
- \htf(n)\ \ge\ \frac{3n}{2}+\frac12+g(p),
- \qquad g(p)=\exp\!\left(\frac{\log p}{300\log\log p}\right).
+ \mathcopy{F_ht(n) >= 3n/2 + 1/2 + g(p), where g(p) = exp(log(p)/(114 log(log(p)))).}{\htf(n)\ \ge\ \frac{3n}{2}+\frac12+g(p),
+ \qquad g(p)=\exp\!\left(\frac{\log p}{114\log\log p}\right).}
 \end{equation}
-The cap consists of six points per nonzero hyperbola fibre, eight fixed boundary points and additional interior points in opposite pairs.
+The set consists of six ring points per seed, eight fixed anchors and interior points in opposite pairs.
 \end{theorem}
 \begin{corollary}\label{cor:superpoly}
-For every fixed $A>0$, the half-turn excess on the sides in Theorem~\ref{thm:main} satisfies
+Let $\mathcal N$ be an infinite set of side lengths supplied by Theorem~\ref{thm:main}. For every fixed $A>0$,
 \[
-  \mathcopy{lim (n -> infinity) (F_ht(n) - 3n/2) / (log n)^A = +infinity.}{\lim_{n\to\infty} \frac{\htf(n)-\tfrac32 n}{(\log n)^A}=+\infty.}
+  \mathcopy{lim (n -> infinity, n in N) (F_ht(n) - 3n/2) / (log n)^A = +infinity.}{\lim_{\substack{n\to\infty\\n\in\mathcal N}} \frac{\htf(n)-\tfrac32 n}{(\log n)^A}=+\infty.}
 \]
-The same limit holds for the unrestricted excess $F(n)-\tfrac32 n$, with the same normalization and along the same sequence.
+The same limit along $\mathcal N$ holds with $F(n)$ in place of $\htf(n)$.
 \end{corollary}
 \begin{proof} Since $n=4p+1$, $\log\log n=\log\log p+o(1)$, so
 \[
   \log\!\left(\frac{g(p)}{(\log n)^A}\right)
-  =\frac{\log p}{300\log\log p}-A\log\log n\longrightarrow+\infty.
+  =\frac{\log p}{114\log\log p}-A\log\log n\longrightarrow+\infty.
 \]
 Now apply~\eqref{eq:main} and $F(n)\ge\htf(n)$.
 \end{proof}
-The displayed \emph{guarantee} is also $o(n^\varepsilon)$ for every fixed $\varepsilon>0$. This is not an upper bound on the true excess. In particular the argument proves neither a fixed positive improvement of the coefficient $3/2$ nor any frequency estimate for the good sides.
-
-\paragraph{Where the extra points come from.} A four-period conic ring already has $6(p-1)$ points; eight suitable boundary points bring its size to $6p+2=3n/2+1/2$. The obstacle is that two ring points can determine a secant through a proposed interior site. We keep all six sites per fibre in cardinality, but not necessarily the same six sites in position. Each secant yields a choice: disable one of two endpoint orientations. If the abscissa cosets of all endpoint occurrences are distinct, any one orientation variable occurs at most twice. This permits one matching to satisfy all the choices, at all the new sites at once. The proof estimates the probability of failure of precisely this coset condition.
+\paragraph{What improves on the 1975 construction?} Corollary~\ref{cor:superpoly} gives a \emph{super-polylogarithmic excess}: the guaranteed additive term dominates $(\log n)^A$ for every fixed $A>0$ along the same sequence. If Theorem~\ref{thm:main} is confirmed, this would be, to our knowledge, the first proof of an unbounded additive excess over $3n/2$ on an infinite sequence of square grids, more than fifty years after Hall, Jackson, Sudbery and Wild~\cite{hjsw}. This historical comparison concerns that specific guarantee, not records on individual boards. The guaranteed term is $o(n^\varepsilon)$ for every fixed $\varepsilon>0$; this is not an upper bound on the true excess. The result neither raises the leading coefficient $3/2$ nor gives a frequency estimate for the good sides.
 
 \paragraph{Antecedents and proof dependencies.} We use the six-site masks recorded by conic\_\allowbreak lift\_\allowbreak synthesist~\cite[\S5.4]{masks} and the four-period ring, component flips and insertion clauses of cedar\_\allowbreak conics and lattice\_\allowbreak lift\_\allowbreak research~\cite{ring}. For $p\equiv1\pmod{12}$ and a nonsquare level, the full ring on its native side $n=4p$ has $6(p-1)=3n/2-6$ points. The eight boundary anchors in an earlier project note~\cite{boundary} give $6p+2$ on side $4p+1$, an excess of only $1/2$. The fixed-weight secant analysis~\cite{ratioante} and rooted product calculation~\cite[\S2]{root} are antecedents of the identities derived in Sections~\ref{sec:sampling} and~\ref{sec:encoding}.
 
 The target sets in~\cite{pair} and~\cite[Theorem 3]{ring} keep lines through two targets off the carrier but do not rule out a secant through two old sites. Conversely, the partial totals $145p/24-o(p)$ and, on a subsequence, $4721p/768-o(p)$ on side $4p$ in~\cite[Theorem 1 and Corollary 4]{root} allow triples through two or more targets outside a fixed set of directions. Neither construction asserts that its full union is an ordinary cap of the combined size. Here a \emph{single} orientation must support a growing family of opposite pairs in all directions. Section~\ref{sec:one} counts equal-slope lifts and bounds coset collisions for unequal slopes; Section~\ref{sec:two} bounds collisions between roots at the same level.
 
-These source credits identify where the ideas came from, not unproved premises: we prove the ring property and derive the secant identities below. Theorem~\ref{thm:main} uses Hall's marriage theorem, the quadratic character bound, Stewart's prime-factor theorem and elementary quadratic reciprocity; it does not assume an rStation result or a finite point count. This comparison makes no claim of priority.
+These source credits identify where the ideas came from, not unproved premises: we prove the ring property and derive the secant identities below. Theorem~\ref{thm:main} uses Hall's marriage theorem, the quadratic character bound, Stewart's prime-factor theorem and elementary quadratic reciprocity; it does not assume an rStation result or a finite point count.
 
 \paragraph{Organization.} Section~\ref{sec:ring} constructs the ring and gives the matching criterion. Sections~\ref{sec:sampling}--\ref{sec:two} estimate the geometric conflicts; Section~\ref{sec:choose} selects a compatible subfamily. Section~\ref{sec:primes} turns the subgroup-index bound into~\eqref{eq:main}. The finite evidence in Appendix~\ref{sec:finite} is independent of the asymptotic proof. All logarithms are natural; $L_p=1+\log p$ and implied constants are absolute unless indicated otherwise.
 
 \input{proof}
 \section*{Authorship and use of generative AI}
-Dmitry Kamenetsky proposed this investigation. Generative AI was used substantially to develop the proof, draft and revise the manuscript, implement the searches, and write and run the verification programs. Responsibility for the mathematics, computations, references and attribution rests with the named author. His line-by-line review is ongoing. Separately implemented checks of finite configurations are not independent human peer review or formal verification of the theorem.
+Dmitry Kamenetsky proposed this investigation. Generative AI was used substantially to develop the proof, draft and revise the manuscript, implement the searches, and write and run the verification programs. Responsibility for the mathematics, computations, references and attribution rests with the named author.
 \clearpage
 \input{references}
 \clearpage

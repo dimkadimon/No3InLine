@@ -1,0 +1,32 @@
+Local review revision of the illustrated manuscript (parent 68b15fe).
+Two fresh source-archive builds, each with three pdfLaTeX passes, no shell escape.
+
+PASS: 15 analytic/coordinate-backed comparisons; four stronger report-only transfers separately. All witnesses and both negative report differences retained.
+Output written on main.pdf (21 pages, 611714 bytes).
+PASS abstract ends with a clickable page-one repository URL; extracted limit and probability bound preserve the subsequence and exponents.
+PASS reader: references and 16 citation destinations before Appendix A; both evidence tiers match the comparison CSV, including the two negative report differences.
+PASS reader: four figures, four marked report-only sources, clean formula extraction, requested removals and pinned kit link.
+PASS fresh source-archive build: 16 members, one LaTeX root, clean three-pass pdfLaTeX build.
+PASS reader PDF attachment round trip, SHA256 238f38e60234b982cd0ba13045bfad4809fb00e764d0eb1278bfeb7378d6d9ca
+arxiv-source.tar.gz SHA256 ef397b4991656f658dd5c38d3b42e442e5e82944187dd3fc0aca6f76641ba344
+main.pdf SHA256 13af946cd4359845c5d5cd115c7cc40968502357bc18c0f0d49419023c4fbd0e
+
+pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)
+qpdf version 12.2.0
+pdfinfo version 25.03.0
+Title:           A super-polylogarithmic excess in the no-three-in-line problem
+Author:          Dmitry Kamenetsky
+Pages:           21
+File size:       1918563 bytes
+
+Both reader PDFs, both source tarballs and the two build transcripts were byte-identical.
+qpdf --check: no syntax or stream encoding errors reported.
+The page-one final abstract URL is a PDF link to the repository root. Section 1 (p. 2) includes the conditional historical claim and the name of the excess.
+Offset box (p. 9): 83,521 total, 81,152 nonsingular. Proposition 7.2 (p. 14): denominator L_p^3, number of pairs.
+Sign-only threshold, full sufficient range and the direct prime/index test distinguished on pp. 7, 15–17.
+References on p. 18 precede Appendix A on p. 19. Table 1 (p. 20) matches all 15 analytic/coordinate-backed comparisons; Table 2 (p. 21) matches the four stronger report-only transfers.
+Verified URL annotations for KNS Theorem 1.2, Lemos–Neumann–Ribas Lemma 2.2 and the FactorDB entry.
+Render inspection: history paragraph, sign bound, pair denominator, explicit range and both evidence tiers.
+All 74 manifest hashes verified in the unchanged ZIP inside the reader PDF and source archive.
+
+Finite witness replay, external coordinate audits and the new arithmetic check have separate transcripts in this directory. None of these checks validates the infinite-family proof.

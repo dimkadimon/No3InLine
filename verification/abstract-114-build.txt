@@ -1,0 +1,20 @@
+19 November 2026 — Problem-first abstract and denominator 114 (local working manuscript)
+
+$ python3 scripts/build_paper.py
+PASS: 15 analytic/coordinate-backed comparisons; four stronger report-only transfers separately. All witnesses and both negative report differences retained.
+Output written on main.pdf (22 pages, 616166 bytes).
+PASS abstract ends with a clickable page-one repository URL; extracted limit and probability bound preserve the subsequence and exponents.
+PASS problem-first abstract; Stewart conversion, explicit index test and exponent 114 in the reader.
+PASS illustrated ring, flip and added-pair walkthrough before Theorem 1.1.
+PASS reader: references and 16 citation destinations before Appendix A; both evidence tiers match the comparison CSV, including the two negative report differences.
+PASS reader: four figures, four marked report-only sources, clean formula extraction, requested removals and pinned kit link.
+PASS fresh source-archive build: 16 members, one LaTeX root, clean three-pass pdfLaTeX build.
+PASS reader PDF attachment round trip, SHA256 238f38e60234b982cd0ba13045bfad4809fb00e764d0eb1278bfeb7378d6d9ca
+arxiv-source.tar.gz SHA256 422836b958548a1ee2a2d94615cceb84f19d8c1a95c8e2ad61ea4cfbba50deb2
+main.pdf SHA256 eb4d9479b3b20928ce4a89709c3de49cf919918f47503a00d6334abbd3c1d5a4
+
+A second fresh archive build reproduced the log, reader PDF and source tarball byte-for-byte.
+The bound on p. 1, Theorem 1.1 and its corollary on p. 3, and the prime/index test and final count on p. 18 now agree. The 293-by-293 walkthrough is still on pages 1–2.
+The conversion in §8 uses Stewart’s stated 104, not a stronger prime-factor result. For x=log(p), d=log(p/j), d>(x-d)/(104 log x) gives d>x/(104 log x+1); log I=d+o(1).
+Exact constant arithmetic checked with Python integers and fractions: 1/105−1/114=1/1330; 2^256/256^2>2^16>max(48*105,7*1330); 134<256. This checks the numerical slack, not the preceding infinite-family argument.
+Source archive comparison to the 300 walkthrough: same sixteen entries; only main.tex and proof.tex changed. All four figures, Appendix A and the three ancillary files compare equal. The reader attachment and archived replay kit compare byte-for-byte and all 74 internal hashes pass.

@@ -1,0 +1,16 @@
+n,B_checked,source_codes,benchmark_details,certified_count,symmetry,delta_vs_checked,excess_vs_1.5n,certificate_or_coordinates,report_source_side,report_source_count,report_transfer,delta_vs_report,report_url
+201,360,K,"22v4 sets/n200.txt; source side 200; lower left (0,0) | 22v4 sets/n200_b.txt; source side 200; lower left (0,0) | 22v4 sets/n200_c.txt; source side 200; lower left (0,0) | 22v4 sets/n200_d.txt; source side 200; lower left (0,0)",362,U,2,60.5,studies/larger-grids/coordinates/n201.csv,,,,,
+202,360,K,"22v4 sets/n200.txt; source side 200; lower left (0,0) | 22v4 sets/n200_b.txt; source side 200; lower left (0,0) | 22v4 sets/n200_c.txt; source side 200; lower left (0,0) | 22v4 sets/n200_d.txt; source side 200; lower left (0,0)",364,Q,4,61,studies/larger-grids/coordinates/n202.csv,,,,,
+293,504,K,"22v4 runs/greedy/out_300_3.txt; source side 300; lower left (3,3)",508,Q,4,68.5,studies/improvements/coordinates/n293.csv,288,512,512,-4,https://rstation.ai/r/no_three_in_line/posts/27?after=nIP3NtW0opRNgzuX#comment-pFrlngBCibDluCMh
+389,576,"C,R","prime 193, side 386 | prime 97, side 388",668,Q,92,84.5,studies/improvements/coordinates/n389.csv,400,696,652,16,https://rstation.ai/r/no_three_in_line/posts/27?after=nIP3NtW0opRNgzuX#comment-pFrlngBCibDluCMh
+773,1152,R,"prime 193, side 772",1188,H,36,28.5,small-prime-examples/coordinates/p193.csv,800,1352,1244,-56,https://rstation.ai/r/no_three_in_line/posts/27?after=5aecd2fe-8112-4851-b576-bd73686cb132#comment-741026d9-0dc7-49d8-ae2e-f633f785bfcc
+4037,6048,"C,R","prime 2017, side 4034 | prime 1009, side 4036",6296,H,248,240.5,studies/improvements/coordinates/n4037.csv,4006,6118,6118,178,https://rstation.ai/r/no_three_in_line/posts/27?after=S23Qbj_ZXvgV762O#comment-UKSKXdvHwjisZcwL
+10085,15120,R,"prime 2521, side 10084",15520,H,400,392.5,studies/improvements/coordinates/n10085.csv,,,,,
+13445,20160,R,"prime 3361, side 13444",20460,H,300,292.5,small-prime-examples/coordinates/p3361.csv,,,,,
+16018,24306,S,47v1 section 8; prime 8009; source side 16018,24588,U,282,561,studies/improvements/coordinates/n16018.csv,,,,,
+16805,25200,R,"prime 4201, side 16804",25508,H,308,300.5,small-prime-examples/coordinates/p4201.csv,,,,,
+32002,48421,S,47v1 section 8; prime 16001; source side 32002,48838,U,417,835,studies/improvements/coordinates/n32002.csv,,,,,
+64006,96816,S,47v1 section 8; prime 32003; source side 64006,97062,U,246,1053,studies/improvements/coordinates/n64006.csv,,,,,
+131074,196608,C,"prime 65537, side 131074",196650,U,42,39,studies/larger-grids/data/edits_65537.txt,,,,,
+1000018,1500024,C,"prime 500009, side 1000018",1500030,U,6,3,studies/larger-grids/data/edits_500009.txt,,,,,
+3188645,4782960,R,"prime 797161, side 3188644",4782972,H,12,4.5,unbounded-gain/data/certificate.txt,,,,,

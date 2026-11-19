@@ -4,6 +4,13 @@ These are outputs of executed checks. They are not human attestations, solver pr
 
 | Transcript | Check that produced it |
 |:---|:---|
+| `r4-build.txt` | R4: clean repeated archive build, bookmarked result, two-tier tables, arXiv metadata and ancillary-file round trip. |
+| `r4-witnesses.txt`, `r4-benchmarks.txt` | Fresh replay of all 15 witnesses, original K/S audits and a separately implemented pass from the raw archives, including all 66 crop maxima and three full S frames. |
+| `abstract-114-build.txt` | Problem-first abstract; Stewart (104) to the index test (105) and point-count bound (114); exact slack arithmetic, repeat build, and unchanged illustrated example and ancillary data. |
+| `walkthrough-build.txt` | Preceding draft with denominator 300. Opening ring/flip walkthrough: actual before-and-after geometry and totals; repeat redraw and typesetting from a fresh archive; ordering ahead of the theorem and identical ancillary kit. |
+| `review-build.txt` | Preceding review draft: repeat build, copy-safe yield and thresholds, per-row verification of the two separate evidence tables, source links, attachment round trip and page checks. |
+| `review-scales.txt` | Exact arithmetic for the offset box and the full factorization of Phi_840(3), prime and order certificates, subgroup indices, finite proposal scales and direct insertions. |
+| `review-witnesses.txt`, `review-external.txt` | Fresh runs from isolated extracts of the pinned ZIP: all 15 project witnesses and the byte-identical matching; separately restored and checked all 146 K source sets/crops and three S baseline geometries. No F source set is thereby certified. |
 | `witnesses-r3.txt` | R3 rerun of the unchanged R2 portable kit from clean extraction: all 15 witnesses, including 144 matching clauses, 38 flips and 57,395,652 special-site directions. |
 | `diagrams-r3.txt` | Exact source data for the mask illustration and both transposed secants; their four coset labels, two bits, and before/after membership; reproducible vector redraw. The deletion diagram is explicitly schematic. |
 | `replay-r2.txt` | Full `verify_release.py --expand-large` from a clean extraction of the **portable kit**, including its 74-file manifest, the revised finite diagnostics and all project witnesses. |
@@ -16,6 +23,7 @@ These are outputs of executed checks. They are not human attestations, solver pr
 | `large-and-medium.txt` | `python3 studies/larger-grids/verify.py` including independent frame expansion, comparison with the two large historical CSVs, medium determinants, frozen covers and gap checks. |
 | `source-pins.txt`, `comparisons.txt` | Pinned upstream inputs reproduced and all 159 output hashes checked; 146 P22 seed geometries and exact crop maxima audited; publication rows reproduced. The F-source results remain **reported** counts; they were not independently verified as coordinates. |
 | `paper-build-r2.txt` | R2: clean three-pass source-archive build, PDF attachment extraction and byte comparison, unchanged page text, and repeat-build agreement. Ten source archive members including the separate ancillary ZIP. |
+| `abstract-link-build.txt` | Prior editorial draft: checks the public repository URL at the end of the abstract as a page-one PDF link, the subsequence and powers of two in copy text, and the ancillary ZIP in both distributions. |
 | `editorial-build.txt` | Post-R3 draft: repeat-build SHA-256, PDF heading order and internal citation destinations, negative rows and non-forum comparisons. The finite kit and generated data are unchanged. |
 | `paper-build.txt` | R3: repeated clean three-pass build, 13 archive members, all four diagram PDFs, checked copy-text for the central equations, four reported-only table markers, attachment round trip, no Appendix B or title date. |
 

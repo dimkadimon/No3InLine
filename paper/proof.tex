@@ -1,5 +1,7 @@
 \section{A ring, eight anchors and a matching}\label{sec:ring}
-Let $p\equiv1\pmod{840}$ be prime, $k\in\F^*$ a nonsquare, $H=\langle -1,3\rangle\subset\F^*$, $h=|H|$, $I=(p-1)/h$. Since $p\equiv1\pmod{12}$, both generators are squares. Call all board sites satisfying $xy=k$ modulo $p$ the \emph{carrier}, independently of any mask. By a \emph{fibre} we mean the set of points of the board reducing to one residue pair modulo $p$. The cosets $A$ and $k/A$ in $\F^*/H$ form distinct pairs: their quadratic characters differ. In each pair independently give one coset physical colour 0 and the other 1. For $u\ne0$ let $e(u)$ be the colour of its coset. Throughout the board $[0,4p]^2$, the fibre over $(u,k/u)$ has points $(x_0+ip,y_0+jp)$ with least positive representatives $x_0,y_0$ and $0\le i,j\le3$. Take the sites outside $\{1,2\}^2$ in sheet indices and having physical parity $x+y\equiv e(u)\pmod 2$. Thus $i+j\equiv e(u)-x_0-y_0\pmod 2$. Writing $ij$ for $(i,j)$, the two sheet masks are
+We now specify the two rules behind the opening picture: where the seeds lie inside a tile, and which seeds share a switch. Let $p\equiv1\pmod{840}$ be prime, $k\in\F^*$ a nonsquare, $H=\langle -1,3\rangle\subset\F^*$, $h=|H|$, $I=(p-1)/h$. Since $p\equiv1\pmod{12}$, both generators are squares. Call all board sites satisfying $xy=k$ modulo $p$ the \emph{carrier}, independently of any mask. By a \emph{fibre} we mean the set of points of the board reducing to one residue pair modulo $p$. For a seed $(u,k/u)$, its fibre consists of the sixteen copies from Section~\ref{sec:intro}. The cosets $A$ and $k/A$ in $\F^*/H$ form distinct pairs: their quadratic characters differ. One switch controls each such pair: give one coset physical colour 0 and the other 1, independently for different pairs. Flipping the switch interchanges the colours throughout $A\cup(k/A)$. For $u\ne0$ let $e(u)$ be the colour of its coset.
+
+Throughout the board $[0,4p]^2$, the fibre over $(u,k/u)$ has points $(x_0+ip,y_0+jp)$ with least positive representatives $x_0,y_0$ and $0\le i,j\le3$. Take the sites outside $\{1,2\}^2$ in sheet indices and having physical parity $x+y\equiv e(u)\pmod 2$. Thus $i+j\equiv e(u)-x_0-y_0\pmod 2$: the parity of $i+j$ gives this seed its light or dark tiles. Writing $ij$ for $(i,j)$, the two sheet masks are
 \[
  M_0=\{00,02,13,20,31,33\},\qquad M_1=\{01,03,10,23,30,32\}.
 \]
@@ -13,12 +15,12 @@ The other three lists follow by the half-turn, and $(i,j)\mapsto(3-i,j)$ exchang
 
 \paragraph{Boundary sites.} Add the eight anchors
 \[B=p\{(0,1),(0,3),(1,0),(3,0),(4,1),(4,3),(1,4),(3,4)\}.\]
- These points are the eight extreme vertices of a convex octagon, so no three are collinear. From an anchor, a nonaxial primitive direction $(a,b)$ meets the carrier only at parameters satisfying $ab t^2=k\pmod p$. At height $\max(|a|,|b|)\le7$ every signed factor is a square modulo $p$ (use $p\equiv1\pmod{8}$ and quadratic reciprocity for $3,5,7$), so there are no such points. At height $D\ge8$ only the inward ray occurs, with $1\le t\le4p/D\le p/2$; it contains at most one of the two opposite roots modulo $p$ (and none if $p\mid ab$). A coarse axis misses the carrier. Lines between anchors have primitive height at most four. Thus $O\cup B$ is a cap for \emph{every} choice of the orientation bits.
+ These points are the eight extreme vertices of a convex octagon, so no three are collinear. From an anchor, a nonaxial primitive direction $(a,b)$ meets the carrier only at parameters satisfying $ab t^2=k\pmod p$. The progression $p\equiv1\pmod{840}$ makes $-1,2,3,5,7$ squares: use $p\equiv1\pmod8$ for $-1,2$ and $p\equiv1\pmod{4\ell}$ for $\ell=3,5,7$ in quadratic reciprocity. Hence at height $\max(|a|,|b|)\le7$, $ab$ is a square and the nonsquare $k$ excludes a hit. The same square condition covers height eight in Section~\ref{sec:sampling}. At height $D\ge8$ only the inward ray occurs, with $1\le t\le4p/D\le p/2$; it contains at most one of the two opposite roots modulo $p$ (and none if $p\mid ab$). A coarse axis misses the carrier. Lines between anchors have primitive height at most four. Thus $O\cup B$ is a cap for \emph{every} choice of the orientation bits.
 
 Figure~\ref{fig:masks} shows what a change of colour means on an actual board: a bit exchanges the two masks in every fibre it controls. It neither moves the anchors nor changes the number of ring sites.
 \begin{figure}[htbp]\centering
 \includegraphics[width=.97\linewidth]{figures/ring-and-masks.pdf}
-\caption{The mask switch at $p=73$, $k=28$. Left: only the twelve outer lifts of $(47,27)$ are drawn; the other fibres are omitted. The two diamonds are a proposed opposite pair, not ring sites. Right: the same fibre before and after the component flip. Cell $(2,3)$ contains $(193,246)$, an endpoint of the blocking secant through $q=(131,122)$ in Appendix~\ref{sec:finite}. Its removal costs no ring points in total. This finite illustration does not use the asymptotic sign test.}\label{fig:masks}
+\caption{The mask switch at $p=73$, $k=28$. Left: only the twelve outer lifts of $(47,27)$ are drawn; the other fibres are omitted. The two diamonds are a proposed opposite pair, not ring sites. Right: the same fibre before and after the component flip. Cell $(2,3)$ contains $(193,246)$, one of the two ring sites on the blocked line through $q=(131,122)$ in Figure~\ref{fig:flip}. Its removal costs no ring points in total. This finite illustration does not use the asymptotic sign test.}\label{fig:masks}
 \end{figure}
 
 \paragraph{Which pairs give clauses?} Fix the level $k$, but not the bits. Write $P_k$ for the union of the twelve outer-sheet sites over each $(u,k/u)$ (both masks together). Given one representative $q_i$ of each proposed opposite pair, form the list
@@ -80,13 +82,13 @@ For an indeterminate root $(X,Y)$, the 130 shift polynomials are $0$, $XY$, the 
 \[
  -\frac{b}{4a}X^2+\tfrac12 XY-\frac{a}{4b}Y^2.
 \]
-The last group has nonzero $X^2$ coefficients distinguishing the signed slopes $b/a$; the first three groups have zero $X^2$ coefficient and distinct $XY$ coefficients. Distinctness over $\mathbb Q$ therefore follows before any root or level is chosen. Only finitely many primes divide a denominator or all nonzero numerators of a coefficient difference. Outside them the shift polynomials stay distinct in $\F[X,Y]$. Each difference has total degree at most two and vanishes on at most $2p$ pairs $(X,Y)$ (the elementary polynomial zero bound). The probability that any two \emph{values} coincide is at most $2\binom{130}{2}/p$. Also $\Prob(\ch(XY)=1)=(p-1)^2/(2p^2)$. Hence a positive fraction, tending to $1/2$, of roots pass the latter condition and have no coincident values.
+The last group has nonzero $X^2$ coefficients distinguishing the signed slopes $b/a$; the first three groups have zero $X^2$ coefficient and distinct $XY$ coefficients. Distinctness over $\mathbb Q$ therefore follows before any root or level is chosen. All rational coefficients just listed have numerator of absolute value and positive denominator at most $15^2=225$: for the ratio shifts use $u+v\le15$. A nonzero coefficient difference therefore has unreduced numerator of absolute value at most $2\cdot225^2$. For $p>101250$ the shift polynomials remain distinct in $\F[X,Y]$. Each difference has total degree at most two and vanishes on at most $2p$ pairs $(X,Y)$ (the elementary polynomial zero bound). The probability that any two \emph{values} coincide is at most $2\binom{130}{2}/p$. Also $\Prob(\ch(XY)=1)=(p-1)^2/(2p^2)$. The fraction passing both requirements is at least $1/2-(1+2\binom{130}{2})/p$, hence at least $1/4$ for $p>101250$.
 
 Fix such a root and write $\mathcal A=\{a_1,\ldots,a_s\}$ for its distinct shifts, $s=130$. Put $\epsilon_j=-1$ for $0,XY$ and the 86 direction shifts, and $\epsilon_j=+1$ for the 42 ratio shifts. For every $k\in\F$ put
 \[
-  \mathcopy{P(k) = 2^(-s) product_{j=1}^s (1 + epsilon_j chi(k - a_j)).}{P(k)=\prod_{j=1}^{s}\frac{1+\epsilon_j\ch(k-a_j)}{2}.}
+  \mathcopy{P(k) = 2^(-s) product_{j=1}^s (1 + epsilon_j chi(k - a_j)).}{P(k)=\frac{1}{2^s}\prod_{j=1}^{s}\bigl(1+\epsilon_j\ch(k-a_j)\bigr).}
 \]
-For $k\notin\mathcal A$, this is the indicator that all signs agree. At a shift value the sign prescription fails, since $\ch(0)=0$. On $\mathcal A$ one factor of $P(k)$ is $1/2$ and every other factor is at most one. Thus
+For $k\notin\mathcal A$, this is the indicator that all signs agree. At $k=a_j$ the sign test fails since $\ch(0)=0$. The $j$th factor in the product is then one, and each other factor is zero or two. Hence $0\le P(a_j)\le 2^{s-1}/2^s=1/2$. Thus
 \[
   \mathcopy{R_A = sum_{k in A} P(k), with 0 <= R_A <= s/2.}{R_{\mathcal A}:=\sum_{k\in\mathcal A}P(k),\qquad 0\le R_{\mathcal A}\le s/2.}
 \]
@@ -101,12 +103,15 @@ Writing $[s]=\{1,\ldots,s\}$, the number $N_z$ of admissible levels at this root
        -R_{\mathcal A}.
 \end{aligned}}
 \]
-Each nonempty $J$ gives a product of distinct linear factors. The Weil bound~\cite[Theorem 5.41]{weil} bounds its character sum by $(|J|-1)\sqrt p$ in absolute value. Consequently
+For nonempty $J$ the product is monic, has $|J|$ simple roots and is not a square. The multiplicative-character Weil bound~\cite[Theorem 5.41]{weil}, applied to the quadratic character, bounds the absolute sum by $(|J|-1)\sqrt p$. Since $\sum_{J\ne\varnothing}(|J|-1)=s2^{s-1}-(2^s-1)$, we obtain
 \[
-  \mathcopy{|N_z - p/2^s| <= (1 - 2^(-s)) (s-1) sqrt(p) + s/2.}{\left|N_z-\frac{p}{2^s}\right|
-  \le (1-2^{-s})(s-1)\sqrt p+\frac{s}{2}.}
+  \mathcopy{|N_z - p/2^s| <= (s/2 - 1 + 2^(-s)) sqrt(p) + s/2.}{\left|N_z-\frac{p}{2^s}\right|\le \bigl(s/2-1+2^{-s}\bigr)\sqrt p+\frac{s}{2}.}
 \]
-For sufficiently large $p$, at least $1/4$ of the roots have the required $\ch(XY)$ and distinct shifts, and for each of them $N_z/p\ge 2^{-131}$. Multiplication gives $\Prob(E_i)\ge 2^{-133}$. This is a marginal bound for $(z_i,k)$, not a conditional bound given the tests at other roots.
+For $s=130$ the error is at most $65\sqrt p+65$. For this sign test alone, $\mathcopy{p >= 2^276}{p\ge 2^{276}}$ suffices: then $p/2^{131}\ge128\sqrt p\ge65\sqrt p+65$. Thus $N_z/p\ge 1/2^{131}$ for each of the qualifying roots. Averaging over the root yields
+\[
+  \mathcopy{Pr(E_i) >= (1/4) * 2^(-131) = 2^(-133) = gamma.}{\Prob(E_i)\ \ge\ \frac{1}{4}\cdot\frac{1}{2^{131}}\ =\ \frac{1}{2^{133}}\ =:\ \gamma.}
+\]
+This is a marginal bound for $(z_i,k)$, not a conditional bound given the tests at other roots.
 \end{proof}
 
 \paragraph{Other types of triples.} We record costs according to the number of distinct sampled indices involved.
@@ -155,10 +160,11 @@ $TTT$ & With two indices, a mate pair determines a diameter and a third site on 
 These ten multisets exhaust the possibilities. In particular the test for three independent indices does not stand in for a test on two sites of one opposite pair.
 \end{proof}
 
-\begin{proposition}\label{prop:index} For all sufficiently large primes $p\equiv1\pmod{840}$ with $I\ge L_p^{24}$, the number of opposite pairs that can be added to a suitably oriented anchored ring is
+\begin{proposition}\label{prop:index} For all sufficiently large primes $p\equiv1\pmod{840}$ with $I\ge L_p^{24}$, there is an orientation of the anchored ring admitting $m$ additional opposite pairs with
 \[
- \gg \frac{\min(I,\sqrt p)}{L_p^3}.
+ \mathcopy{m >= c * min(I, sqrt(p)) / (L_p^3), for an absolute c > 0.}{m\ \ge\ c\,\frac{\min\{I,\sqrt p\}}{L_p^3}}
 \]
+for an absolute $c>0$. The denominator is $L_p^3$; each retained pair contributes two points.
 \end{proposition}
 \begin{proof} Use $G=\max(1,\lfloor I^{1/4}\rfloor)$ in \eqref{eq:nonparallel}. Call an index \emph{eligible} if it passes $E_i$, has no one-index geometric exception and all endpoint occurrences of its nonaxial blocking secants through the representative use distinct $H$-cosets. On $E_i$ these are among our generic, long-direction, long-ratio templates. Removing impossible outer-sheet points from the template count can only help. Any two occurrences belong to the two slots of one chord, two different chords at one representative (equal or unequal modular slopes), or two different representatives. Reuse of a physical endpoint is included in this partition. The last case is a two-index event. For the within-root cases use Section~\ref{sec:encoding}, Lemma~\ref{lem:lifts} and Proposition~\ref{prop:nonparallel}, respectively. Let $B_i$ denote failure of any of the additional one-index checks. Since $h/p\le I^{-1}$ and $G\asymp I^{1/4}$, their unconditional costs give
 \begin{equation}\label{eq:one}
@@ -177,7 +183,7 @@ Mark an edge on two eligible indices for any two-index geometric exception, or i
   \Prob\big(\{i,j\}\text{ is marked}\big)
     \ll L_p^2\!\left(\frac{1}{I}+\frac{1}{\sqrt p}\right).
 \end{equation}
-Also mark a three-index edge for a collinearity among three eligible indices, at probability $O(1/p)$ for each triple. Put $J=\min\{I,\sqrt p\}$ and $N=\lfloor J/L_p^3\rfloor$. Then $N\to\infty$ under the index hypothesis. For the total number $Z$ of marked edges,
+Also mark a three-index edge for a collinearity among three eligible indices, at probability $O(1/p)$ for each triple. Put $J=\min\{I,\sqrt p\}$ and $\mathcopy{N = floor(J / (L_p^3))}{N=\lfloor J/L_p^3\rfloor}$. Then $N\to\infty$ under the index hypothesis. For the total number $Z$ of marked edges,
 \[
   \mathcopy{E[Z] << N^2 L_p^2/J + N^3/p << N/L_p + N/L_p^6 = o(N).}{\mathbb E Z
    \ll \frac{N^2 L_p^2}{J}+\frac{N^3}{p}
@@ -193,20 +199,32 @@ All blocking endpoint occurrences in the surviving representatives now have dist
 \caption{How the deletion step in Proposition~\ref{prop:index} works, schematically. Each numbered vertex is one eligible index at the \emph{same} level $k$ and represents two opposite sites. Meeting the marked pair and the marked triple removes every indicated conflict. The matching is performed on the survivors. The diagram illustrates the deletion rule, not observed conflict frequencies.}\label{fig:pruning}
 \end{figure}
 
+\input{constants}
+
 \section{The cyclotomic choice of primes}\label{sec:primes}
-\begin{proof}[Proof of Theorem~\ref{thm:main}] Apply Stewart's theorem \cite[Theorem 1, (7)]{stewart} to $\Phi_j(3,1)$ for large multiples $j$ of 840. Here $(3+1)^2=16$ and $3\cdot1=3$ are coprime nonzero integers, and $3/1$ is not a root of unity. The largest prime divisor satisfies
+\begin{proof}[Proof of Theorem~\ref{thm:main}] Apply Stewart's theorem \cite[Theorem 1.1, (1.7)]{stewart} to $\Phi_j(3,1)$ for large multiples $j$ of 840. Here $(3+1)^2=16$ and $3\cdot1=3$ are coprime nonzero integers, and $3/1$ is not a root of unity. The largest prime divisor satisfies
 \[
  p> j\exp\!\left(\frac{\log j}{104\log\log j}\right).
 \]
-As $p>j$, $X^j-1=\prod_{d\mid j}\Phi_d(X)$ is separable modulo $p$. Its cyclotomic factors therefore share no root. Since $3$ is a root of $\Phi_j$ modulo $p$, its multiplicative order is exactly $j$. Thus $p\equiv1\pmod{840}$; moreover $j$ is even, $-1\in\langle3\rangle$, and $h=j$. Distinct orders give distinct primes. For all sufficiently large primes so obtained,
-\[
- \log I\ge \frac{\log p}{210\log\log p}:
-\]
-if $j\le\sqrt p$ this is immediate, while if $j>\sqrt p$, Stewart gives $\log(p/j)>\log p/(208\log\log p)$. Passing to $I=(p-1)/j$ adds $\log(1-1/p)$, absorbed by replacing 208 with 210. In particular $I\ge L_p^{24}$ eventually. Also $\sqrt p\ge \exp(\log p/(210\log\log p))$ eventually. By Proposition~\ref{prop:index}, the log of the number of extra points is therefore at least
-\[
- \frac{\log p}{210\log\log p}-3\log L_p-O(1)
- \ \ge\ \frac{\log p}{300\log\log p}
-\]
-for all sufficiently large primes in this sequence. This gives~\eqref{eq:main}. For a prescribed integer $m$, one may also keep exactly $m$ of the supplied opposite pairs on all sufficiently large boards of the sequence.\end{proof}
+As $p>j$, $X^j-1=\prod_{d\mid j}\Phi_d(X)$ is separable modulo $p$. Its cyclotomic factors therefore share no root. Since $3$ is a root of $\Phi_j$ modulo $p$, its multiplicative order is exactly $j$. Thus $p\equiv1\pmod{840}$; moreover $j$ is even, $-1\in\langle3\rangle$, and $h=j$. Distinct orders give distinct primes.
 
-The constant 300 is not optimized. Neither a conjecture about multiplicative orders nor empirical independence of secants is used. The proof supplies no numerical cutoff at which one can expect the character prescription to become practical: there are 130 simultaneous signs, and only their fixed number is used in the asymptotic argument.
+Write $x=\log p$ and $d=\log(p/j)$, so that $\log j=x-d$. Since $\log\log j<\log x$, Stewart's inequality gives
+\[
+ \mathcopy{d > log(j)/(104 log(log(j))) >= (x-d)/(104 log x), hence d > x/(104 log x + 1).}{d>\frac{\log j}{104\log\log j}\ge\frac{x-d}{104\log x}
+ \quad\Longrightarrow\quad d>\frac{x}{104\log x+1}.}
+\]
+The last lower bound is asymptotic to $x/(104\log x)$. Since $I=(p-1)/j$, we have $\log I=d+\log(1-1/p)=d+o(1)$. It follows that $\log I\ge x/(105\log x)$ for all sufficiently large primes in the sequence.
+
+We now show that for \emph{any} prime $p\equiv1\pmod{840}$ the following test suffices for~\eqref{eq:main}:
+\begin{equation}\label{eq:prime-test}
+ \mathcopy{log(p) >= 2^256 and log(I) >= log(p)/(105 log(log(p))).}{x\ge 2^{256},\qquad \log I\ge\frac{x}{105\log x}.}
+\end{equation}
+In this range $x/(\log x)^2>2^{16}$ (the ratio is increasing) and $\log L_p=\log(1+x)\le2\log x$. Thus $x/(105\log x)>24\log L_p$, so $I\ge L_p^{24}$. Also $\log\sqrt p=x/2\ge x/(105\log x)$. Hence $\log J\ge x/(105\log x)$ for $J=\min(I,\sqrt p)$. The bound~\eqref{eq:explicit-index} counts opposite pairs, so the number $2m$ of extra points is at least $2^{-134}J/L_p^3$. Taking logarithms gives
+\[
+ \mathcopy{log(2m) >= x/(105 log x) - 3 log L_p - 134 log 2 >= x/(114 log x).}{\log(2m)\ge\frac{x}{105\log x}-3\log L_p-134\log 2
+ \ge\frac{x}{114\log x}.}
+\]
+For the last step, $1/105-1/114=1/1330$, and $x/(1330\log x)>7\log x\ge3\log L_p+134\log 2$. All sufficiently large primes in our sequence pass~\eqref{eq:prime-test}. Adding these $2m$ points to the $6p+2$ ring points and anchors gives~\eqref{eq:main}.
+\end{proof}
+
+\paragraph{Which primes are covered?} One may enumerate $j=840,1680,\ldots$ and take $p$ to be the largest prime factor of $\Phi_j(3,1)$. Stewart's threshold for $j$ is effectively computable; we have not evaluated it. A prime on the progression can instead be tested directly by~\eqref{eq:prime-test}, without knowing that threshold. The test is sufficient, not necessary; we do not claim that all such primes pass it. For a prime that passes, one could exhaust the finite choices of level, proposals and orientation. For any fixed integer $r\ge0$, one may retain just $r$ added pairs on all sufficiently large boards in the sequence. No practical running time or least successful prime is claimed.

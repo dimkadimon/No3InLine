@@ -30,6 +30,8 @@ def export():
     for p in (8009,16001,32003):paths.append(f'studies/improvements/data/final-{p}.txt')
     assert len(set(paths))==len(paths)
     files={name:(R/name).read_bytes() for name in paths};files['README.md']=(R/'replay/README.md').read_bytes()
+    # The live results README describes a newer rendering; keep the R2 documentation in its ZIP.
+    files['results/README.md']=(R/'replay/results-README-r2.md').read_bytes()
     for tag in ('ring','other'):files[f'paper/table-{tag}.txt']=(R/f'paper/table-{tag}.tex').read_bytes()
     files['MANIFEST.sha256']=''.join(f'{hashlib.sha256(files[n]).hexdigest()}  {n}\n' for n in sorted(files)).encode()
     buf=io.BytesIO()

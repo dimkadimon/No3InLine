@@ -1,0 +1,20 @@
+19 November 2026 — R4 submission package (local preflight, not an arXiv receipt)
+
+$ python3 scripts/build_paper.py
+PASS: 15 analytic/coordinate-backed comparisons; four stronger report-only transfers separately. All witnesses and both negative report differences retained.
+Output written on main.pdf (22 pages, 616292 bytes).
+PASS abstract ends with a clickable page-one repository URL; extracted limit and probability bound preserve the subsequence and exponents.
+PASS problem-first abstract; Stewart conversion, explicit index test and exponent 114 in the reader.
+PASS illustrated ring, flip and added-pair walkthrough before Theorem 1.1.
+PASS main result in PDF outline and forward page link; arXiv abstract 962 ASCII characters with the manuscript text and denominator 114.
+PASS reader: references and 16 citation destinations before Appendix A; both evidence tiers match the comparison CSV, including the two negative report differences.
+PASS reader: four figures, four marked report-only sources, clean formula extraction, requested removals and pinned kit link.
+PASS fresh source-archive build: 16 members, one LaTeX root, clean three-pass pdfLaTeX build.
+PASS reader PDF attachment round trip, SHA256 238f38e60234b982cd0ba13045bfad4809fb00e764d0eb1278bfeb7378d6d9ca
+arxiv-source.tar.gz SHA256 967200f805c251de0520c11c46e99832310105e286a59056d5baede2be05e0e9
+main.pdf SHA256 2c5e84bc375f71ea69003cb4baef028b88f7c354ef81642ed9ea7437565b3470
+
+A second clean three-pass build reproduced the source archive, reader PDF and build log byte-for-byte. qpdf --check passed; pdfdetach extracted the byte-pinned replay ZIP.
+Source-only check: all 16 archive entries were regular files. In isolation, with anc/ omitted, pdfLaTeX (-no-shell-escape) produced the same 22 pages of text and zero embedded files. The only TeX root is main.tex. Four vector figures, three ancillary files. No external data restore is needed to typeset.
+Theorem and corollary, authorship text, abstract, source credits, four figures, two table tiers and three ancillary files are unchanged from the preceding 114 draft. The opening text points to the page-3 result; the new §1.1 PDF outline entry resolves to the theorem page. The 962-character paste field is plain ASCII and matches the printed abstract with standard inline TeX.
+The cross-check of slope keys accepted valid point sets and rejected collinear triples with vertical, opposite-ray and negative slopes; distinct near-adjacent rational slopes at width 64,006 were distinguished. Checks of finite geometry and the build do not verify §§3–7 of the infinite-family proof.

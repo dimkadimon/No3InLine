@@ -1,48 +1,69 @@
 \section{Finite witnesses and comparisons}\label{sec:finite}
-\subsection{What changing an orientation accomplishes}
-At $p=73$, $k=28$, the ring and the eight anchors have 440 points. In the square-abscissa-even orientation, the proposed site $q=(131,122)$ is blocked: $(96,52)$ and $(193,246)$ lie on $y=2x-140$. Flipping the component containing the residue $1$ removes the second point and retains the first. The same flip admits five opposite pairs, giving 450 points in all (Figure~\ref{fig:flip}). This example explains how an insertion can be a net gain without being legal in the original orientation. This illustrates a flip, not the height-eight sieve or the largest project witness on side 293.
+\subsection{Certificates for the flip examples}
+For the opening example (Figure~\ref{fig:flip}), $p=73$ and the level is $k=28$. The initial choice is even physical parity for square abscissas and odd parity for nonsquares. The switched group is $H\cup28H$, where $H=\langle-1,3\rangle$ has 12 elements. Thus 24 seeds exchange six selected copies apiece: 144 ring sites leave and 144 others enter. The site $(193,246)$ that leaves the line $y=2x-140$ is the copy $(47,27)+73(2,3)$ pictured in Figure~\ref{fig:masks}. The five representatives in the certificate are
+\[
+ (115,130),\quad(117,142),\quad(121,185),\quad(131,122),\quad(138,131).
+\]
+Together with their mates $(292-x,292-y)$, these give the verified 450-point set. The check concerns the whole board, not just the line in the picture. This is not the largest project witness on side 293 (see Table~\ref{tab:bounds}).
 
-\begin{figure}[htbp]\centering
-\includegraphics[width=.96\linewidth]{figures/one-flip.pdf}
-\caption{The 450-point cap on side 293. Squares are the eight anchors; diamonds are the ten insertions. On the indicated integer line, the open diamond is a proposal and the cross marks a vacated ring site. The flip changes an entire component, not just the point shown.}\label{fig:flip}
-\end{figure}
-
-A larger example realizes the stronger \emph{distinct-coset} criterion used in the proof. At $p=797\,161$, $k=11$, the group $H$ has order 26 and index $30\,660$. Take the representatives $(1\,591\,070,845\,785)$ and $(845\,785,1\,591\,070)$ and their mates. Testing the $12(p-1)$ possible outer-sheet sites yields 72 potential nonaxial secants at each representative. This finite example uses a shorter search filter than the asymptotic sign test; its clauses are enumerated directly. The 288 endpoint occurrences in these 144 clauses have 288 distinct abscissa cosets. In the initial orientation 21 and 17 secants block the two sites, respectively. A matching of all 144 clauses gives 38 component flips and a cap of size
+A larger example realizes the \emph{distinct-coset} criterion. At $p=797\,161$, $k=11$, the group $H$ has order 26 and index $30\,660$. Take the representatives $(1\,591\,070,845\,785)$ and $(845\,785,1\,591\,070)$ and their mates. Testing the $12(p-1)$ possible outer-sheet sites yields 72 potential nonaxial secants at each representative. This finite example uses a shorter search filter than the asymptotic sign test; its clauses are enumerated directly. The 288 endpoint occurrences in these 144 clauses have 288 distinct abscissa cosets. In the initial orientation 21 and 17 secants block the two sites, respectively. A matching of all 144 clauses gives 38 component flips and a cap of size
 \[
  4\,782\,960+8+4=4\,782\,972.
 \]
 A second program reconstructs the cap from the representatives and the flipped component labels without reading the matching. For old triples it checks integer intercepts in all eight possible same-fibre directions. For each of the twelve anchor or target sites it checks the primitive unoriented directions to every other final point: $12(4\,782\,972-1)=57\,395\,652$ directions. No repeated direction was found within any of the twelve lists. These are finite checks of actual lattice points, not an empirical estimate of $g(p)$.
 
+\subsection{The selection bound at finite primes}\label{sec:scale}
+What does Proposition~\ref{prop:index} guarantee at a size one can compute? Let $J=\min(I,\sqrt p)$. The proof samples $N=\lfloor J/L_p^3\rfloor$ proposals; only a fraction survive. The first three primes congruent to 1 modulo 840 give the following comparison. The last column counts \emph{opposite pairs} in actual anchored-ring certificates, before any exchange search.
+\begin{center}\small
+\begin{tabular}{@{}rrrrrr@{}}\toprule
+$p$ & $\operatorname{ord}_p(3)$ & $I$ & $J/L_p^3$ & $N$ & Certified pairs \\ \midrule
+$2\,521$ & 126  & 20 & 0.02903 & 0 & 118 \\
+$3\,361$ & 1680 &  2 & 0.00264 & 0 & 146 \\
+$4\,201$ & 420  & 10 & 0.01226 & 0 & 150 \\ \bottomrule
+\end{tabular}\end{center}
+All three fail $I\ge L_p^{24}$, so the proposition gives no numerical gain here. Even for the distinct-coset example $p=797\,161$, $J/L_p^3\simeq0.288$: the two pairs found directly do not come from the asymptotic estimate. Membership in the progression is not the index condition.
+
+For an example from the cyclotomic rule itself, take its first input, $j=840$. The largest prime factor $P$ of $\Phi_{840}(3,1)$ is
+\[
+ \mathcopy{P = 2047314589905164660182861222233071665633201.}{P=2\,047\,314\,589\,905\,164\,660\,182\,861\,222\,233\,071\,665\,633\,201.}
+\]
+The order of 3 modulo $P$ is 840, hence $I=(P-1)/840\simeq2.44\times10^{39}$. The raw proposal scale $J/L_P^3\simeq1.50\times10^{15}$ is large, but $L_P^{24}\simeq6.83\times10^{47}$ is still larger than $I$. Thus even here the proposition does \emph{not} certify those proposals as insertions. A smaller factor, $162\,410\,641$, also has order 840 and gives $N=1$, again outside the hypotheses. The ancillary arithmetic check verifies the \href{https://factordb.com/index.php?id=1100000000498735166}{factorization}, the primality of every factor and the orders. No cap of side $4P+1$ was computed for this illustration.
+
 \subsection{Lower bounds at the same side length}
-Table~\ref{tab:bounds} gives the largest explicit project witness exhibited on each listed side, including configurations found by exchanges rather than by preserving an anchored ring. Let $W$ denote its count. The benchmark $B$ is the largest transferred count from the specified external sources below, using the cited versions. It concerns the \emph{unrestricted} problem; where the winning source is a report, its status as a lower bound is conditional on that report. We include reported counts even when independent coordinate files were not located. This matters: on two boards a reported external bound already exceeds our explicit witness. Neither $W$ nor $B$ is an estimate of the maximum.
+Table~\ref{tab:bounds} compares the largest certified project witness $W$ exhibited at each side with the strongest \emph{analytic or coordinate-backed} benchmark $B$ among the specified sources. These are lower bounds for the unrestricted problem. The symmetry column refers only to $W$. No unverified forum count enters $B$. Four stronger reports, including two that exceed our witnesses, are displayed separately in Table~\ref{tab:reports}; omitting them from the certified comparison does not establish a record.
 
 \begin{table}[htbp]\centering\small
-\caption{Finite evidence. $W-B$ compares constructions; $W-3n/2$ measures the excess at the actual side. Q and H mean board-centred quarter-turn and half-turn symmetry, respectively; U means no symmetry is required. Symmetry labels refer only to $W$.}\label{tab:bounds}
+\caption{Analytic and coordinate-backed comparisons. $W-B$ compares constructions; $W-3n/2$ measures the excess at side $n$. Q and H denote board-centred quarter-turn and half-turn symmetry; U means no symmetry is required.}\label{tab:bounds}
 \smallskip
 \begin{tabular}{@{}rrcrcrr@{}}\toprule
 Side $n$ & External $B$ & Source & Witness $W$ & Sym. & $W-B$ & $W-3n/2$ \\ \midrule
 \multicolumn{7}{@{}l}{\emph{Sides of the form $4p+1$ used for ring examples}}\\[2pt]
-\RingTableRows
+\rowinput{table-checked-ring.tex}
 \addlinespace[.65em]
 \multicolumn{7}{@{}l}{\emph{Other sides with certified constructions}}\\[2pt]
 \rowinput{table-other.tex}
-\bottomrule\end{tabular}\par\smallskip
-\begin{minipage}{.94\linewidth}\footnotesize
-\textbf{$\dagger$ Reported only.} In the four \reportedsource\ rows, $B$ is transferred from a posted count whose coordinates were not checked. Only $B$ and the difference $W-B$ depend on that report. Every $W$ is verified from a coordinate list or certificate. C and R are analytic bounds; K and S use checked external point sets.
-\end{minipage}
+\bottomrule\end{tabular}
 \end{table}
 
-\paragraph{Why two differences are negative.} On side 293 our quarter-turn witness has 508 points. A reported 512-point set on side 288~\cite{chain} fits unchanged, so $W-B=508-512=-4$. On side 773 our half-turn witness has 1188 points. A set of 1352 points is reported on side 800~\cite{plateau}. Each row and column holds at most two, so trimming 27 of each costs at most $2\cdot27+2\cdot27=108$ points. If the report holds, at least 1244 remain, giving $W-B=1188-1244=-56$. Neither transfer is required to preserve symmetry about the new centre.
-
-Both witnesses are nevertheless \emph{above} $3n/2$: $508-439.5=+68.5$ and $1188-1159.5=+28.5$. Neither board is on the prime progression of Theorem~\ref{thm:main} ($p=73,193$, respectively). If we exclude forum reports, the strongest benchmarks among our sources are 504 on side 293 (a checked crop) and 1152 on side 773 (the ring on side 772), giving $+4$ and $+36$ instead. We retain the larger reports, explicitly marked, rather than claim gains over weaker comparisons. None of these differences determines a board maximum.
-
-\paragraph{How $B$ was calculated.} A cap of $b$ points on side $a$ gives an ordinary cap of at least $b-4\max(a-n,0)$ points on side $n$: embed it if it fits, or delete at most two points per removed row and per removed column. Such a transfer need not preserve symmetry about the \emph{new} centre. For C, R, S and F we apply this inequality to each source; K instead uses actual coordinates. We take the maximum of all the resulting integers.
+\paragraph{How $B$ was calculated.} A cap with $b$ points on side $a$ gives an ordinary cap with at least $b-4\max(a-n,0)$ points on side $n$: embed it if it fits, or delete at most two points per removed row and per removed column. This need not preserve symmetry about the new centre. For C, R and S we apply that transfer; for K we count actual coordinates. We take the maximum among these four sources.
 \begin{description}
-\item[C and R.] C is the $3(q-1)$ construction at side $2q$ of Hall et al.\ \cite{hjsw}. R is the four-period ring of~\cite{ring}; the mask argument in Section~\ref{sec:ring}, before adding the anchors, gives $6(q-1)$ sites on side $4q$ for prime $q\equiv1\pmod{12}$. With the transfer inequality above, it suffices in each family to try the nearest admissible prime on either side of the target scale.
-\item[K and S.] K comprises 146 identified coordinate sets from version 4 of kiro\_conic's search supplement~\cite{kiro}. We count the best axis-aligned $n$-square crop of each set, or embed it unchanged. S comprises the three archived, directly comparable witnesses from~\cite[\S8]{station47}. They have 282, 421 and 810 insertions into their respective classical frames. We reconstructed each S baseline and checked all ordinary triples, independently of the search that found its insertions. Neither a successful check nor the size of a crop establishes optimality.
-\item[F.] F denotes a transfer of a publicly \emph{reported} count~\cite{chain,plateau,framepost}. For the four F rows the source pairs $(a,b)$ are, in order, $(288,512)$, $(400,696)$, $(800,1352)$ and $(4006,6118)$. The two negative rows are worked above. On side 389 the transfer gives $696-4(400-389)=652$; on side 4037 the reported $6118=3(2003-1)+112$ fit without trimming. We located the posts, not a coordinate certificate for these counts. If reports are excluded, the best comparisons from C, R, K and S on these four sides are instead $504,576,1152,6048$. No rounded density is used as a point count.
+\item[C and R.] C is the $3(q-1)$ construction at side $2q$ of Hall et al.\ \cite{hjsw}. R is the four-period ring of~\cite{ring}; Section~\ref{sec:ring}, before adding anchors, gives $6(q-1)$ sites on side $4q$ for prime $q\equiv1\pmod{12}$. It suffices in each family to try the nearest admissible prime on either side of the target scale.
+\item[K and S.] K comprises 146 coordinate sets from kiro\_conic's versioned search supplement~\cite{kiro}. We use the best axis-aligned $n$-square crop of each set, or embed it unchanged. S comprises the three witnesses from~\cite[\S8]{station47} with 282, 421 and 810 insertions into their classical frames. We reconstructed each S baseline independently of the original search. A second check on the source coordinates reproduced the K crop maxima and all three S totals. Neither check establishes optimality.
 \end{description}
 
-\paragraph{Exchanges versus additions.} At sides 389, 4037 and 10085 the project counts are 668, 6296 and 15520, rather than the smaller counts from keeping particular embedded rings unchanged. On the three S boards, exchanges improve the public totals by 282, 417 and 246; these are net gains, not counts of points appendable while keeping each published point. At side 32002, for example, the preceding project bound was 48661 and the present one is 48838. Positive differences in the table are relative to named comparisons, not claims of world records.
+\begin{table}[htbp]\centering\small
+\caption{Reported only: transfers $B_F=b-4\max(a-n,0)$ that would exceed $B$ in Table~\ref{tab:bounds}. Every $W$ is verified; neither the posted count $b$ nor its transfer $B_F$ is used as certified evidence.}\label{tab:reports}
+\smallskip
+\begin{tabular}{@{}rrcrrrr@{}}\toprule
+Side $n$ & Source side $a$ & Report & Stated $b$ & $B_F$ & $W$ & $W-B_F$ \\ \midrule
+\rowinput{table-reports.tex}
+\bottomrule\end{tabular}\par\smallskip
+\begin{minipage}{.93\linewidth}\footnotesize
+\textbf{$\dagger$ Reported only.} The cited posts state point counts; we did not locate coordinate certificates for these four counts. The last column is conditional on the report.\end{minipage}
+\end{table}
 
-\paragraph{Verification coverage.} The medium examples have explicit coordinates. For the four rotational sets at sides 293, 389, 4037 and 10085 the checker tests exact directions from every point: $281\,191\,312$ ordered directions in total. It also checks the claimed symmetries. The large two-period sets use a compact list of deletions and additions to the stated frame. The checker regenerates that frame, checks the possible same-fibre directions over its retained points, and tests every direction from every added point. For the four-period examples the analogous procedure uses eight old directions rather than four. The two largest expanded two-period lists can be regenerated byte-for-byte from their edit certificates. The geometry checks require no search solver. Small-field tests of the identities in Sections~\ref{sec:encoding}--\ref{sec:two} are additional diagnostics and are not used in their proofs. The \href{https://raw.githubusercontent.com/dimkadimon/No3InLine/e19b8a1b689eba392c7d26ec3733e88db566dc0e/paper/anc/no3-replay-r2.zip}{version-pinned finite replay kit} is also an ancillary file of the TeX source and an attachment to the distributed PDF.
+\paragraph{Why two reported comparisons are negative.} The reported 512 points on side 288 fit unchanged on side 293, so $508-512=-4$. On side 773, trimming 27 rows and 27 columns from the reported 1352 points on side 800 costs at most 108 points. If the report holds, at least 1244 remain, so $1188-1244=-56$. Yet the witnesses exceed $3n/2$ by $508-439.5=68.5$ and $1188-1159.5=28.5$. Their sides correspond to $p=73,193$, outside the progression of Theorem~\ref{thm:main}. Against checked benchmarks the differences are instead $508-504=+4$ (an actual crop) and $1188-1152=+36$ (a ring). The comparison with another construction is not the excess over $3n/2$.
+
+\paragraph{Exchanges versus additions.} At sides 389, 4037 and 10085 the project counts 668, 6296 and 15520 use exchanges, not just additions to particular rings. On the three S boards the net gains over the named constructions are 282, 417 and 246. These are not necessarily numbers of points that could be appended without removing any. Neither table asserts a board maximum.
+
+\paragraph{Verification coverage.} For the rotational witnesses at sides 293, 389, 4037 and 10085, the checker verifies symmetry and all $281\,191\,312$ ordered directions between distinct points. For the large edited frames it regenerates the retained points, checks all possible same-fibre directions (four for two-period frames, eight for four-period rings), and tests every direction from each addition. The two largest expanded two-period lists reproduce byte-for-byte. No geometry check uses a search solver; small-field identity tests are diagnostics, not proofs of Sections~\ref{sec:encoding}--\ref{sec:two}. The \href{https://raw.githubusercontent.com/dimkadimon/No3InLine/e19b8a1b689eba392c7d26ec3733e88db566dc0e/paper/anc/no3-replay-r2.zip}{version-pinned finite replay kit} is included as \texttt{anc/no3-replay-r2.zip} in the TeX source archive. The repository's reader PDF also includes the ZIP as an attachment; it is not needed to typeset the paper.
