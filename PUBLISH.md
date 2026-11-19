@@ -5,7 +5,7 @@ Destination: **`dimkadimon/No3InLine`**. A new repository is to be public; an ex
 A `.bundle` distributed alongside the paper contains the source tree **and the actual local commit**, without credentials. To publish it from a machine where you control the GitHub login:
 
 ```sh
-git clone -b main No3InLine.bundle No3InLine
+git clone -b main No3InLine-R2.bundle No3InLine
 cd No3InLine
 gh auth login --hostname github.com --web      # skip if already signed in as dimkadimon
 python3 scripts/publish.py                     # authenticated inspection; no remote writes
@@ -17,3 +17,5 @@ The script uses the GitHub CLI credential helper; it does not require a token on
 **Safeguards.** A 404 without authentication does not prove a repository does not exist. The script first authenticates and checks the repository through the API. If the owner is authenticated and the name is absent, `gh repo create --public` requests an empty public repository. If the target exists, the script does not change its visibility. It checks out the existing default branch in a disposable clone and merges the release (even when the histories were originally unrelated). It does not choose between conflicting file versions, remove unrelated files, force-push, or turn off branch protection. On a conflict or rejected push, use a reviewed merge or pull request instead. An identical branch tip is confirmed with `git ls-remote` after a successful push.
 
 Keep access tokens out of the repository, URLs, chat, and shell commands. Use a credential manager or the browser login.
+
+The R2 bundle contains an annotated **local review tag**, `review-r2-2026-11-19`. Check it with `git show --no-patch review-r2-2026-11-19`. The script above publishes a branch; it does not publish a tag, create a release, obtain a DOI, or approve the manuscript. If a persistent public release is later authorized, verify its accessibility and the exact tagged contents before putting the URL in the paper.

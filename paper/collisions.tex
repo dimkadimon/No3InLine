@@ -1,0 +1,155 @@
+\section{Two chords through the same representative}\label{sec:one}
+A \emph{generic template} below has the nonvanishing conditions of Section~\ref{sec:encoding} and the four integer bounds $|at|,|au|,|bt|,|bu|\le4p$. These constraints are imposed before taking probabilities. A \emph{hit} means that both endpoints reduce to the level $k$; they need not be selected by a mask. Throughout this section the random experiment has exactly $p^3$ equally likely outcomes $(x,y,k)$. We count on $k\ne0$ and $xy\ne k$ where required; that restriction does not decrease the denominator.
+
+\subsection{Equal modular slopes: counting distinct physical lifts}
+\begin{lemma}[Parallel lifts]\label{lem:lifts}
+The probability that two distinct generic physical chords of direction and ratio heights greater than eight both hit the same nonzero level at one root and have equal modular slopes is $O(L_p/p)$.
+\end{lemma}
+\begin{proof}
+The two modular lines through the root coincide. Each chord has two distinct endpoint residues ($a(u-t)\ne0$), and the conic has at most two intersections with that line. Reorder the second chord's two columns to align these residues. For the two matrices of \emph{integer offsets} we then have
+\begin{equation}\label{eq:liftmat}
+ M=v(t,u),\quad v=(a,b)^{\mathsf T},\qquad M'=M+pE,\quad |E_{ij}|\le8.
+\end{equation}
+If $E=0$, the physical unordered endpoints agree, hence so do the canonical templates. Thus $E\ne0$. This reasoning includes the possibility that different pairs lie on the very same ordinary line.
+
+If $E$ has rank one, write $E=rs^{\mathsf T}$ over $\mathbb Q$. Then $M+pE=[v\ r]\operatorname{diag}(1,p)[(t,u)^{\mathsf T}\ s]^{\mathsf T}$. Its determinant is zero, so either $r$ is parallel to $v$ or $s$ is parallel to $(t,u)^{\mathsf T}$. In the first case a nonzero column of $E$ is an integer multiple of the primitive vector $v$; in the second a nonzero row is an integer multiple of the primitive row $(t,u)/\gcd(|t|,|u|)$. In either case the corresponding height is at most eight, contrary to hypothesis. This is the point at which the short \emph{ratio} exclusion is needed in addition to the short-direction exclusion.
+
+Suppose now that $E$ is invertible. Write $d=\gcd(|t|,|u|)$ and $w=(t,u)^{\mathsf T}/d$. Both $v$ and $w$ are primitive. With $J=\operatorname{adj}(E)$, expanding the determinant in~\eqref{eq:liftmat} gives
+\begin{equation}\label{eq:bilin}
+ 0=p^2\det E+pd\,w^{\mathsf T}Jv,
+ \qquad d\mid |\det E|.
+\end{equation}
+Indeed $d\mid p\det E$ and $p\nmid d$ by genericity. There are at most $17^4$ matrices to consider and $1\le |\det E|\le128$ in this case.
+
+Here is the integer-point count for fixed $E,d$. In a bin $D\le\norm v<2D$ we have $\norm w\le U=4p/(dD)$; if $U<1$ there are no solutions. For fixed primitive $v$, write $c=Jv$ and $g=\gcd(|c_1|,|c_2|)$. Then $c\ne0$, and $g\mid |\det E|$ because $Ec=(\det E)v$ and the entries of $v$ are coprime. The same identity gives $\norm c\ge |\det E|\norm v/16$ (each absolute row sum of $E$ is at most 16). If the equation $c\cdot w=-p\det E/d$ is soluble, its integer solutions form one progression with primitive step $(c_2,-c_1)/g$. Its step has infinity norm at least $\norm v/16$. This also covers a zero coordinate of $c$.
+
+If $D\le U$, each of the $O(D^2)$ choices of $v$ contributes $O(1+U/D)$ points in the $w$-box. The product is $O(D^2+DU)=O(p)$. If $U<D$, fix primitive $w$ first. Apply the same argument to $J^{\mathsf T}w$ and $E^{\mathsf T}$: for $\norm w=m$ the number of possible $v$ in the larger box is $O(1+D/m)$. The integer square has $8m$ points of norm exactly $m\ge1$, so the bin contributes at most
+\[
+ \sum_{m\le U}8m\,O(1+D/m)=O(U^2+DU)=O(p).
+\]
+Here $DU=4p/d$. For each solution, $M$ and $M'=M+pE$ are fixed. A nonzero rank-one $M'$ admitting a second template determines its primitive direction with positive first coordinate, and then its two parameters, up to the column order we temporarily allowed. Thus each solution yields at most two ordered representations of the second chord (one in canonical order). Summing the $O(L_p)$ bins and the finitely many $E,d$ gives $O(pL_p)$ pairs, with absolute constants. By~\eqref{eq:hit} the first template alone hits with probability $p^{-2}$. The union bound proves the assertion.
+\end{proof}
+
+\subsection{Unequal modular slopes: a divisor count and a direction count}
+Let two templates have distinct modular slopes. Designate one endpoint of each for comparison, and relabel so their signed parameters are $t,t'$ (not necessarily the lesser parameters). Write $U=x+at$, $V=x+au$, $U'=x+a't'$ for three endpoint abscissas. In a joint hit at $xy\ne k\ne0$ no two of the residues on distinct lines can agree: the only intersection of the lines is the root, which is not on the conic. Distinct conic residues have both coordinates distinct. The slope between abscissas $s_1,s_2$ on the conic is $-k/(s_1s_2)$. Dividing the slope from $U$ to $V$ by the slope from $V$ to $U'$ therefore gives
+\[
+ \frac{U'}{U}=\frac{b}{a}\frac{a't'-au}{b't'-bu}
+ =\frac{\alpha-\lambda}{\beta-\lambda},\qquad
+ (\alpha,\beta,\lambda,\mu)=\left(\frac{a'}a,\frac{b'}b,\frac{u}{t'},\frac{t}{u'}\right).
+\]
+All divisions here are in $\F$ by nonzero elements. If these two occurrences share a coset, $e=U'/U\in H$. Equality of the products in~\eqref{eq:hit} and the last identity give the two necessary conditions
+\begin{equation}\label{eq:ABCD}
+ \alpha\beta=\lambda\mu,\qquad \alpha-e\beta=(1-e)\lambda.
+\end{equation}
+Here $e\ne1$, since otherwise $\alpha=\beta$ and the slopes are equal. We will count using only necessary conditions, not assert that each counted pair is a chord on the board.
+
+\begin{lemma}[Four large gcds]\label{lem:gcd}
+Let $G\ge1$ be an integer. Among ordered generic template pairs with
+$abtu\equiv a'b't'u'\pmod p$, the number for which at least one of
+\[
+ \gcd(a,a'),\quad\gcd(b,b'),\quad\gcd(u,t'),\quad\gcd(t,u')
+\]
+is greater than $G$ is $O(p^3 L_p^5/G)$. Gcds are positive and taken in $\Z$.
+\end{lemma}
+\begin{proof}
+In a specified row of the following table, fix any common divisor $\ell>G$ of the indicated two factors. Since both are nonzero modulo $p$, $p\nmid\ell$. The table writes the two products \emph{after cancelling the same} $\ell$ in $\F$. Each row still has the congruence $ij\equiv i'j'\pmod p$.
+\begin{center}\small
+\begin{tabular}{@{}ccccc@{}}\toprule
+Factors divisible by $\ell$ & $i$ & $j$ & $i'$ & $j'$ \\ \midrule
+$a,a'$ & $(a/\ell)t$ & $bu$ & $(a'/\ell)t'$ & $b'u'$\\
+$b,b'$ & $(b/\ell)t$ & $au$ & $(b'/\ell)t'$ & $a'u'$\\
+$u,t'$ & $a(u/\ell)$ & $bt$ & $a'(t'/\ell)$ & $b'u'$\\
+$t,u'$ & $a(t/\ell)$ & $bu$ & $a'(u'/\ell)$ & $b't'$\\ \bottomrule
+\end{tabular}\end{center}
+In each row $0<|i|,|i'|\le 4p/\ell$, $0<|j|,|j'|\le4p$, by the four offset bounds on each template. None of the four products vanishes modulo $p$. For fixed $i,j$ there are at most $4\tau(|i|)\tau(|j|)$ choices of the original four factors: a signed ordered factorization of a nonzero integer $s$ has $2\tau(|s|)$ choices, and the row tells us exactly which factor to remultiply by $\ell$. Ignoring primitivity, sign conventions and the physical window only increases this bound.
+
+For fixed $i,i'$ put $c=i/i'\in\F^*$ and group $j$ by its residue. With
+\[
+ W(r)=\sum_{0<|j|\le4p,\ j\equiv r\ (p)}\tau(|j|)\quad(r\in\F^*),
+\]
+the sum of the remaining weights is $\sum_r W(r)W(cr)\le\sum_r W(r)^2$, by Cauchy--Schwarz and the permutation $r\mapsto cr$. Each residue has at most nine integer representatives in $[-4p,4p]$. A second Cauchy--Schwarz, now within each residue, gives
+\[
+ \sum_r W(r)^2\le 18\sum_{m\le4p}\tau(m)^2\ll pL_p^3.
+\]
+For the last inequality, $\tau(m)^2\le d_4(m)$ by multiplicativity and $(j+1)^2\le\binom{j+3}{3}$ at a prime power. Counting four positive factors by fixing the first three gives $\sum_{m\le X}d_4(m)\le X(1+\log X)^3$ for $X\ge1$. Similarly $\sum_{m\le X}\tau(m)\le X(1+\log X)$. Applying the latter bound to both signed small factors $i,i'$ costs $O((p/\ell)^2L_p^2)$. If $4p/\ell<1$ the count is zero. Otherwise the cost for this row and divisor is $O(p^3L_p^5/\ell^2)$. Every bad pair occurs for at least its gcd, so summing over the four rows and $\sum_{\ell>G}\ell^{-2}\le1/G$ proves the lemma. This is a global count; no dyadic-bin factor is charged in it.
+\end{proof}
+
+\begin{lemma}[One modular ratio in a rectangle]\label{lem:ratio}
+For $c\in\F^*$, $S,T>0$ and an integer $G\ge1$, the number of integer pairs with $0<|s|\le S$, $0<|t|\le T$, $p\nmid st$, $t\equiv cs\pmod p$ and $\gcd(|s|,|t|)\le G$ is
+\begin{equation}\label{eq:ratio}
+ O(G+ST/p),
+\end{equation}
+uniformly in all parameters.
+\end{lemma}
+\begin{proof}
+There is nothing to count if $S<1$ or $T<1$. First require primitivity. Representatives of one rational direction then consist of at most a vector and its negative. Two different rational directions have a nonzero integer determinant divisible by $p$. After scaling the coordinates by $1/S,1/T$, the absolute determinant is at least $p/(ST)$ and each vector has Euclidean norm at most $\sqrt2$. Their angular separation $\theta$ on the unoriented circle of circumference $\pi$ therefore satisfies $\sin\theta\ge p/(2ST)$. If $2ST<p$ there cannot be two such directions. If $p/2\le ST<p$, two can exist, but their separation is at least $1/2$ radian. In general, when there are at least two, the consecutive angular gaps on that circle are each at least $p/(2ST)$ since $\sin\theta\le\theta$. Summing the gaps gives at most $2\pi ST/p$ directions. Including the empty and one-direction cases, the primitive count is at most $2+4\pi ST/p$.
+
+For gcd exactly $j$, write $(s,t)=j(s_0,t_0)$. Values divisible by $p$ contribute nothing; otherwise the same congruence holds for the primitive pair, in the smaller rectangle $S/j,T/j$. Sum the bound $2+4\pi ST/(p j^2)$ over $1\le j\le G$; the sum of $j^{-2}$ is at most two. This proves~\eqref{eq:ratio}.
+\end{proof}
+
+\begin{proposition}[Nonparallel collision at one root]\label{prop:nonparallel}
+For $1\le G\le\sqrt p$ integral, the probability of a joint hit of two generic templates of unequal modular slopes with a common designated endpoint coset, at a nonzero level off the root, is
+\begin{equation}\label{eq:nonparallel}
+ O\left(\frac{L_p^5}{G}+\frac{h}{p}(1+G)^2 L_p^2\right).
+\end{equation}
+The event is the existence of such a pair, with any endpoint order.
+\end{proposition}
+\begin{proof}
+For a fixed nonparallel pair the two linear equations in $x,y$ in~\eqref{eq:hit} are independent. If the products agree, there is one solution and then one value of $k$; otherwise no outcome works. Thus Lemma~\ref{lem:gcd}, divided by $p^3$, bounds the contribution of large gcds even without enforcing the coset ratio.
+
+For the remaining pairs fix two direction bins $D,D_1$ with parameter bounds $T=\lfloor4p/D\rfloor$, $T_1=\lfloor4p/D_1\rfloor$. Put $X=DD_1$ and $Y=TT_1$. Since $2p\le DT,D_1T_1\le4p$, we have
+\begin{equation}\label{eq:binsize}
+ 4p^2\le XY\le16p^2.
+\end{equation}
+If $X\ge p$, choose the four signed parameters in $O(T^2T_1^2)=O(Y^2)$ ways and choose $e$ in at most $h$ ways. Then $\lambda,\mu$ are fixed, and~\eqref{eq:ABCD} gives
+\[
+ e\beta^2+(1-e)\lambda\beta-\lambda\mu=0,\qquad \alpha=e\beta+(1-e)\lambda.
+\]
+Its leading coefficient is nonzero, so there are at most two pairs $(\alpha,\beta)$. For each, realize $a'/a=\alpha$ and $b'/b=\beta$ separately in boxes of radii $2D,2D_1$. Each has $O(G+4X/p)$ possibilities by Lemma~\ref{lem:ratio}. Multiplying these upper bounds does not presume independence: retaining all combinations only overcounts. The number in these bins is at most
+\[
+ O\big(hY^2(G+X/p)^2\big)\ll h(1+G)^2(XY/p)^2\ll h(1+G)^2p^2.
+\]
+If $X<p$, choose both directions in $O(D^2D_1^2)=O(X^2)$ ways, and choose $e\in H\setminus\{1\}$. The first two ratios are fixed. Now $\lambda=(\alpha-e\beta)/(1-e)$ is unique; zero is inadmissible, and otherwise $\mu=\alpha\beta/\lambda$ is unique as well. Realize $u/t'=\lambda$ and $t/u'=\mu$ in the two boxes with radii $T_1,T$, with gcds at most $G$. The number is at most
+\[
+ O\big(hX^2(G+Y/p)^2\big)\ll h(1+G)^2(XY/p)^2\ll h(1+G)^2p^2,
+\]
+since $Y\ge p$ by~\eqref{eq:binsize}. There are $O(L_p^2)$ ordered bin pairs and at most four ways to designate the endpoints of two canonical chords. Dividing the resulting count by $p^3$ gives the second term of~\eqref{eq:nonparallel}; adding the large-gcd term finishes the proof.
+\end{proof}
+
+\section{Two roots at the same level}\label{sec:two}
+\begin{proposition}[Cross-root collision]\label{prop:cross}
+For two independently sampled representatives and one shared random level, the probability that a generic hit at the first representative and a generic hit at the second have a common designated endpoint coset at $k\ne0$ is
+\[
+ O\big(L_p^2(h/p+p^{-1/2})\big).
+\]
+The bound is unconditional; it also bounds the event with either or both sign tests imposed.
+\end{proposition}
+\begin{proof}
+Fix two templates and a designation of endpoints. Let $m=b/a$, $m'=b'/a'$, $\Delta=u-t$, $\Delta'=u'-t'$, all nonzero in $\F$. If the first designated abscissa is $U$, then the other abscissa on the first line is $U+a\Delta$, and the slope formula gives
+\begin{equation}\label{eq:levelU}
+ k=-mU(U+a\Delta).
+\end{equation}
+For a common coset write $U'=eU$ with $e\in H$. Equate~\eqref{eq:levelU} to $-m'eU(eU+a'\Delta')$ and divide by $U\ne0$:
+\begin{equation}\label{eq:crosslin}
+ (m-e^2m')U=e b'\Delta'-b\Delta.
+\end{equation}
+Given a solution $U$, equation~\eqref{eq:levelU} determines $k$. The two roots are uniquely recovered as $(U-at,k/U-bt)$ and $(eU-a't',k/(eU)-b't')$. If the left coefficient in~\eqref{eq:crosslin} is nonzero there is at most one $U$; if only the right side is nonzero there is none. In these nonexceptional cases there are $O(p^4L_p^2)$ ordered template pairs and at most $h$ ratios. Each contributes at most one of the $p^5$ equiprobable outcomes $(k,x,y,x',y')$, not one of $p^6$: the level is shared. This gives $O(hL_p^2/p)$.
+
+In the exceptional case \emph{both} sides of~\eqref{eq:crosslin} vanish identically in $U$. As $b'\Delta'\ne0$, necessarily
+\begin{equation}\label{eq:exception}
+ e=\frac{b\Delta}{b'\Delta'},\qquad ab\Delta^2=a'b'(\Delta')^2\ne0.
+\end{equation}
+The second equation follows by substituting the first into $b/a=e^2 b'/a'$. Conversely the second forces that coefficient to vanish for this unique ratio. If the ratio is not in $H$, discard the pair; in particular there is \emph{no factor $h$} in counting exceptional pairs.
+
+For fixed first template let $c=ab\Delta^2$. In one bin $(D_1,T_1)$ there are two bounds on the number of second templates satisfying the invariant in~\eqref{eq:exception}:
+\begin{enumerate}
+\item Choose $(a',b')$ in $O(D_1^2)$ ways. The congruence $(\Delta')^2=c/(a'b')$ has at most two roots. For each of $O(T_1)$ choices of $t'$, the residue of $u'=t'+\Delta'$ has at most nine representatives in $[-T_1,T_1]$, since $T_1\le4p$. Cost: $O(D_1^2 T_1)$.
+\item Choose $(t',u')$ in $O(T_1^2)$ ways with $\Delta'\ne0$ modulo $p$, then $a'$ in $O(D_1)$ ways. The residue $b'=c/(a'(\Delta')^2)$ is unique and has at most 17 representatives in $[-2D_1,2D_1]$, since $D_1\le4p$. Cost: $O(D_1 T_1^2)$.
+\end{enumerate}
+The smaller bound is $O(D_1T_1\min(D_1,T_1))=O(p^{3/2})$ because $D_1T_1\le4p$. For each exceptional pair there are at most $p-1$ nonzero values of $U$, each specifying at most one whole outcome by the reconstruction above. The union bound, including the choice of first template, second bin, and outcome, is therefore
+\[
+ \frac{O(p^2 L_p)\,O(L_p)\,O(p^{3/2})\,(p-1)}{p^5}
+ =O(p^{-1/2}L_p^2).
+\]
+Endpoint order costs only an absolute factor. There is no use of independence between mates: their clauses were identified by symmetry in Lemma~\ref{lem:matching}.
+\end{proof}

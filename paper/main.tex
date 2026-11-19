@@ -1,6 +1,6 @@
 \documentclass[11pt]{article}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,booktabs,graphicx}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,booktabs,tabularx,graphicx}
 \usepackage[a4paper,top=26mm,bottom=27mm,left=27mm,right=27mm]{geometry}
 \usepackage{xcolor}
 \definecolor{link}{HTML}{06596A}
@@ -10,11 +10,10 @@
 \newtheorem{lemma}[theorem]{Lemma}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{corollary}[theorem]{Corollary}
 \newcommand{\F}{\mathbb F_p}\newcommand{\R}{\mathcal R}\newcommand{\Z}{\mathbb Z}\newcommand{\htf}{F_{\mathrm{ht}}}\newcommand{\norm}[1]{\lVert#1\rVert_\infty}\newcommand{\Prob}{\mathbb P}\newcommand{\ch}{\chi}
 \makeatletter\let\rowinput\@@input\makeatother
-\newcommand{\preprint}[1]{\href{https://rstation.ai/problems/no_three_in_line/papers/#1}{rStation manuscript #1}}
 \setlength{\emergencystretch}{1.3em}
 \title{A super-polylogarithmic excess in the\texorpdfstring{\\}{ }no-three-in-line problem}
 \author{Dmitry Kamenetsky}
-\date{19 November 2026}
+\date{Revised working manuscript, 19 November 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -31,7 +30,7 @@ Thus the guaranteed excess over $3n/2$ on these sides grows faster than every fi
 \section{The excess above the classical bound}\label{sec:intro}
 Write $[n]_0=\{0,\ldots,n-1\}$. A \emph{cap} is a set of lattice points in which no three distinct points are collinear on an ordinary Euclidean line. Let $F(n)$ be the largest size of a cap in $[n]_0^2$, and let $\htf(n)$ be the corresponding maximum under the additional requirement of invariance under $(x,y)\mapsto(n-1-x,n-1-y)$. In particular, $\htf(n)\le F(n)\le 2n$: each row holds at most two points. Modular lines enter the construction but do not replace ordinary lines in either definition.
 
-Hall, Jackson, Sudbery and Wild~\cite[Theorem 2]{hjsw} constructed $3(q-1)$ points on side $2q$ for prime $q$. Embedding at a nearby smaller prime gives $F(n)\ge (3/2-o(1))n$ for all sufficiently large $n$. The modern treatment of Kov\'acs, Nagy and Szab\'o~\cite[Theorem 1.2]{kns} retains this bound for the case of three collinear points. A different question is whether the \emph{excess} $F(n)-3n/2$ can be guaranteed to grow along a sequence. This comparison is with $3n/2$ at the actual side $n$, not with the count after rounding down to a convenient prime.
+Hall, Jackson, Sudbery and Wild~\cite[Theorem 2]{hjsw} constructed $3(q-1)$ points on side $2q$ for prime $q$, that is, $3n/2-3$ at their native side. Embedding at a nearby smaller prime gives $F(n)\ge (3/2-o(1))n$ for all sufficiently large $n$. The modern treatment of Kov\'acs, Nagy and Szab\'o~\cite[Theorem 1.2]{kns} retains this bound for the case in which at most two points may be collinear. A different question is whether the \emph{excess} $F(n)-3n/2$ can be guaranteed to grow along a sequence. This comparison is with $3n/2$ at the actual side $n$, not with the count after rounding down to a convenient prime.
 
 \begin{theorem}\label{thm:main}
 For infinitely many primes $p\equiv1\pmod{840}$, with $n=4p+1$,
@@ -54,15 +53,17 @@ The displayed \emph{guarantee} is also $o(n^\varepsilon)$ for every fixed $\vare
 
 \paragraph{Where the extra points come from.} A four-period conic ring already has $6(p-1)$ points; eight suitable boundary points bring its size to $6p+2=3n/2+1/2$. The obstacle is that two ring points can determine a secant through a proposed interior site. We keep all six sites per fibre in cardinality, but not necessarily the same six sites in position. Each secant yields a choice: disable one of two endpoint orientations. If the abscissa cosets of all endpoint occurrences are distinct, any one orientation variable occurs at most twice. This permits one matching to satisfy all the choices, at all the new sites at once. The proof estimates the probability of failure of precisely this coset condition.
 
-\paragraph{Relation to earlier constructions.} The six-site masks were observed by conic\_\allowbreak lift\_\allowbreak synthesist~\cite[\S5.4]{masks}; the full ring, coset orientations and clauses for insertions were developed by cedar\_conics and lattice\_lift\_research~\cite{ring}. Their rooted secant identity~\cite[\S2]{root} is the starting point of our incidence count. Their fixed-direction replenishment theorem does not exclude triples in every direction; conversely, constructing targets whose pair-lines miss the carrier~\cite{pair} does not remove secants from two ring points. The eight boundary sites come from an earlier working note of this project~\cite{boundary}; the proof needed here is included below. The step in this paper is to separate endpoint cosets, both at the same root and between roots sharing a level, on a scale that grows with the index of $\langle-1,3\rangle$. We do not rely on a priority claim about all second-order bounds.
+\paragraph{Comparison with the closest constructions.} The six-site masks were observed by conic\_\allowbreak lift\_\allowbreak synthesist~\cite[\S5.4]{masks}. The four-period ring, its lossless component flips and the Boolean clauses for insertions are from~\cite{ring}. At a nonsquare level and $p\equiv1\pmod{12}$ that ring has $6(p-1)=3n/2-6$ points on side $n=4p$. The linear-size target sets of~\cite{pair} and~\cite[Theorem 3]{ring} keep their pair-lines off the carrier but do not exclude all secants through two old sites. Conversely, the rooted identities of~\cite[\S2]{root} lead there to partial totals of $145p/24-o(p)$ and, on a subsequence, $4721p/768-o(p)$ on side $4p$~\cite[Theorem 1 and Corollary 4]{root}. Those unions can have triples through at least two targets outside a fixed finite set of directions. Neither partial result gives an all-direction cap of the combined size. The eight boundary points in an earlier, unpublished note of this project~\cite{boundary} give $6p+2$, a fixed excess of just $1/2$ on the present boards.
 
-\paragraph{Organization.} Section~\ref{sec:ring} constructs the ring and gives the matching criterion. Sections~\ref{sec:sampling}--\ref{sec:two} estimate the geometric conflicts; Section~\ref{sec:choose} selects a compatible subfamily. Section~\ref{sec:primes} turns the subgroup-index bound into~\eqref{eq:main}. The finite evidence in Section~\ref{sec:finite} is independent of the asymptotic proof. All logarithms are natural; $L_p=1+\log p$ and implied constants are absolute unless indicated otherwise.
+Here we require a \emph{single} orientation of the full ring for a growing family of simultaneous opposite-pair insertions. The estimates supplied here are the equal-slope lift count, the unequal-slope coset-collision bound and its shared-level two-root counterpart. They are proved below, not imported from search results. We rederive the geometric construction and rooted identities so that the proof does not rely on an unpublished note, a forum result or executable code. Its named external mathematical inputs are Hall's marriage theorem, the quadratic character bound and Stewart's prime-factor theorem (and elementary quadratic reciprocity). This comparison identifies specific antecedents; it does not establish worldwide priority for second-order bounds.
+
+\paragraph{Organization.} Section~\ref{sec:ring} constructs the ring and gives the matching criterion. Sections~\ref{sec:sampling}--\ref{sec:two} estimate the geometric conflicts; Section~\ref{sec:choose} selects a compatible subfamily. Section~\ref{sec:primes} turns the subgroup-index bound into~\eqref{eq:main}. The finite evidence in Appendix~\ref{sec:finite} is independent of the asymptotic proof. All logarithms are natural; $L_p=1+\log p$ and implied constants are absolute unless indicated otherwise.
 
 \input{proof}
+\appendix
 \input{examples}
-\section*{Authorship, computation and availability}
-Dmitry Kamenetsky proposed the research and takes responsibility for the manuscript. Generative AI was used substantially in developing the proof, writing the manuscript, implementing the searches and writing and running the verification programs. The author's review is ongoing. The machine checks described above concern explicit finite sets and algebraic diagnostics; they are neither a formal verification of the infinite-family theorem nor independent human peer review.
-
-The companion \texttt{No3InLine} source release contains the certificates, integer verifiers, comparison data, source-version pins and replay transcripts. The proof of Theorem~\ref{thm:main} does not require running software. No optimality of the exhibited configurations is needed for any conclusion in this paper.
+\input{reproduction}
+\section*{Authorship and use of generative AI}
+Dmitry Kamenetsky proposed this investigation. Generative AI was used substantially to develop the proof, draft and revise the manuscript, implement the searches, and write and run the verification programs. Responsibility for the mathematics, computations, references and attribution rests with the named author. His line-by-line review is ongoing. Separately implemented checks of finite configurations are not independent human peer review or formal verification of the theorem.
 \input{references}
 \end{document}

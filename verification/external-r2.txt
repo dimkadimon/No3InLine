@@ -1,0 +1,13 @@
+PIN 22.zip 704cba3c87fc5882aa323c51ead7bb6ce9157a92932814b5b9dcf19ff88e1f68
+PIN 47.zip cb218228a2e7a1e5d801cbf85bb360ee7007ad7f5352d8ecf9e95e6fc1b214cd
+PASS restored or checked 154 source files against historical output digests.
+PASS all 146 P22 seed geometries and all window maxima; P47 versioned header counts.
+PASS counts and benchmark provenance for all 15 sides.
+VERIFIED n=16018 p=8009 retained=24024 removed=0 additions=282 total=24306 exact_anchor_directions=6854010
+VERIFIED n=32002 p=16001 retained=48000 removed=0 additions=421 total=48421 exact_anchor_directions=20384820
+VERIFIED n=64006 p=32003 retained=96006 removed=0 additions=810 total=96816 exact_anchor_directions=78420150
+PASS: all three public P47 v1 point sets reconstructed from the source additions and checked as ordinary caps.
+VERIFIED n=201 points=362 exact_determinants=7840920
+VERIFIED n=202 points=364 exact_determinants=7971964
+VERIFIED n=67 points=128 exact_determinants=341376
+VERIFIED n=69 points=128 exact_determinants=341376

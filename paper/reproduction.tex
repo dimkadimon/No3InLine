@@ -1,0 +1,22 @@
+\section{Data availability and replay}\label{sec:reproduction}
+Theorem~\ref{thm:main} is analytic; no finite search, transcript or unverified comparison is a hypothesis. The files below reproduce Appendix~\ref{sec:finite}. The portable kit is version \texttt{R2} (19 November 2026). It is attached to the distributed reader PDF as \path{no3-replay-r2.zip} and also supplied in the manuscript source archive under \path{anc/}. A public archival DOI or repository release has not been confirmed for this draft. The two copies have identical SHA-256:
+\begin{center}\small\texttt{238f38e60234b982cd0ba13045bfad4809fb00e764d0eb1278bfeb7378d6d9ca}.\end{center}
+In a PDF reader save the file from the attachments pane, or use \texttt{pdfdetach -save 1 -o replay.zip main.pdf}. A PDF rebuilt by a TeX-only processor need not have an attachment: in that case use the copy in the source archive. The finite-data commit in the full companion Git bundle is \texttt{e19b8a1b689eba392c7d26ec3733e88db566dc0e}. This pins the kit and checkers; the local tag \texttt{review-r2-2026-11-19} identifies this manuscript in the full bundle. Neither identifier denotes a public deposit. The internal \path{MANIFEST.sha256} identifies every kit member other than the manifest itself.
+
+\paragraph{Where the points are.} In \path{results/lower-bounds.csv}, the last column gives the exact coordinates or certificate for each of the 15 sides; the preceding columns identify the comparison and its transfer. A CSV with header \texttt{x,y} is itself a zero-based coordinate certificate. The small anchored examples have both CSVs and compact certificates in \path{small-prime-examples/}. The large matching uses \path{unbounded-gain/data/certificate.txt}. Its header gives $p,k$, the number of opposite pairs and the number of flipped bits, followed by the representatives and the least residue of each flipped component. The base orientation has even physical parity at square abscissas. For the large two-period frames, the files named \texttt{final-} or \texttt{edits\_} give the prime, deletion and addition counts, then the actual edits. The kit's \path{README.md} specifies the frame and gives example expansion commands.
+
+\paragraph{Checks that do not need the network.} Unzip into an empty directory. From its root use Python 3.9 or newer without \verb|-O|, and a C++17 compiler. No search solver is needed. Run
+\begin{verbatim}
+python3 scripts/verify_release.py --hashes-only
+python3 scripts/comparison.py
+python3 scripts/verify_release.py
+\end{verbatim}
+The first checks file integrity, the second checks transfers and both panels of Table~\ref{tab:bounds}, and the third reconstructs and checks all 15 project witnesses. It regenerates the large matching byte-for-byte before running a separately implemented integer verifier on the resulting certificate. To export its full coordinates use \path{scripts/expand_ring.py} with arguments \path{unbounded-gain/data/certificate.txt} and a new CSV filename. The sorted export has $4\,782\,972$ data rows. Its digest and the six smaller ring comparisons are in \path{verification/exported-rings.txt}. The finite counting diagnostics in \path{scripts/audit_counting.py} can also be run on their own.
+
+\paragraph{Rechecking an external comparison.} \path{results/source-register.csv} gives the versioned manuscript URLs, credited authors, dates and comment locators. The exact two supplement ZIP hashes and download URLs are pinned in \path{scripts/restore_inputs.py} and \path{THIRD_PARTY.md}. To check K and S from those inputs run
+\begin{verbatim}
+python3 scripts/restore_inputs.py --group station --fetch
+python3 scripts/comparison.py --audit-sources
+python3 scripts/check_public_frames.py
+\end{verbatim}
+The first step refuses changed bytes; \verb|--cache DIR| works offline with the pinned archives. The second tests all 146 K sets and every relevant crop. The third reconstructs and checks the three S baselines without project exchanges. For F there are only the reports and their arithmetic: the exact locations and counts in \path{results/forum-counts.csv} do not constitute coordinate certificates.

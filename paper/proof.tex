@@ -1,15 +1,38 @@
 \section{A ring, eight anchors and a matching}\label{sec:ring}
-Let $p\equiv1\pmod{840}$ be prime, $k\in\F^*$ a nonsquare, $H=\langle -1,3\rangle\subset\F^*$, $h=|H|$, $I=(p-1)/h$. Since $p\equiv1\pmod{12}$, both generators are squares. By a \emph{fibre} we mean the set of points of the board reducing to one residue pair modulo $p$. The cosets $A$ and $k/A$ in $\F^*/H$ form distinct pairs: their quadratic characters differ. Independently in each pair give one coset physical colour 0 and the other 1. For $u\ne0$ let $e(u)$ be the colour of its coset. Throughout the board $[0,4p]^2$, the fibre over $(u,k/u)$ has points $(x_0+ip,y_0+jp)$ with least positive representatives $x_0,y_0$ and $0\le i,j\le3$. Take the sites outside $\{1,2\}^2$ in sheet indices and having physical parity $x+y\equiv e(u)\pmod 2$. Writing $ij$ for the sheet pair $(i,j)$, the two possible masks are
+Let $p\equiv1\pmod{840}$ be prime, $k\in\F^*$ a nonsquare, $H=\langle -1,3\rangle\subset\F^*$, $h=|H|$, $I=(p-1)/h$. Since $p\equiv1\pmod{12}$, both generators are squares. Call all board sites satisfying $xy=k$ modulo $p$ the \emph{carrier}, independently of any mask. By a \emph{fibre} we mean the set of points of the board reducing to one residue pair modulo $p$. The cosets $A$ and $k/A$ in $\F^*/H$ form distinct pairs: their quadratic characters differ. In each pair independently give one coset physical colour 0 and the other 1. For $u\ne0$ let $e(u)$ be the colour of its coset. Throughout the board $[0,4p]^2$, the fibre over $(u,k/u)$ has points $(x_0+ip,y_0+jp)$ with least positive representatives $x_0,y_0$ and $0\le i,j\le3$. Take the sites outside $\{1,2\}^2$ in sheet indices and having physical parity $x+y\equiv e(u)\pmod 2$. Thus $i+j\equiv e(u)-x_0-y_0\pmod 2$. Writing $ij$ for $(i,j)$, the two sheet masks are
 \[
  M_0=\{00,02,13,20,31,33\},\qquad M_1=\{01,03,10,23,30,32\}.
 \]
-Each is a six-point cap. For example, in $M_1$ the five slopes from $01$ are $\infty,-1,1,-1/3,1/3$; listing the other rows gives no repetition, and reflection gives $M_0$. Taking differences of the sites shows that the only primitive nonaxial directions in a mask, up to sign, are $(1,\pm1),(3,\pm1),(1,\pm3)$. A primitive physical line reduces to a genuine line modulo $p$ and meets $xy=k$ in at most two residues. Call the selected sites the \emph{ring points}, or old points. A triple of old points would therefore contain a same-fibre pair. An axis meets only one residue of the conic. For a nonaxial direction $(a,b)$ the other abscissa is $-ak/(bu)$ by the quadratic root product. Since $-a/b\in H$ for the listed directions, this lies in the coset paired with $uH$; its colour is opposite, whereas $x+y$ has constant parity on the physical line. Thus every orientation gives a cap $O$ of size $6(p-1)$. The reflection in $C=(2p,2p)$ sends $u$ to $-u$, preserves parity and the outer sheets, so $O$ has the required half-turn. Call a coordinate \emph{coarse} if it is divisible by $p$. Every noncoarse physical row and column strictly inside $(p,3p)$ has exactly one old point: the two outer sheet choices in the other coordinate have opposite parities.
+In $M_1$ the slopes to the other five sites, from $01$, $03$ and $10$ respectively, are
+\[
+ \{\infty,-1,1,-1/3,1/3\},\quad
+ \{\infty,-3,0,-1,-1/3\},\quad
+ \{-1,-3,3,0,1\}.
+\]
+The other three lists follow by the half-turn, and $(i,j)\mapsto(3-i,j)$ exchanges the masks. Thus each mask is a six-point cap, and the only primitive nonaxial directions in either mask, up to sign, are $(1,\pm1),(3,\pm1),(1,\pm3)$. A primitive physical line reduces to a genuine line modulo $p$ and meets $xy=k$ in at most two residues. Call the selected sites the \emph{ring points}, or old points. A triple of old points would therefore contain a same-fibre pair; all three cannot be in that fibre because its mask is a cap. An axis meets only one residue of the conic. For a nonaxial direction $(a,b)$ the other abscissa is $-ak/(bu)$ by the quadratic root product. Since $-a/b\in H$ for the listed directions, this lies in the coset paired with $uH$; its colour is opposite, whereas $x+y$ has constant parity on that physical line since $a+b$ is even. Thus every orientation gives a cap $O$ of size $6(p-1)$. The reflection in $C=(2p,2p)$ sends $u$ to $-u$, preserves parity and the outer sheets, so $O$ has the required half-turn. Call a coordinate \emph{coarse} if it is divisible by $p$. Every noncoarse physical row and column strictly inside $(p,3p)$ has exactly one old point: the two outer sheet choices in the other coordinate have opposite parities.
 
 \paragraph{Boundary sites.} Add the eight anchors
 \[B=p\{(0,1),(0,3),(1,0),(3,0),(4,1),(4,3),(1,4),(3,4)\}.\]
- These points are the eight extreme vertices of a convex octagon, so no three are collinear. From an anchor, a nonaxial primitive direction $(a,b)$ meets the carrier only at parameters satisfying $ab t^2=k\pmod p$. At height $\max(|a|,|b|)\le7$ every nonzero signed factor is a square modulo $p$ by quadratic reciprocity, so there are no such points. At height $D\ge8$ only the inward ray occurs, with $1\le t\le4p/D\le p/2$; it contains at most one of the two opposite roots modulo $p$ (and none if $p\mid ab$). A coarse axis misses the carrier. Lines between anchors have primitive height at most four. Thus $O\cup B$ is a cap for \emph{every} choice of the orientation bits.
+ These points are the eight extreme vertices of a convex octagon, so no three are collinear. From an anchor, a nonaxial primitive direction $(a,b)$ meets the carrier only at parameters satisfying $ab t^2=k\pmod p$. At height $\max(|a|,|b|)\le7$ every signed factor is a square modulo $p$ (use $p\equiv1\pmod{8}$ and quadratic reciprocity for $3,5,7$), so there are no such points. At height $D\ge8$ only the inward ray occurs, with $1\le t\le4p/D\le p/2$; it contains at most one of the two opposite roots modulo $p$ (and none if $p\mid ab$). A coarse axis misses the carrier. Lines between anchors have primitive height at most four. Thus $O\cup B$ is a cap for \emph{every} choice of the orientation bits.
 
-\paragraph{Matching criterion.} For a new site $q$ and two potentially selected outer-sheet endpoints on one secant through $q$, forbid simultaneous selection of the endpoints. Each endpoint is selected at exactly one value of its bit. Hence this is a two-literal clause: make at least one endpoint absent. We omit axes because the selected central rows/columns have only one old site; we shall insist that different targets use different rows and columns. For pairs of opposite new sites there is no need to repeat the clauses at the reflected sites. Suppose the abscissa $H$-cosets attached to \emph{all endpoint occurrences} of the remaining clauses are pairwise distinct. A bit belongs to two cosets, so it has at most two occurrences total. Any $j$ clauses have $2j$ occurrences and therefore at least $j$ distinct neighbouring bits, even when both endpoints of a clause use one bit. By Hall's marriage theorem match each clause to a different bit and set that bit to disable one of its endpoints. This satisfies all clauses simultaneously. The condition is sufficient, not necessary. In particular we need not separate two distinct cosets merely because they are paired by $A\mapsto k/A$.
+\paragraph{Which pairs give clauses?} Fix the level $k$, but not the bits. Write $P_k$ for the union of the twelve outer-sheet sites over each $(u,k/u)$ (both masks together). Given one representative $q_i$ of each proposed opposite pair, form the list
+\[
+ \mathcal L_i=\big\{\{P,P'\}\subset P_k:\ P\ne P',\ q_i,P,P'\text{ collinear on a nonaxial integer line}\big\}.
+\]
+This is a list of \emph{unordered physical pairs}, not just of lines or of residue pairs. A line with $r$ possible sites contributes $\binom r2$ clauses, even if some pairs cannot be selected together by any orientation. The index $i$ is part of the clause identifier. An \emph{occurrence} is $(i,c,P)$ with $c\in\mathcal L_i$ and $P\in c$, and its label is
+\[
+ \lambda(i,c,P)=(P_x\bmod p)H\in\F^*/H.
+\]
+An endpoint used twice has two occurrences; it is not silently deduplicated. Its bit is indexed by the unordered coset pair $\{\lambda,k/\lambda\}$, not by $\lambda$ alone. Membership of $P$ asks that its coset receive its physical parity, so precisely one of the two bit values makes $P$ absent. The clause for $c$ asks that at least one of its two endpoints be absent.
+
+\begin{lemma}[Matching all representatives]\label{lem:matching}
+If the occurrence labels are pairwise distinct over the lists of all representatives, one orientation clears every listed pair both at the representatives and at their mates. Noncoarse central axes through a target already contain at most one selected ring point in every orientation.
+\end{lemma}
+\begin{proof}
+Build the bipartite incidence graph from clauses to orientation bits. A bit has at most two occurrences in total, one per coset in its pair, even though two occurrences in one clause might refer to that same bit. Any $j$ clauses have exactly $2j$ occurrences, hence touch at least $j$ distinct bits. Hall's theorem~\cite{marriage} matches all clauses to distinct bits. For each clause set its assigned bit to disable one incident endpoint; no other clause asks to set that assigned bit. Set the unassigned bits arbitrarily. This precludes every potential pair that could give a triple with two selected ring points and a representative.
+
+Let $R(P)=2C-P$. Reflection bijects $P_k$ with itself, preserves physical parity and sends the abscissa residue $u$ to $-u$, in the very same coset since $-1\in H$. Thus a reflected clause has the same two membership requirements, not two additional occurrences for the degree count. At a central noncoarse physical row or column the one-site observation above handles an axis directly. The two partner cosets of a single bit may both occur.
+\end{proof}
 
 \section{Sampling opposite pairs at one level}\label{sec:sampling}
 Choose one level $k\in\F$ uniformly. Independently of it, sample $N$ independent uniform residues $z_i=(X_i,Y_i)\in\F^2$. Index $i$ proposes the two actual sites $q_i=(p+[X_i]_p,p+[Y_i]_p)$ and $2C-q_i$, where $[\ ]_p\in[0,p-1]$. We call $q_i$ the representative and $z_i$ its root modulo $p$. Write $d_i=X_iY_i$ and let $\ch$ be the quadratic character, zero at zero. We now define a test $E_i$ for \emph{one} index and show $\Prob(E_i)\ge\gamma>0$ for all sufficiently large $p$, with absolute $\gamma$. We will use linearity of expectation, not an assumption that these tests at the shared level are independent.
@@ -25,22 +48,35 @@ Consider two carrier endpoints at signed offsets $t,u$ from $q_i$ along a primit
  \ch(k-\beta d_i)=+1\quad(\beta\in\R),\qquad
  \R=\left\{\left(\frac{r-s}{r+s}\right)^2:\ 0<|r|,|s|\le8,\ r\ne\pm s\right\}.
 \end{equation}
-Indeed let the reduced parameters be $r,s$, and $(U,V)$ the first endpoint modulo $p$. The second is $(1-s/r)z_i+(s/r)(U,V)$. Both have product $k$; expanding shows that $s(Y_iU+X_iV)=(r+s)k+(s-r)d_i$, whence
+Indeed let the reduced parameters be $r,s$, and $(U,V)$ the first endpoint modulo $p$. The second is $(1-s/r)z_i+(s/r)(U,V)$. The offsets are nonzero modulo $p$ because $k\ne d_i$. When the reduced parameters have height at most eight, $r-s\ne0$ modulo all $p>16$ since the endpoints are distinct. Both endpoints have product $k$; expanding and cancelling $r-s$ shows that $s(Y_iU+X_iV)=(r+s)k+(s-r)d_i$, whence
 \[
  [s(Y_iU-X_iV)]^2=(k-d_i)\big((r+s)^2k-(r-s)^2d_i\big).
 \]
-For $r+s\ne0$ the right side is a nonsquare by \eqref{eq:shortratio}; for $r+s=0$ its second factor is $-4r^2d_i$, a square since $\ch(-1)=\ch(d_i)=1$. Again this is impossible. The same protections hold for the reflected root.
+For $r+s\ne0$ the right side is a nonsquare by \eqref{eq:shortratio}; for $r+s=0$ its second factor is $-4r^2d_i$, a square since $\ch(-1)=\ch(d_i)=1$. The first factor is still a nonsquare, so this too is impossible. The same protections hold for the reflected root.
 
-To prove the probability bound, consider the shifts $0,d_i,\beta d_i,\rho_{i,a,b}$ as polynomials in $X_i,Y_i$. They are distinct over $\mathbb Q$ after deduplicating $\R$ and taking one primitive representative per slope: $\beta\notin\{0,1\}$, and the $X_i^2,Y_i^2$ coefficients of $\rho$ encode the slope. The lists are fixed, so they stay distinct as polynomials for all large $p$. Two distinct shifts coincide in value with probability $O(1/p)$ by the degree-two polynomial zero bound. The event $\ch(d_i)=1$ alone has probability $(p-1)^2/(2p^2)$. For each root satisfying it with all shifts distinct, the number of $k$ giving the $s_0$ specified signs is
+\begin{lemma}[The finite sign prescription]\label{lem:signs}
+At one representative the test uses exactly 130 shifted signs of the level, in addition to the test on $d_i$. For all sufficiently large primes in the progression its unconditional probability is bounded below by an absolute constant $\gamma>0$.
+\end{lemma}
+\begin{proof}
+The following count gives a reproducible deduplication without a long list of fractions. There are $\sum_{v=2}^8\varphi(v)=1+2+2+4+2+6+4=21$ reduced fractions $u/v$ with $1\le u<v\le8$. Positive primitive ordered pairs in the $8$-box number $1+2\cdot21=43$ (include $(1,1)$); the two signs of $b$ give 86 slopes for $a>0$. For each of the 21 proper fractions include in $\R$ exactly
 \[
- p2^{-s_0}+O(s_0\sqrt p+s_0).
+ \left(\frac{v-u}{v+u}\right)^2\quad\text{and its reciprocal}.
 \]
-Indeed expand $2^{-s_0}\prod_j(1+\epsilon_j\ch(k-a_j))$ in a sum over subsets of the distinct shifts $a_j$. Each nonempty subset gives the character of a squarefree polynomial with distinct roots; its complete sum is bounded by $(s_0-1)\sqrt p$ by the Weil bound \cite{weil}. Removing all the roots costs at most $s_0$. The number $s_0$ is fixed (86 slopes, 42 ratio shifts, and $0,d_i$); only its finiteness matters. Thus $\Prob(E_i)\ge\gamma$ as claimed.
+These are precisely the ratio shifts in~\eqref{eq:shortratio}: common scaling and interchanging $r,s$ leave the square unchanged, while changing one sign inverts it. The first values are strictly between zero and one and are distinct since $(1-z)/(1+z)$ is strictly decreasing there; their reciprocals exceed one. Thus there are 42, none equal to $0$ or $1$.
+
+For an indeterminate root $(X,Y)$, the 130 shift polynomials are $0$, $XY$, the 42 polynomials $\beta XY$, and the 86 polynomials
+\[
+ -\frac{b}{4a}X^2+\tfrac12 XY-\frac{a}{4b}Y^2.
+\]
+The last group has nonzero $X^2$ coefficients distinguishing the signed slopes $b/a$; the first three groups have zero $X^2$ coefficient and distinct $XY$ coefficients. Distinctness over $\mathbb Q$ therefore follows before any root or level is chosen. Only finitely many primes divide a denominator or all nonzero numerators of a coefficient difference. Outside them the shift polynomials stay distinct in $\F[X,Y]$. Each difference has total degree at most two and vanishes on at most $2p$ pairs $(X,Y)$ (the elementary polynomial zero bound). The probability that any two \emph{values} coincide is at most $2\binom{130}{2}/p$. Also $\Prob(\ch(XY)=1)=(p-1)^2/(2p^2)$. Hence a positive fraction, tending to $1/2$, of roots pass the latter condition and have no coincident values.
+
+For any such root write its distinct shifts as $a_1,\dots,a_s$, $s=130$. Prescribe sign $-1$ at the shifts $0,XY$ and at all direction shifts, and $+1$ at the 42 ratio shifts. Off the $s$ roots the indicator of this prescription is $2^{-s}\prod_j(1+\epsilon_j\ch(k-a_j))$. Its complete sum over $k$ has constant term $p2^{-s}$. Each nonempty subset of shifts gives the quadratic character of a squarefree polynomial with distinct linear factors; the absolute value of its sum is at most $(s-1)\sqrt p$ by the Weil bound~\cite[Theorem 5.41]{weil}. The coefficients of the subset terms have total absolute value at most one. Removing the $s$ roots costs at most $s$. The count is consequently $p2^{-130}+O(130\sqrt p+130)$ for every such root. For example $\gamma=2^{-133}$ works eventually. This lower bound is marginal in $(z_i,k)$, not conditional on any tests at the other roots.
+\end{proof}
 
 \paragraph{Other types of triples.} We record costs according to the number of distinct sampled indices involved.
 \begin{itemize}
 \item For one index on $E_i$, a line through a target and an anchor, or through the two mates, reduces to the line through zero of slope $Y_i/X_i$, a square. Thus it misses $xy=k$. The two coordinates of each target are noncoarse, strictly inside $(p,3p)$, and the mates use different rows and columns. A target on an anchor--anchor line, or an anchor on the line between mates, costs $O(1/p)$ per index: in the latter case the representative is on the fixed line from $C$ to the anchor.
-\item For two distinct indices and any choice of signs, condition on their two target positions. Off the diagonal the joining line has $O(1+p/D)$ board sites if its primitive height is $D$. Each site is on the carrier with probability $1/p$ over the independent uniform $k$. For a fixed first site and a uniform second site in its translated $p$-square, there are $O(D)$ primitive directions of height $D$, each containing $O(1+p/D)$ choices. Thus the off-diagonal mean of $1/D$ is at most $O(p^{-2})\sum_{D\le4p} D(1+p/D)/D=O(L_p/p)$. Thus a joining line hitting the carrier costs $O(L_p/p)$ per pair of indices. Coincidences, shared rows or columns, a joining line through an anchor, or a third target that is the mate of one of the first two, cost $O(1/p)$ per pair. Indeed an independent uniform target in a translated $p$-square is on a prescribed line with probability $O(1/p)$. For a mate triple condition on its opposite pair first.
+\item For two distinct indices and any choice of signs, condition on their two target positions. Off the diagonal the joining line has $O(1+p/D)$ board sites if its primitive height is $D$. Each site is on the carrier with probability $1/p$ over the independent uniform $k$. For a fixed first site and a uniform second site in its translated $p$-square, there are $O(D)$ primitive directions of height $D$, each containing $O(1+p/D)$ choices. Thus the off-diagonal mean of $1/D$ is at most $O(p^{-2})\sum_{D\le4p} D(1+p/D)/D=O(L_p/p)$. By summing the $1/p$ site probabilities, the joining-line cost is $O(1/p+\mathbb E[\mathbf{1}_{\rm distinct}/D])=O(L_p/p)$ per pair of indices. Coincidences, shared rows or columns, a joining line through an anchor, or a third target that is the mate of one of the first two, cost $O(1/p)$ per pair. Indeed a line contains at most $p$ sites in a translated $p$-square. For an anchor test fix the first target off the anchor, then expose the second site. A target coinciding with the fixed anchor costs at most $1/p^2$ even without eligibility. For a mate triple condition on its opposite pair first.
 \item For three distinct indices, any three-target collinearity costs $O(1/p)$ per triple of indices: choose signs and condition on two distinct positions (coincidences are already marked). There are only eight sign choices.
 \end{itemize}
 These are unconditional upper bounds for bad events, with eligibility imposed where stated; they are not used as conditional probabilities after the character test. After resolving them only triples with two old points and one target still require work.
@@ -48,88 +84,55 @@ These are unconditional upper bounds for bad events, with eligibility imposed wh
 \section{Encoding the remaining secants}\label{sec:encoding}
 For one root $z=(x,y)$ (residue of $q$), write a physical chord as the ordered template $g=(a,b,t,u)$, with primitive $(a,b)$, $a>0$, $b\ne0$, $t<u$, and actual offsets $t(a,b),u(a,b)$ from $q$. Each coordinate of an offset has absolute value at most $4p$. We count a superset of the actual chords by using this coordinate bound and dropping all outer-sheet and window restrictions. On $E_i$ surviving physical chords at $q_i$ have both direction and ratio height greater than 8. They satisfy $p\nmid abtu(t-u)$: $p\mid t$ or $p\mid u$ would put $z$ on the carrier; if $p\mid(t-u)$ for an actual board chord, its endpoint difference has length at least $p$ times the direction height in the infinity norm, so that height is at most four. If $p\mid ab$, the modular line is axial and gives only one residue, again forcing $p\mid(t-u)$. Axial physical lines have already been handled.
 
+The offsets relative to $q$ determine its physical unordered endpoint pair uniquely; a chosen endpoint order will cost at most two. Conversely every pair in $\mathcal L_i$ at a passing representative yields one of these canonical generic templates.
+
 For such a template, incidence of both endpoints with $xy=k$ is equivalent to
 \begin{equation}\label{eq:hit}
  k-xy=-abtu,\qquad bx+ay=-ab(t+u).
 \end{equation}
-This follows by subtraction and substitution; cf.\ \cite[\S2]{root}. A specified template hits with probability $p^{-2}$. Two templates at the same root with distinct modular slopes require equal products $abtu=a'b't'u'$ in $\F$; if so, their equations fix $x,y,k$ uniquely. Their joint probability is $p^{-3}$. We only count collisions for $k\ne0$ and nonzero endpoint abscissas.
+Subtracting the endpoint equations first gives $(u-t)(bx+ay+ab(t+u))=0$. Substitution gives the first identity as well; this is the rooted calculation of~\cite[\S2]{root} with the level uniform in all of $\F$. For each $x$ the second equation determines $y$ and the first determines $k$: there are exactly $p$ hits among $p^3$ outcomes before restricting the level. A specified template therefore hits with probability $p^{-2}$. Two templates at the same root with distinct modular slopes require equal products $abtu=a'b't'u'$ in $\F$; if so, their equations fix $x,y,k$ uniquely. Their joint probability is $p^{-3}$. We only count collisions for $k\ne0$ and nonzero endpoint abscissas.
 
-Split direction height into dyadic bins $D\le\max(|a|,|b|)<2D$. Then $|a|,|b|\le 2D$ and $|t|,|u|\le T=\lfloor4p/D\rfloor$, where $DT\asymp p$ for $1\le D\le4p$. There are $O(D^2)$ choices of direction and $O(T^2)$ choices of parameters, hence $O(p^2)$ templates per bin and $O(p^2L_p)$ in total. In the same template the endpoint abscissas $x+at,x+au$ are distinct. For each $e\in H$ their ratio equals $e$ at at most one $x$; $y,k$ then follow from \eqref{eq:hit}. Hence an internal coset collision at one root costs $O(hL_p/p)$ in probability.
+Split direction height into dyadic bins $D\le\max(|a|,|b|)<2D$. Then $|a|,|b|\le 2D$ and $|t|,|u|\le T=\lfloor4p/D\rfloor$, where $DT\asymp p$ for $1\le D\le4p$. There are $O(D^2)$ choices of direction and $O(T^2)$ choices of parameters, hence $O(p^2)$ templates per bin and $O(p^2L_p)$ in total. In the same template the endpoint abscissas $x+at,x+au$ are distinct. The value $e=1$ is impossible. For each other $e\in H$, the equation $x+au=e(x+at)$ has at most one $x$; $y,k$ then follow from \eqref{eq:hit}. Hence a collision between the two slots of a single template costs $O(p^2 L_p\,h/p^3)=O(hL_p/p)$ per root.
 
-\section{Different physical chords at the same root}\label{sec:one}
-\subsection{Equal modular slopes: separating the physical lifts}
-If two distinct physical templates through $q$ with the same modular slope both hit, they use the same two conic residues, since there are two distinct intersections and no third. Reorder their endpoints to agree modulo $p$. Define the offset matrices
-\[
- M=(a,b)^{\mathsf T}(t,u),\qquad M'=M+pE_0.
-\]
-Here $E_0$ is a nonzero integer $2\times2$ matrix with entries of absolute value at most eight. Zero would mean the very same physical pair (a primitive direction and its ordered endpoints are canonical). If $E_0$ has rank one, then $M$ and $E_0$ have the same column space or the same row space over $\mathbb Q$: otherwise their sum, with nonzero coefficients, has rank two. A nonzero column or row of $E_0$ would make the primitive direction or reduced ratio height at most eight, already excluded. This is why cutting off short slopes alone is not enough.
-
-If $\det E_0\ne0$, put $d=\gcd(|t|,|u|)$, $v=(a,b)^{\mathsf T}$, $w=(t/d,u/d)^{\mathsf T}$. Expanding $\det(M+pE_0)=0$ gives
-\[
- d\, w^{\mathsf T}\operatorname{adj}(E_0)v=-p\det E_0.
-\]
-Since $p\nmid d$, $d\mid\det E_0$ and there are only boundedly many choices for $d$. For each fixed $E_0,d$ there are $O(pL_p)$ solutions subject to the coordinate bounds. Indeed in a dyadic $v$-bin of height $D$ we have $\norm w\le U=4p/(dD)$. For primitive $v$, the entries of $\operatorname{adj}(E_0)v$ have gcd dividing $|\det E_0|$, and its norm is comparable to $\norm v$ with constants depending only on $E_0$. Solutions on the integer line in $w$ have spacing $\gg_{E_0}\norm v$. For $D\le U$ this gives $O_{E_0}(D^2+DU)=O(p)$ solutions. If $U<D$ sum instead over primitive $w$ of norm at most $U$, using the transposed matrix: $\sum_{0<\norm w\le U}O_{E_0}(1+D/\norm w)=O_{E_0}(U^2+DU)=O(p)$. Sum the bins and the bounded choices of $E_0,d$ and of order. Each pair thus enumerated costs at most $p^{-2}$ by a single hit. Here the second physical pair, if admissible, is determined by $M+pE_0$. All these parallel coincidences together cost $O(L_p/p)$ per root.
-
-\subsection{Unequal modular slopes: the coset collision estimate}
-Consider an endpoint of each of two nonparallel templates at the same root; reorder within each so those endpoints have parameters $t,t'$. Put $U=x+at$, $V=x+au$, $U'=x+a't'$. Two distinct conic residues with abscissas $s_1,s_2$ determine modular slope $-k/(s_1s_2)$. The secant through $U,V$ has slope $b/a$ and that through $V,U'$ has slope $(b't'-bu)/(a't'-au)$. No cross-identified endpoint is possible since the two lines through $z$ are distinct and $z$ is not on the conic. Therefore
-\[
- \frac{U'}{U}=\frac{b}{a}\frac{a't'-au}{b't'-bu}=\frac{A-C'}{B'-C'},\qquad
- A=a'/a,\quad B'=b'/b,\quad C'=u/t',\quad D'=t/u'.
-\]
-All ratios here are in $\F$. For $U'/U=e\in H$ the two necessary equations are
-\begin{equation}\label{eq:ABCD}
- AB'=C'D',\qquad A-e B'=(1-e)C'.
-\end{equation}
-The first is the product condition from \eqref{eq:hit}; $e=1$ would imply equal modular slopes.
-
-We prove the probability bound
-\begin{equation}\label{eq:nonparallel}
- O\left(\frac{L_p^5}{G}+\frac{h}{p}(1+G)^2 L_p^2\right) \qquad(1\le G\le p^{1/2})
-\end{equation}
-per root, for any threshold $G$. First discard a pair if any of the following four integer pairs has gcd greater than $G$: $(a,a')$, $(b,b')$, $(u,t')$, $(t,u')$. For any common divisor $l>G$ of the indicated two factors, cancel $l$ in the product congruence; the factors are nonzero mod $p$. In each template group the four factors into two signed products $i,j$, each using one direction coordinate and one parameter. Group the factor divided by $l$ into $i$, so $0<|i|\le4p/l$ and $0<|j|\le4p$; use $i',j'$ for the other template. The congruence is $ij=i'j'\pmod p$. For a specified $i,j$ there are $O(\tau(|i|)\tau(|j|))$ representations, with $\tau$ the divisor function. For fixed $i,i'$ the sum of weights $\tau(|j|)\tau(|j'|)$ is $O(pL_p^3)$: on nonzero residues multiplication by $i/i'$ is a permutation, the ranges of $j,j'$ have bounded multiplicity, and Cauchy--Schwarz applies to $\sum_{n\le4p}\tau(n)^2\ll p L_p^3$. The latter follows from $\tau(n)^2\le d_4(n)$ and a triple harmonic sum. Also $\sum_{n\le4p/l}\tau(n)\ll(p/l)L_p$. There are therefore $O(p^3L_p^5/l^2)$ product-equal pairs, even ignoring primitivity. Sum over $l>G$ and the four gcds, and use the $p^{-3}$ hit probability: this gives the first term of \eqref{eq:nonparallel}.
-
-For the rest use a direction-counting fact: given $e_0\in\F^*$, the number of nonzero integer pairs $|s|\le S, |t|\le T$, $p\nmid st$, $t/s=e_0\pmod p$ and $\gcd(s,t)\le G$ is
-\begin{equation}\label{eq:ratio}
- O(G+ST/p).
-\end{equation}
-For primitive pairs normalize to $(s/S,t/T)$. Nonparallel normalized vectors have determinant of absolute value at least $p/(ST)$, and lengths at most $\sqrt2$. The unoriented angles are separated by $\gg p/(ST)$ when more than one exists. Identical rational directions give at most two primitive pairs. This proves $O(1+ST/p)$; dividing first by each possible gcd and summing $1/j^2$ gives \eqref{eq:ratio}.
-
-Take bins $(D,T)$ and $(D_1,T_1)$ as in the preceding section. If $DD_1\ge p$, fix $t,u,t',u'$ and $e$. Equations \eqref{eq:ABCD} determine at most two pairs $(A,B')$ by a nonzero quadratic. Their integer representations for the two direction-coordinate pairs cost $O((G+DD_1/p)^2)$ by \eqref{eq:ratio}. The resulting count is
-\[
- O\big(h(TT_1)^2(G+DD_1/p)^2\big)\ll h(1+G)^2p^2.
-\]
-If $DD_1<p$, fix both directions and $e\ne1$. Equations \eqref{eq:ABCD} determine $C',D'$ uniquely if admissible. Now $TT_1\gg p$, and \eqref{eq:ratio} for the two parameter pairs gives $O(h(DD_1)^2(G+TT_1/p)^2)\ll h(1+G)^2p^2$. Sum over $O(L_p^2)$ bin pairs and the bounded endpoint orders; each nonparallel pair costs $p^{-3}$. This proves \eqref{eq:nonparallel}.
-
-\section{Chords at two independently sampled roots}\label{sec:two}
-The level $k$ is shared; the roots $z,z'$ are independent. For one template let $U=x+at$, $\Delta=u-t$. Its second endpoint's abscissa is $U+a\Delta$, so the slope formula gives
-\[
- k=-(b/a)U(U+a\Delta).
-\]
-Given $U,k$ and the template, its root is determined: $x=U-at$, $y=k/U-bt$. If $U'=eU$ at the other root, $e\in H$, equality of levels gives
-\[
- (b/a-e^2 b'/a')U=e b'(u'-t')-b(u-t).
-\]
-Unless both coefficients vanish this has at most one solution for $U$ and hence at most one of the $p^5$ outcomes $(k,z,z')$. Since there are $O(p^4 L_p^2)$ template pairs, the cost is $O(hL_p^2/p)$.
-
-In the exceptional case $e$ is uniquely determined and necessarily
-\[
- ab(u-t)^2=a'b'(u'-t')^2\ne0\pmod p.
-\]
-Fix the first template and the bin $(D_1,T_1)$ for the second. Fixing its direction determines at most two possible $u'-t'$ modulo $p$, giving $O(D_1^2T_1)$ choices; alternatively fixing its parameters and $a'$ gives $b'$ modulo $p$ and $O(D_1T_1^2)$ choices. All single integer ranges have bounded multiplicity modulo $p$. The smaller estimate is $O(p^{3/2})$ since $D_1T_1\asymp p$. There are at most $p$ outcomes per template pair here (one for each $U$). The total exceptional probability is $O(p^{-1/2}L_p^2)$. Reordering endpoints only changes the constant. Reflected copies of a root do not require this independence argument: their constraints are already the same by the old half-turn symmetry.
+\input{collisions}
 
 \section{Choosing a compatible subfamily}\label{sec:choose}
+\begin{lemma}[Exhaustion of ordinary triples]\label{lem:triples}
+Suppose the retained proposals pass the sign test, all the one-, two- and three-index geometric exceptions of Section~\ref{sec:sampling} have been removed, and an orientation clears the lists $\mathcal L_i$ of the representatives. Then the union of the ring, the eight anchors and the retained opposite pairs is a cap.
+\end{lemma}
+\begin{proof}
+Write $O$ for a selected ring point, $B$ for an anchor and $T$ for either sign of a retained target. The sets are disjoint: anchors are coarse, ring points are noncoarse, and eligible targets are noncoarse and off the carrier. An eligible index supplies two distinct sites, and coincidences between indices have been marked. The table lists every multiset of three site types; entries concern three \emph{distinct physical points}.
+\begin{center}\small\renewcommand{\arraystretch}{1.13}
+\begin{tabularx}{\linewidth}{@{}lX@{}}\toprule
+Types & Reason a triple of these types cannot survive \\ \midrule
+$OOO$ & Same-fibre pair, mask and opposite coset colour (Section~\ref{sec:ring}).\\
+$OOB$ & A line from an anchor contains at most one carrier site: the short-direction square test or the inward-ray bound (Section~\ref{sec:ring}).\\
+$OBB$ & An anchor--anchor axis is coarse; a nonaxis anchor--anchor line has primitive height at most four and misses the carrier.\\
+$BBB$ & All eight anchor sites are extreme vertices.\\
+$OOT$ & The central axes have only one old site each; every nonaxial pair is a clause, including at the mate by reflection (Lemma~\ref{lem:matching}).\\
+$OBT$ & The target--anchor line reduces to the square-slope line through zero and misses the nonsquare level.\\
+$BBT$ & Reject an index with either site on one of the finitely many anchor--anchor lines.\\
+$OTT$ & Mates give the same square-slope exclusion. For different indices mark a joining line with any carrier site, for every choice of signs.\\
+$BTT$ & For mates reject the index if its diameter contains an anchor. For different indices mark the pair if the joining line contains an anchor.\\
+$TTT$ & With two indices, a mate pair determines a diameter and a third site on it marks the pair of indices. With three indices mark signed three-site collinearity. One index has only two sites.\\ \bottomrule
+\end{tabularx}\end{center}
+These ten multisets exhaust the possibilities. In particular the test for three independent indices does not stand in for a test on two sites of one opposite pair.
+\end{proof}
+
 \begin{proposition}\label{prop:index} For all sufficiently large primes $p\equiv1\pmod{840}$ with $I\ge L_p^{24}$, the number of opposite pairs that can be added to a suitably oriented anchored ring is
 \[
  \gg \frac{\min(I,\sqrt p)}{L_p^3}.
 \]
 \end{proposition}
-\begin{proof} Use $G=\max(1,\lfloor I^{1/4}\rfloor)$ in \eqref{eq:nonparallel}. Call an index \emph{eligible} if it passes $E_i$, has no one-index geometric exception and all endpoint occurrences of its nonaxial blocking secants through the representative use distinct $H$-cosets. On $E_i$ these are among our generic, long-direction, long-ratio templates. Removing impossible outer-sheet points from the template count can only help. Including the internal, parallel and nonparallel cases, the unconditional probability of a one-index failure \emph{on} $E_i$ is
+\begin{proof} Use $G=\max(1,\lfloor I^{1/4}\rfloor)$ in \eqref{eq:nonparallel}. Call an index \emph{eligible} if it passes $E_i$, has no one-index geometric exception and all endpoint occurrences of its nonaxial blocking secants through the representative use distinct $H$-cosets. On $E_i$ these are among our generic, long-direction, long-ratio templates. Removing impossible outer-sheet points from the template count can only help. Any two occurrences belong to the two slots of one chord, two different chords at one representative (equal or unequal modular slopes), or two different representatives. Reuse of a physical endpoint is included in this partition. The last case is a two-index event. For the within-root cases use Section~\ref{sec:encoding}, Lemma~\ref{lem:lifts} and Proposition~\ref{prop:nonparallel}, respectively. With $h/p\le I^{-1}$ and $G\asymp I^{1/4}$, the unconditional probability of a one-index failure \emph{on} $E_i$ is at most
 \begin{equation}\label{eq:one}
- O\big(L_p^5 I^{-1/4}\big)=o(1).
+ O\!\left(\frac{1+L_p}{p}+\frac{L_p}{I}
+ +\frac{L_p^5}{I^{1/4}}+\frac{L_p^2}{\sqrt I}\right)
+ =O(L_p^5 I^{-1/4})=o(1).
 \end{equation}
 Hence the mean number of eligible indices among $N$ proposals is at least $\gamma N/2$. The shared level is not resampled.
 
-Mark an edge on two eligible indices for any two-index geometric exception, or if blocking endpoints at their representatives use a common $H$-coset. By the preceding section and the geometric estimates, the unconditional probability per index pair is
+Mark an edge on two eligible indices for any two-index geometric exception, or if blocking endpoints at their representatives use a common $H$-coset. By Proposition~\ref{prop:cross} and the geometric estimates, the unconditional probability per index pair is
 \begin{equation}\label{eq:two}
  O\big(L_p^2 (I^{-1}+p^{-1/2})\big).
 \end{equation}
@@ -139,19 +142,19 @@ Also mark a three-index edge for a new collinearity among three eligible indices
 \]
 Subtracting, for some outcome the number of eligible indices minus the number of marked edges is at least $\gamma N/4$. Discard at most one candidate index per marked edge, for instance the union of one chosen index from each edge. This leaves at least $\gamma N/4$ indices with no marked edges. Their level is nonsquare because each passed $E_i$.
 
-All blocking endpoint occurrences in the surviving representatives now have distinct $H$-cosets, both within and across indices. The finite matching criterion chooses one orientation that disables every such secant, and by symmetry the same is true at all the mates. Every triple with fewer than two old points was excluded by the anchor check or by the one-, two- and three-index geometry; the all-old triples and the two-old/one-anchor triples were handled in Section~\ref{sec:ring}. Thus the $6(p-1)$ chosen old points, the eight anchors and all the retained opposite pairs form one half-turn cap, with no restriction on direction. Changing an orientation swaps six sites for six in each affected fibre. Thus each retained opposite pair accounts for two net additional points.
+All blocking endpoint occurrences in the surviving representatives now have distinct $H$-cosets, both within and across indices. Lemma~\ref{lem:matching} chooses one orientation that disables every such secant, and by symmetry the same is true at all the mates. Lemma~\ref{lem:triples} now excludes every ordinary triple. Thus the $6(p-1)$ chosen old points, the eight anchors and all the retained opposite pairs form one half-turn cap, with no restriction on direction. Changing an orientation swaps six sites for six in each affected fibre. Thus each retained opposite pair accounts for two net additional points.
 \end{proof}
 
 \section{The cyclotomic choice of primes}\label{sec:primes}
-\begin{proof}[Proof of Theorem~\ref{thm:main}] Apply Stewart's theorem \cite[Theorem 1, (7)]{stewart} to $\Phi_j(3,1)$ for large multiples $j$ of 840. Its largest prime divisor satisfies
+\begin{proof}[Proof of Theorem~\ref{thm:main}] Apply Stewart's theorem \cite[Theorem 1, (7)]{stewart} to $\Phi_j(3,1)$ for large multiples $j$ of 840. Here $(3+1)^2=16$ and $3\cdot1=3$ are coprime nonzero integers, and $3/1$ is not a root of unity. The largest prime divisor satisfies
 \[
  p> j\exp\!\left(\frac{\log j}{104\log\log j}\right).
 \]
-As $p>j$, the factorization of $X^j-1$ is separable modulo $p$ and $\operatorname{ord}_p(3)=j$. Thus $p\equiv1\pmod{840}$; moreover $j$ is even, $-1\in\langle3\rangle$, and $h=j$. Distinct orders give distinct primes. For all sufficiently large primes so obtained,
+As $p>j$, $X^j-1=\prod_{d\mid j}\Phi_d(X)$ is separable modulo $p$. Its cyclotomic factors therefore share no root. Since $3$ is a root of $\Phi_j$ modulo $p$, its multiplicative order is exactly $j$. Thus $p\equiv1\pmod{840}$; moreover $j$ is even, $-1\in\langle3\rangle$, and $h=j$. Distinct orders give distinct primes. For all sufficiently large primes so obtained,
 \[
  \log I\ge \frac{\log p}{210\log\log p}:
 \]
-if $j\le\sqrt p$ this is immediate, and otherwise use $\log j>(\log p)/2$ and $\log\log j\le\log\log p$ in Stewart's estimate. In particular $I\ge L_p^{24}$ eventually. Also $\sqrt p\ge \exp(\log p/(210\log\log p))$ eventually. By Proposition~\ref{prop:index}, the log of the number of extra points is therefore at least
+if $j\le\sqrt p$ this is immediate, while if $j>\sqrt p$, Stewart gives $\log(p/j)>\log p/(208\log\log p)$. Passing to $I=(p-1)/j$ adds $\log(1-1/p)$, absorbed by replacing 208 with 210. In particular $I\ge L_p^{24}$ eventually. Also $\sqrt p\ge \exp(\log p/(210\log\log p))$ eventually. By Proposition~\ref{prop:index}, the log of the number of extra points is therefore at least
 \[
  \frac{\log p}{210\log\log p}-3\log L_p-O(1)
  \ \ge\ \frac{\log p}{300\log\log p}

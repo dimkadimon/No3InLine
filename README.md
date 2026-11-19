@@ -1,9 +1,9 @@
 # No3InLine
 
 **A super-polylogarithmic excess in the no-three-in-line problem**  
-Dmitry Kamenetsky · preprint for author and independent review · 19 November 2026
+Dmitry Kamenetsky · R2 working manuscript for author and independent review · 19 November 2026
 
-**[Read the paper (PDF)](paper/main.pdf)** · [LaTeX source for arXiv](paper/arxiv-source.tar.gz) · [Finite comparison table (CSV)](results/lower-bounds.csv) · [Verification transcripts](verification/) · [Source credits](THIRD_PARTY.md)
+**[Read the paper (PDF)](paper/main.pdf)** · [TeX and ancillary source](paper/arxiv-source.tar.gz) · [Standalone finite replay (ZIP)](paper/anc/no3-replay-r2.zip) · [Response to review](REVISION.md) · [Finite comparison table (CSV)](results/lower-bounds.csv) · [Verification transcripts](verification/) · [Source credits](THIRD_PARTY.md)
 
 On a square of side `n`, let `F_ht(n)` be the maximum number of points with no three on an ordinary straight line, invariant under the half-turn about the board centre. The paper proves that for infinitely many primes `p ≡ 1 (mod 840)`, with `n = 4p + 1`,
 
@@ -14,6 +14,8 @@ The guaranteed surplus dominates every fixed power of `log n`, but is smaller th
 ### Idea
 
 Keep six sites on each of `p−1` hyperbola fibres and add eight boundary sites. Interior opposite pairs are proposed at a **single common level**. Separate the multiplicative cosets of the obstructing secant endpoints, discard conflicting proposals, and use one matching to orient the ring. Only the proposals are thinned: flipping an orientation never lowers the number of ring sites. The index of `⟨−1,3⟩` measures the room for this construction, and Stewart's cyclotomic prime-factor theorem supplies a sequence with large index. The finite certificates are illustrations and independent lower bounds, not assumptions in the proof.
+
+**Review revision.** Sections 5–6 now derive the same-root lift and divisor counts and the exceptional shared-level probability in full. Lemmas 2.1, 3.1 and 7.1 account for endpoint occurrences, 130 sign shifts and all ten ordinary triple types. Appendix A is supplementary finite evidence; Appendix B identifies the local finite-data commit and explains how to use the replay ZIP embedded in the PDF. The full local bundle labels this draft `review-r2-2026-11-19`. No public DOI or public distribution URL has been confirmed.
 
 ## Selected finite bounds
 
@@ -34,22 +36,24 @@ The **504** from an actual side-293 crop is reproducible but is not the stronges
 
 ## Reproduce the release
 
-Use Python 3.9+ **without `-O`**, and a C++17 compiler (`c++` by default). The principal geometry and table checks use no network, solver or nonstandard Python packages. On a typical workstation allow several minutes and several hundred MB of RAM, especially for the largest matching example.
+Use Python 3.9+ **without `-O`**, and a C++17 compiler (`c++` by default). The principal geometry and table checks use no network, solver or nonstandard Python packages. The **standalone ZIP**, which is also attached to the reader PDF, has its own README and manifest; these same offline checks run in an empty directory after unpacking it. On a typical workstation allow several minutes and several hundred MB of RAM, especially for the largest matching example.
 
 ```sh
 python3 scripts/verify_release.py --hashes-only   # release integrity, seconds
 python3 scripts/comparison.py                    # regenerate counts, check CSV and typeset rows
 python3 scripts/verify_release.py                # all 15 manuscript witnesses, exact geometry
-python3 scripts/build_paper.py                   # make arXiv sources and PDF in paper/; needs TeX
+python3 scripts/audit_counting.py                # small exact diagnostics, not an asymptotic proof
+python3 scripts/build_paper.py                   # needs TeX, qpdf, Poppler; full checkout, not the kit
 ```
 
-The witness verifier reconstructs sets independently of the heuristic that found them. It compares released CSVs with compact certificates or exact digests, checks the actual geometric constraints, and reproduces the matching certificate byte-for-byte. `verification/manuscript-witnesses.txt` records a successful run. These checks do **not** verify the asymptotic estimates by computer.
+The witness verifier reconstructs sets independently of the heuristic that found them. It compares released CSVs with compact certificates or exact digests, checks the actual geometric constraints, and reproduces the matching certificate byte-for-byte. `verification/replay-r2.txt` records the R2 run from an isolated kit extraction. These checks do **not** verify the asymptotic estimates by computer.
 
 For the separately credited upstream comparisons and the older experimental packages:
 
 ```sh
 python3 scripts/restore_inputs.py --fetch         # 159 pinned data files; see THIRD_PARTY.md
 python3 scripts/comparison.py --audit-sources    # all 146 P22 input geometries and exact crop maxima
+python3 scripts/check_public_frames.py           # recheck the three published P47 starting sets
 python3 scripts/verify_release.py --expand-large # also create two optional 131074-/1000018-side CSVs
 python3 studies/improvements/verify.py --rescan  # earlier all-board/axis rescans and finite-branch audits
 python3 studies/larger-grids/verify.py           # earlier frame, deletion/cover, medium-board and gap checks
@@ -61,7 +65,7 @@ python3 studies/larger-grids/verify.py           # earlier frame, deletion/cover
 
 | Path | Contents |
 |:---|:---|
-| `paper/` | Current named preprint, complete proof, figure, bibliography, PDF and source-only archive. |
+| `paper/` | Current named preprint, complete proof, figure, bibliography, reader PDF and TeX-source archive with ancillary kit. |
 | `results/` | Machine-readable comparison, exact crop results, source row indices, and reported benchmarks. |
 | `unbounded-gain/` | Original working proof and the C++ matching builder, separate verifier and compact certificate. |
 | `small-prime-examples/` | Six anchored rings and a credited catalogue control. Download/open `gallery.html` to inspect the actual points offline. |
@@ -72,6 +76,6 @@ python3 studies/larger-grids/verify.py           # earlier frame, deletion/cover
 
 ## Attribution and license
 
-Dmitry Kamenetsky proposed this research and takes responsibility for the manuscript. Proof development, implementation, search and writing were substantially AI-assisted. **His review is ongoing**; independently implemented checks are not independent human refereeing. The project has no assigned arXiv identifier in this release. Please cite the dated manuscript and the revision used. The earlier working notes are retained to document provenance, not as separate claims of refereed publication.
+Dmitry Kamenetsky proposed this research. Responsibility for the manuscript rests with the named author. Proof development, implementation, search and writing were substantially AI-assisted. **His review is ongoing**; independently implemented checks are not independent human refereeing. The project has no assigned arXiv identifier in this release. Please cite the dated manuscript and the revision used. The earlier working notes are retained to document provenance, not as separate claims of refereed publication.
 
 The [MIT License](LICENSE) covers original project work. Upstream coordinate sources, inferred benchmarks, prior theorems, catalogue words/control sets, and font subsets are separately credited in [THIRD_PARTY.md](THIRD_PARTY.md); no third-party license is being overwritten. For the maintainer's safe GitHub publication workflow see [PUBLISH.md](PUBLISH.md).
